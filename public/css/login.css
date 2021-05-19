@@ -24,6 +24,15 @@ button.w3-button.w3-section.w3-teal.w3-ripple {
     border-radius: 30px;
 }
 
+button.w3-button.w3-section.w3-teal.w3-ripple.opuscolo {
+    color: black;
+    border-color: #3a3133c7;
+    font-weight: 600;
+    background-color: #0000004d;
+    border: black;
+}
+}
+
 button.w3-button.w3-section.w3-teal.w3-ripple.actors {
     background-color: #808000!important;
     color: white!important;
@@ -36,8 +45,8 @@ button.w3-button.w3-section.w3-teal.w3-ripple.singin {
 
 
 .w3-button:hover {
-    color: white !important;
-    background-color: #ccc!important;
+    color: black !important;
+    background-color: #D2D0D1!important;
 }
 
 .gender input[type="radio"] {
