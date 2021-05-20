@@ -1614,14 +1614,15 @@ a.text-white:focus {
 }
 
 .main-content .navbar-top {
-  position: absolute;
+  position: static;
   z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   padding-right: 0 !important;
   padding-left: 0 !important;
-  background-color: transparent;
+  background-color: #99acc0;
+  padding-bottom: 30;
 }
 
 @media (min-width: 768px) {
