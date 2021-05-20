@@ -32,7 +32,7 @@
                 <!--<span class="avatar avatar-sm rounded-circle">
                   <img alt="Image placeholder" src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg">
                 </span>-->
-                <div class="media-body ml-2 d-none d-lg-block">
+                <!--<div class="media-body ml-2 d-none d-lg-block">
                   <span class="mb-0 text-sm font-weight-bold">Accedi / Registrati</span>
                 </div>
               <!--</div>

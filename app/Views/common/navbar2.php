@@ -1,11 +1,8 @@
 
-    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main"> 
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
 	  <!--<nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-default">-->
-    <div class="media align-items-center">
-	    <div class="media-body ml-2 d-none d-lg-block">
-        <span class="mb-0 text-sm font-weight-bold">Accedi / Registrati</span>
-        </div>
+    <div class="container">
         <!--<a class="navbar-brand" href="#">Default Color</a>-->
         <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
