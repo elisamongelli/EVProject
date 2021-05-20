@@ -2,6 +2,8 @@
 <link href="css/stle-custom.css" rel="stylesheet">
 <link href="css/login.css" rel="stylesheet">
 
+<head><title>Covid-19 Prenota un Tampone</title></head>
+
 <body>
   <div class="main-content">
     <!-- Top navbar -->
@@ -65,8 +67,6 @@
             </div>-->
           <!--</li>
         </ul>-->
-      </div>
-    </nav>
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(img/photo_2021-05-19_18-17-14.jpg); background-size: cover; background-position: center top;">
       <!-- Mask -->
@@ -77,7 +77,7 @@
           <div class="col-lg-7 col-md-10">
             <h1 class="display-2 text-white">Covid-19</h1>
 			<h3 class="display-3 text-white">Prenota un Tampone</h3></br>
-            <p class="text-white mt--3 mb-8">Registrati o accedi per usufruire dei nostri servizi online</p>
+            <p class="text-white mt--3 mb-8"><a href='#' style='color:white';><u>Registrati o accedi</u><a> per usufruire dei nostri servizi online</p>
             <!--<a href="#!" class="btn btn-info">Edit profile</a>-->
           </div>
         </div>
@@ -115,7 +115,7 @@
 				<div class="h3 mt-4"><span style="color:#3a3133c7;">
                   COME DEVO COMPORTARMI SE IL RISULTATO DEL MIO TEST E' NEGATIVO?</br>E COME INVECE SE E' POSITIVO?</span>
 				</div></br>
-				</br></br><a href="#"><b>Leggi tutto...</b></a></br></br><!--
+				</br></br><a href="Opuscolo"><b>Consulta Opuscolo</b></a></br></br><!--
 				<button class="w3-button w3-section w3-teal w3-ripple opuscolo"> Leggi tutto </button>
 				</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>-->
               </div>
