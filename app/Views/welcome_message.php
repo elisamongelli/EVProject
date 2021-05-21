@@ -68,7 +68,7 @@
           <!--</li>
         </ul>-->
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(img/photo_2021-05-19_18-17-14.jpg); background-size: cover; background-position: center top;">
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(img/photo_2021-05-19_18-17-14.jpg); background-position: center;">
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
@@ -122,7 +122,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 order-xl-2">
+        <!--<div class="col-xl-4 order-xl-2">
           <div class="card bg-secondary shadow">
             <div class="card-header bg-white border-0">
               <div class="rowModified align-items-center"><!--
@@ -132,7 +132,7 @@
                 <div class="col-4 text-right">
                   <a href="#!" class="btn btn-sm btn-primary">Settings</a>
                 </div>-->
-				<div class="text-center">
+				<!--<div class="text-center">
 					<h2 style="color:black;">NOTIZIE</h2>
 					<h3 style="color:black;">Aggiornamenti sulla situazione del Covid-19 in Italia</h3>
 				</div>
@@ -172,7 +172,7 @@
                   </div>
                 </div>
                 <hr class="my-4">-->
-				<img src="img/ministero-della-salute-dati-popolazione-contagiata-in-italia.jpg" class="align-items-center covidImage">
+				<!--<img src="img/ministero-della-salute-dati-popolazione-contagiata-in-italia.jpg" class="align-items-center covidImage">-->
                 <!-- Address --><!--
                 <h6 class="heading-small text-muted mb-4">Contact information</h6>
                 <div class="pl-lg-4">
@@ -218,9 +218,9 @@
             </div>
           </div>
         </div>
-      </div>
+      <!--</div>
     </div>
-  </div>
+  </div>-->
   <footer class="footer">
     <div class="row align-items-center justify-content-xl-between">
       <div class="col-xl-6 m-auto text-center">

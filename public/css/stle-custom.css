@@ -498,6 +498,7 @@ a>code {
   .col-xl-8 {
     max-width: 57%;
     flex: 0 0 57%;
+	margin-inline: auto;
   }
 
   .order-xl-1 {
@@ -1626,7 +1627,7 @@ a.text-white:focus {
   width: 100%;
   padding-right: 0 !important;
   padding-left: 0 !important;
-  background-color: #99acc0;
+  background-color: #9f9ee5;
   padding-bottom: 10;
 }
 
