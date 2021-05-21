@@ -104,6 +104,23 @@ p {
   margin-bottom: 1rem;
 }
 
+.p-opuscolo {
+  font-size: 22px;
+  color: black;
+}
+
+.div-opuscolo {
+  background-color: #5e72e44f;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 2%;
+  font-family: Open Sans, sans-serif;
+  color: black;
+}
+
 
 address {
   font-style: normal;
@@ -233,6 +250,10 @@ input[type='month'] {
   -webkit-appearance: listbox;
 }
 
+#mySelect .firstOption {
+  font-style: italic;
+}
+
 textarea {
   overflow: auto;
   resize: vertical;
@@ -299,6 +320,19 @@ h6,
 h1,
 .h1 {
   font-size: 1.625rem;
+}
+
+.h1-opuscolo {
+  color: black;
+  margin-top: 50;
+  margin-bottom: -6;
+}
+
+.h1-ruoli {
+  color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #1a174dc9;
 }
 
 h3,
@@ -519,12 +553,13 @@ a>code {
   padding: .625rem .75rem;
   transition: all .2s cubic-bezier(.68, -.55, .265, 1.55);
   color: #8898aa;
-  border: 1px solid #cad1d7;
+  border: 1px solid #505458;
   border-radius: .375rem;
   background-color: #fff;
   background-clip: padding-box;
   box-shadow: none;
 }
+
 
 @media screen and (prefers-reduced-motion: reduce) {
   .form-control {
@@ -557,7 +592,7 @@ a>code {
 
 .form-control::placeholder {
   opacity: 1;
-  color: #adb5bd;
+  color: #8e98a2;
 }
 
 .form-control:disabled,
@@ -1182,6 +1217,11 @@ button.bg-white:focus {
 .align-items-center {
   align-items: center !important;
   margin-left: auto;
+}
+
+.align-items-center-home {
+  align-items: center !important;
+  margin-left: 0;
 }
 
 .align-items-center.covidImage {

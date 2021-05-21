@@ -77,7 +77,7 @@
           <div class="col-lg-7 col-md-10">
             <h1 class="display-2 text-white">Covid-19</h1>
 			<h3 class="display-3 text-white">Prenota un Tampone</h3></br>
-            <p class="text-white mt--3 mb-8"><a href='#' style='color:white';><u>Registrati o accedi</u><a> per usufruire dei nostri servizi online</p>
+            <p class="text-white mt--3 mb-8"><a href="Accesso" style='color:white';><u>Registrati o accedi</u><a> per usufruire dei nostri servizi online</p>
             <!--<a href="#!" class="btn btn-info">Edit profile</a>-->
           </div>
         </div>
@@ -213,8 +213,8 @@
                     <label>About Me</label>
                     <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
                   </div>
-                </div>-->
-              </form>
+                </div>
+              </form>-->
             </div>
           </div>
         </div>

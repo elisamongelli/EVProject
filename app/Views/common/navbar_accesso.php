@@ -1,12 +1,19 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/stle-custom.css" rel="stylesheet">
 
-    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-      <div class="container-fluid">
-	  <!--<nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-default">-->
-    <div class="container">
+<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main"> 
+	<div class="container-fluid">
+	<!--<nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-default">-->
+	  <div class="media align-items-center-home">
+		<a href="Home"><i class="fa fa-home" style="font-size:26px ; color:royalblue"></i></a>
+	    <div class="media-body ml-2 d-none d-lg-block">
+			<span class="mb-0 text-sm font-weight-bold"></br></span>
+        </div>
         <!--<a class="navbar-brand" href="#">Default Color</a>-->
         <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>-->
+        </button>
         <div class="collapse navbar-collapse" id="navbar-default">
             <div class="navbar-collapse-header">
                 <div class="row">
@@ -20,9 +27,9 @@
                             <span></span>
                             <span></span>
                         </button>
-                    </div>-->
+                    </div>
                 </div>
-            </div>
+            </div>-->
             
             <!--<ul class="navbar-nav ml-lg-auto">
                 <!--<li class="nav-item">
@@ -51,6 +58,6 @@
                 </li>
             </ul>-->
             
-        </div>
+      </div>
     </div>
 </nav>

@@ -20,8 +20,32 @@ header.w3-container.w3-teal {
 
 button.w3-button.w3-section.w3-teal.w3-ripple {
     margin-inline: 2%;
-    width: 18%;
     border-radius: 30px;
+}
+
+.w3-button.w3-section.w3-teal.w3-ripple.accesso {
+    background-color: #9f9ee5!important;
+}
+
+.w3-button.w3-section.w3-teal.w3-ripple.ruoli {
+    background-color: #9f9ee5!important;
+}
+
+@media only screen and (max-width: 480px){
+	.w3-button.w3-section.w3-teal.w3-ripple.ruoli{
+	  max-width:600px !important;
+	  width:100% !important;
+	}
+
+	.w3-button.w3-section.w3-teal.w3-ripple.ruoli{
+	  display:block !important;
+	  font-size:18px !important;
+	}
+}
+
+.w3-button.w3-section.w3-teal.w3-ripple.accesso:hover {
+    color: black !important;
+    background-color: #9f9ee5b3!important;
 }
 
 button.w3-button.w3-section.w3-teal.w3-ripple.opuscolo {
@@ -31,14 +55,13 @@ button.w3-button.w3-section.w3-teal.w3-ripple.opuscolo {
     background-color: #0000004d;
     border: black;
 }
-}
 
 button.w3-button.w3-section.w3-teal.w3-ripple.actors {
     background-color: #808000!important;
     color: white!important;
 }
 
-button.w3-button.w3-section.w3-teal.w3-ripple.singin {
+button.w3-button.w3-section.w3-teal.w3-ripple.signin {
     background-color: #ccc!important;
     color: white !important;
 }
@@ -46,7 +69,7 @@ button.w3-button.w3-section.w3-teal.w3-ripple.singin {
 
 .w3-button:hover {
     color: black !important;
-    background-color: #D2D0D1!important;
+    background-color: #D2D0D1;
 }
 
 .gender input[type="radio"] {

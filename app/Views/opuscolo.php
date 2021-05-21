@@ -4,31 +4,8 @@
 
 <head>
 	<title>Opuscolo Informativo</title>
-	<style>
-	.div-opuscolo {
-	  background-color: #3297d340;
-	  border-radius: 20px;
-	  padding-top: 10px;
-	  padding-bottom: 10px;
-	  padding-left: 20px;
-	  padding-right: 20px;
-	  margin: 2%;
-	  font-family: Open Sans, sans-serif;
-	  color: black;
-	}
-	
-	.p-opuscolo {
-	  font-size: 22px;
-	  color: black;
-	}
-	
-	.h1-opuscolo {
-	  color: black;
-	  margin-top: 50;
-	  margin-bottom: -6;
-	}
-	</style>
 </head>
+
 <body>
 	
 	<div class="main-content">
@@ -40,15 +17,15 @@
 	<div class="div-opuscolo">
 		<h1 class="h1-opuscolo"><i>Quante e quali sono le tipologie di tampone?</i></h1>
 		<p  class="p-opuscolo" style="margin-left: 1%; margin-top: 2%">Le tipologie di tampone sono due:</br></p>
-		<ul><p  class="p-opuscolo" style="margin-left: 1% ; margin-top: 2%">
-		- TAMPONE MOLECOLARE: è il test attualmente più affidabile per la diagnosi di infezione da coronavirus. Viene eseguito su un campione prelevato con un tampone a livello naso/oro-faringeo, 
+		<ul><li><p  class="p-opuscolo" style="margin-left: 1% ; margin-top: 2%">
+		TAMPONE MOLECOLARE: è il test attualmente più affidabile per la diagnosi di infezione da coronavirus. Viene eseguito su un campione prelevato con un tampone a livello naso/oro-faringeo, 
 		e quindi analizzato attraverso metodi molecolari di real-time RT-PCR (Reverse Transcription-Polymerase Chain Reaction) per l’amplificazione dei geni virali maggiormente espressi durante 
 		l’infezione. L’analisi può essere effettuata solo in laboratori altamente specializzati, individuati dalle autorità sanitarie, e richiede in media dalle 2 alle 6 ore dal momento in cui 
-		il campione viene avviato alla processazione in laboratorio;</br></br>
-		- TAMPONE ANTIGENICO (RAPIDO): questa tipologia di test è basata sulla ricerca, nei campioni respiratori, di proteine virali (antigeni). Le modalità di raccolta del campione sono del 
+		il campione viene avviato alla processazione in laboratorio;</p></li>
+		<li><p  class="p-opuscolo" style="margin-left: 1% ; margin-top: 2%">TAMPONE ANTIGENICO (RAPIDO): questa tipologia di test è basata sulla ricerca, nei campioni respiratori, di proteine virali (antigeni). Le modalità di raccolta del campione sono del 
 		tutto analoghe a quelle dei test molecolari (tampone naso-faringeo), i tempi di risposta sono molto brevi (circa 15 minuti), ma la sensibilità e specificità di questo test sembrano 
 		essere inferiori a quelle del test molecolare. Ciò comporta la possibilità di risultati falso-negativi in presenza di bassa carica virale (tC>25), oltre alla necessità di confermare i 
-		risultati positivi mediante un tampone molecolare.</p></ul>
+		risultati positivi mediante un tampone molecolare.</p></li></ul>
 	</div>
 	
 	<div class="div-opuscolo">
