@@ -48,11 +48,11 @@
 					</form>
 					<p style="color:black">Non sei ancora registrato?<a href="#">&nbsp Registrati</a></p>-->
 					
-					<button class="w3-button w3-section w3-teal w3-ripple ruoli"> Cittadino </button></br></br></br>
-					<button class="w3-button w3-section w3-teal w3-ripple ruoli"> Datore di Lavoro </button></br></br></br>
-					<button class="w3-button w3-section w3-teal w3-ripple ruoli"> Medico di Medicina Generale </button></br></br></br>
-					<button class="w3-button w3-section w3-teal w3-ripple ruoli"> Laboratorio di Analisi</button></br></br></br>
-					<button class="w3-button w3-section w3-teal w3-ripple ruoli"> Azienda Sanitaria </button></br></br>
+					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Cittadino </button></a></br></br></br>
+					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Datore di Lavoro </button></a></br></br></br>
+					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Medico di Medicina Generale </button></a></br></br></br>
+					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Laboratorio di Analisi</button></a></br></br></br>
+					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Azienda Sanitaria </button></a></br></br>
 				  </center>
 				</div>
 			  </div>

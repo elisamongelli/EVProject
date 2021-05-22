@@ -26,7 +26,7 @@
 			</div>
 		</div>-->
 
-		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Accedi</b></h1>
+		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Registrati</b></h1>
 		
 		<div class="header pb-8 pt-0 d-flex align-items-center" style="min-height: 83%; background-color:#1a174dc9">
 		
@@ -70,7 +70,7 @@
 						</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>--
 					  </div>-->
 					  <center>
-						<form method="post" action="Accesso/controllaCampi">
+						<form method="post" action="login.php">
 						
 							<p class="pt-md-4">
 								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
@@ -81,7 +81,7 @@
 							</p>
 							
 							<p class="pt-md-4" id="mySelect" style="width:90%">
-								<select name="ruolo" class="form-control" required>
+								<select class="form-control" required>
 								  <option class="firstOption" disabled selected>Ruolo</option>
 								  <option class="otherOptions">Cittadino</option>
 								  <option class="otherOptions">Datore di Lavoro</option>

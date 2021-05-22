@@ -105,8 +105,8 @@
             </div>-->
             <div class="card-body pt-0 pt-md-4">
               <div class="text-center">
-                <h2 style="color:black;">OPUSCOLO INFORMATIVO</h2></br>
-                <div class="h3 mt-4"><span style="color:#3a3133c7;">
+                <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
+                <div class="h3 mt-4"><span style="color:#3a3133c7;"></br>
                   QUANTE E QUALI SONO LE TIPOLOGIE DI TAMPONE?</span>
 				</div></br>
 				<div class="h3 mt-4"><span style="color:#3a3133c7;">

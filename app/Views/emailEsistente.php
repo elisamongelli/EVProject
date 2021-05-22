@@ -25,6 +25,8 @@
 				
 			</div>
 		</div>-->
+		
+		<!--<div id="error2" class="errorDiv" >Account non esistente, registrati</div>-->
 
 		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Accedi</b></h1>
 		

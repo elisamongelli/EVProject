@@ -25,6 +25,9 @@
 				
 			</div>
 		</div>-->
+		
+		<div id="error1" class="errorDiv" >Credenziali Errate</div>
+		<div id="error2" class="errorDiv" >Account gi&agrave; esistente, fai login</div>
 
 		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Accedi</b></h1>
 		
@@ -70,7 +73,7 @@
 						</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>--
 					  </div>-->
 					  <center>
-						<form method="post" action="Accesso/controllaCampi">
+						<form method="post" action="opuscolo.php">
 						
 							<p class="pt-md-4">
 								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
@@ -104,4 +107,15 @@
 	</div>
 </body>
 
+<script> 
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var product = urlParams.get('login');
+  if(product == 'false'){
+	document.getElementById('error1').style.display='block'
+  }
+  if(product == 'exists'){
+	document.getElementById('error2').style.display='block'
+  }
+</script>
 

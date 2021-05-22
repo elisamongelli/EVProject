@@ -9,7 +9,7 @@
 <body>
 	
 	<div class="main-content">
-		<?php include 'common/navbar.php';?>
+		<?php include 'common/navbar_accesso.php';?>
 	</div>
 
 	<h1 class="h1-opuscolo" style='text-align:center';><b>Opuscolo Informativo</br></h1></br></br>
