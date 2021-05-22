@@ -80,14 +80,14 @@
 								<input class="form-control" type="password" name="password" placeholder="Password" style="width:90%" required>
 							</p>
 							
-							<p class="pt-md-4" id="mySelect">
+							<p class="pt-md-4" id="mySelect" style="width:90%">
 								<select class="form-control" required>
 								  <option class="firstOption" disabled selected>Ruolo</option>
-								  <option>Cittadino</option>
-								  <option>Datore di Lavoro</option>
-								  <option>Medico di Medicina Generale</option>
-								  <option>Laboratorio di Analisi</option>
-								  <option>Azienda Sanitaria</option>
+								  <option class="otherOptions">Cittadino</option>
+								  <option class="otherOptions">Datore di Lavoro</option>
+								  <option class="otherOptions">Medico di Medicina Generale</option>
+								  <option class="otherOptions">Laboratorio di Analisi</option>
+								  <option class="otherOptions">Azienda Sanitaria</option>
 								</select>
 							</p>
 							

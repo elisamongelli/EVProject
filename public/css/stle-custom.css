@@ -250,9 +250,16 @@ input[type='month'] {
   -webkit-appearance: listbox;
 }
 
+
 #mySelect .firstOption {
   font-style: italic;
+  color:#848b90!important;
 }
+
+#mySelect .otherOptions {
+  color:#505458!important;
+}
+
 
 textarea {
   overflow: auto;
