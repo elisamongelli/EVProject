@@ -49,14 +49,16 @@ class Accesso extends Controller
 		
 		if ($userValid == 1) {
 			// $error = "error1";
-			echo view('emailEsistente');
+			echo view('errors/emailEsistente');
 		}/*
 		else if ($userValid == true) {
 			echo('CORRETTO');
 		}
 		else echo('SBAGLIATO');*/
-		
+		else echo view('opuscolo');
 		//echo($userValid);
 		// echo($user['Email']['Password']);
+		
+		
 	}
 }

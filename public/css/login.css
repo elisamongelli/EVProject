@@ -1,7 +1,7 @@
 .errorDiv {
     background: #ff000057;   
     text-align: center;
-    display: none;
+    display: block;
 }
 
 
