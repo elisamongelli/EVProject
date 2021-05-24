@@ -81,19 +81,19 @@ class Accesso extends Controller
 		else if ($userValido == 3) {
 			switch ($ruolo) {
 				case "Cittadino":
-					echo view('opuscolo');
+					echo view('#dash');
 					break;
 				case "Datore di Lavoro":
-					echo view('opuscolo');
+					echo view('#dash');
 					break;
 				case "Medico di Medicina Generale":
-					echo view('opuscolo');
+					echo view('#dash');
 					break;
 				case "Laboratorio di Analisi":
-					echo view('opuscolo');
+					echo view('#dash');
 					break;
 				case "Azienda Sanitaria":
-					echo view('opuscolo');
+					echo view('#dash');
 					break;
 			}
 		}

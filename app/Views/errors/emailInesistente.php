@@ -26,7 +26,7 @@
 			</div>
 		</div>-->
 		
-		<div id="error2" class="errorDiv" >Account non esistente, <a href="/Ruoli" style="color:#525f7f"><u>registrati</u></a></div>
+		<div id="error2" class="errorDiv" >Account non esistente, <a href="/Registrazione" style="color:#525f7f"><u>registrati</u></a></div>
 
 		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Accedi</b></h1>
 		
@@ -95,7 +95,7 @@
 							
 							<button class="w3-button w3-section w3-teal w3-ripple accesso"> Accedi </button>
 						</form>
-						<p style="color:black">Non sei ancora registrato?<a href="/Ruoli">&nbsp Registrati</a></p>
+						<p style="color:black">Non sei ancora registrato?<a href="/Registrazione">&nbsp Registrati</a></p>
 					  </center>
 					</div>
 				  </div>

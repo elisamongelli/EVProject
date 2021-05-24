@@ -48,11 +48,11 @@
 					</form>
 					<p style="color:black">Non sei ancora registrato?<a href="#">&nbsp Registrati</a></p>-->
 					
-					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Cittadino </button></a></br></br></br>
-					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Datore di Lavoro </button></a></br></br></br>
-					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Medico di Medicina Generale </button></a></br></br></br>
-					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Laboratorio di Analisi</button></a></br></br></br>
-					<a href="Registrazione"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Azienda Sanitaria </button></a></br></br>
+					<a href="Registrazione/visualizzaForm/Cittadino"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Cittadino </button></a></br></br></br>
+					<a href="Registrazione/visualizzaForm/Datore"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Datore di Lavoro </button></a></br></br></br>
+					<a href="Registrazione/visualizzaForm/Medico"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Medico di Medicina Generale </button></a></br></br></br>
+					<a href="Registrazione/visualizzaForm/Laboratorio"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Laboratorio di Analisi</button></a></br></br></br>
+					<a href="Registrazione/visualizzaForm/AziendaSanitaria"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Azienda Sanitaria </button></a></br></br>
 				  </center>
 				</div>
 			  </div>

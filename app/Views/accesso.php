@@ -93,7 +93,7 @@
 							
 							<button class="w3-button w3-section w3-teal w3-ripple accesso"> Accedi </button>
 						</form>
-						<p style="color:black">Non sei ancora registrato?<a href="Ruoli">&nbsp Registrati</a></p>
+						<p style="color:black">Non sei ancora registrato?<a href="Registrazione">&nbsp Registrati</a></p>
 					  </center>
 					</div>
 				  </div>
