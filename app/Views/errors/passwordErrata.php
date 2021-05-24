@@ -1,11 +1,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="css/stle-custom.css" rel="stylesheet">
-<link rel="stylesheet" href="css/login.css">
+<link href="/css/stle-custom.css" rel="stylesheet">
+<link href="../css/login.css" rel="stylesheet">
 
 <body>
 	<div class="main-content">
-		<?php include 'common/navbar_accesso.php';?><!--
+		<?php include __DIR__ . "/../common/navbar_accesso.php";?><!--
 
 		<div class="w3-container w3-half w3-margin-top">
 			<div class="w3-container w3-card-4">
@@ -25,6 +25,8 @@
 				
 			</div>
 		</div>-->
+		
+		<div id="error2" class="errorDiv" >La password inserita è errata</div>
 
 		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Accedi</b></h1>
 		
@@ -70,7 +72,7 @@
 						</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>--
 					  </div>-->
 					  <center>
-						<form method="post" action="Accesso/controllaCampi">
+						<form method="post" action="controllaCampi">
 						
 							<p class="pt-md-4">
 								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
@@ -93,7 +95,7 @@
 							
 							<button class="w3-button w3-section w3-teal w3-ripple accesso"> Accedi </button>
 						</form>
-						<p style="color:black">Non sei ancora registrato?<a href="Ruoli">&nbsp Registrati</a></p>
+						<p style="color:black">Non sei ancora registrato?<a href="/Ruoli">&nbsp Registrati</a></p>
 					  </center>
 					</div>
 				  </div>

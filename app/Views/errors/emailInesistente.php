@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="../css/stle-custom.css" rel="stylesheet">
+<link href="/css/stle-custom.css" rel="stylesheet">
 <link href="../css/login.css" rel="stylesheet">
 
 <body>
@@ -26,7 +26,7 @@
 			</div>
 		</div>-->
 		
-		<div id="error2" class="errorDiv" >Account non esistente, registrati</div>
+		<div id="error2" class="errorDiv" >Account non esistente, <a href="/Ruoli" style="color:#525f7f"><u>registrati</u></a></div>
 
 		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Accedi</b></h1>
 		
@@ -84,7 +84,7 @@
 							
 							<p class="pt-md-4" id="mySelect" style="width:90%">
 								<select name="ruolo" class="form-control" required>
-								  <option class="firstOption" disabled selected>Ruolo</option>
+								  <option class="firstOption" disabled selected value="">Ruolo</option>
 								  <option class="otherOptions">Cittadino</option>
 								  <option class="otherOptions">Datore di Lavoro</option>
 								  <option class="otherOptions">Medico di Medicina Generale</option>
@@ -95,7 +95,7 @@
 							
 							<button class="w3-button w3-section w3-teal w3-ripple accesso"> Accedi </button>
 						</form>
-						<p style="color:black">Non sei ancora registrato?<a href="Ruoli">&nbsp Registrati</a></p>
+						<p style="color:black">Non sei ancora registrato?<a href="/Ruoli">&nbsp Registrati</a></p>
 					  </center>
 					</div>
 				  </div>

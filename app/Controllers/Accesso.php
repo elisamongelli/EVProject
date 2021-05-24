@@ -2,7 +2,12 @@
 
 namespace App\Controllers;
 
-use App\Models\AccessoModel;
+use App\Models\CittadinoModel;
+use App\Models\DatoreModel;
+use App\Models\MedicoModel;
+use App\Models\LaboratorioModel;
+use App\Models\AziendaSanitariaModel;
+
 use CodeIgniter\Controller;
 
 class Accesso extends Controller
@@ -41,24 +46,56 @@ class Accesso extends Controller
 		$ruolo = $_POST['ruolo'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
-		// echo($ruolo.$email.$password);
 		
-		$model = new AccessoModel();
+		// $model = new CittadinoModel();
 		
-		$userValid = $model->controlla($ruolo, $email, $password);
 		
-		if ($userValid == 1) {
-			// $error = "error1";
-			echo view('errors/emailEsistente');
-		}/*
-		else if ($userValid == true) {
-			echo('CORRETTO');
+		switch ($ruolo) {
+			case "Cittadino":
+				$model = new CittadinoModel();
+				break;
+			case "Datore di Lavoro":
+				$model = new DatoreModel();
+				break;
+			case "Medico di Medicina Generale":
+				$model = new MedicoModel();
+				break;
+			case "Laboratorio di Analisi":
+				$model = new LaboratorioModel();
+				break;
+			case "Azienda Sanitaria":
+				$model = new AziendaSanitariaModel();
+				break;
 		}
-		else echo('SBAGLIATO');*/
-		else echo view('opuscolo');
-		//echo($userValid);
-		// echo($user['Email']['Password']);
 		
 		
+		$userValido = $model->getUtente($email, $password);
+		
+		
+		if ($userValido == 1) {
+			echo view('errors/emailInesistente');
+		}
+		else if ($userValido == 2) {
+			echo view('errors/passwordErrata');
+		}
+		else if ($userValido == 3) {
+			switch ($ruolo) {
+				case "Cittadino":
+					echo view('opuscolo');
+					break;
+				case "Datore di Lavoro":
+					echo view('opuscolo');
+					break;
+				case "Medico di Medicina Generale":
+					echo view('opuscolo');
+					break;
+				case "Laboratorio di Analisi":
+					echo view('opuscolo');
+					break;
+				case "Azienda Sanitaria":
+					echo view('opuscolo');
+					break;
+			}
+		}
 	}
 }
