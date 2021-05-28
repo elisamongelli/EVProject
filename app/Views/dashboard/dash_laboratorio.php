@@ -1,11 +1,18 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-<link href="/css/stle-custom.css" rel="stylesheet">
+<link href="css/stle-custom.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
+
+<head><title>Covid-19 Prenota un Tampone</title></head>
 
 <body>
   <div class="main-content">
     <!-- Top navbar -->
-    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-      <div class="container-fluid">
+	<?php include __DIR__ . "/../common/navbar_account.php";?>
+	<!-- Top navbar -->
+
+
+
+
         <!-- Brand -->
         <!--<a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">User profile</a>-->
         <!-- Form 
@@ -20,18 +27,18 @@
           </div>
         </form> -->
         <!-- User -->
-        <ul class="navbar-nav align-items-center d-none d-md-flex">
+        <!--<ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
-            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="media align-items-center">
-                <span class="avatar avatar-sm rounded-circle">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+              <!--<div class="media align-items-center">
+                <!--<span class="avatar avatar-sm rounded-circle">
                   <img alt="Image placeholder" src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg">
-                </span>
-                <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                </span>-->
+                <!--<div class="media-body ml-2 d-none d-lg-block">
+                  <span class="mb-0 text-sm font-weight-bold">Accedi / Registrati</span>
                 </div>
-              </div>
-            </a>
+              <!--</div>
+            </a><!--
             <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
               <div class=" dropdown-header noti-title">
                 <h6 class="text-overflow m-0">Welcome!</h6>
@@ -57,22 +64,21 @@
                 <i class="ni ni-user-run"></i>
                 <span>Logout</span>
               </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+            </div>-->
+          <!--</li>
+        </ul>-->
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: center;">
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid d-flex align-items-center">
+      <div class="container-fluid align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Hello Jesse</h1>
-            <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-            <a href="#!" class="btn btn-info">Edit profile</a>
+            <h1 class="display-2 text-white">Covid-19</h1>
+			<!--<h3 class="display-3 text-white">Prenota un Tampone</h3></br>
+            <p class="text-white mt--3 mb-8"><a href="Accesso" style='color:white';><u>Registrati o accedi</u><a> per usufruire dei nostri servizi online</p>-->
+            <!--<a href="#!" class="btn btn-info">Edit profile</a>-->
           </div>
         </div>
       </div>
@@ -80,75 +86,65 @@
     <!-- Page content -->
     <div class="container-fluid mt--7">
       <div class="row">
-        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+        <div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
           <div class="card card-profile shadow">
             <div class="row justify-content-center">
-              <div class="col-lg-3 order-lg-2">
+              <div class="col-lg-3 order-lg-2"><!--
                 <div class="card-profile-image">
                   <a href="#">
                     <img src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg" class="rounded-circle">
                   </a>
-                </div>
+                </div>-->
               </div>
-            </div>
+            </div><!--
             <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
               <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
                 <a href="#" class="btn btn-sm btn-default float-right">Message</a>
               </div>
-            </div>
+            </div>-->
             <div class="card-body pt-0 pt-md-4">
-              <div class="row">
-                <div class="col">
-                  <div class="card-profile-stats d-flex justify-content-center mt-md-5">
-                    <div>
-                      <span class="heading">22</span>
-                      <span class="description">Friends</span>
-                    </div>
-                    <div>
-                      <span class="heading">10</span>
-                      <span class="description">Photos</span>
-                    </div>
-                    <div>
-                      <span class="heading">89</span>
-                      <span class="description">Comments</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="text-center">
-                <h3>
-                  Jessica Jones<span class="font-weight-light">, 27</span>
-                </h3>
-                <div class="h5 font-weight-300">
-                  <i class="ni location_pin mr-2"></i>Bucharest, Romania
-                </div>
-                <div class="h5 mt-4">
-                  <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
-                </div>
-                <div>
-                  <i class="ni education_hat mr-2"></i>University of Computer Science
-                </div>
-                <hr class="my-4">
-                <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
-                <a href="#">Show more</a>
+                <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
+				<div class="h3 mt-4"><a href="Registrazione">&nbsp Consulta l'opuscolo </a><span style="color:#3a3133c7;"></br>
+                  </span>
+				</div>
+                <div class="h3 mt-4"><a href="Registrazione">&nbsp Gestisci le prenotazioni </a><span style="color:#3a3133c7;"></br>
+                  </span>
+				</div>
+				<div class="h3 mt-4"><a href="Registrazione">&nbsp Invia Referti </a><span style="color:#3a3133c7;"></br>
+                  </span>
+				</div>
+				<div class="h3 mt-4"><a href="Registrazione">&nbsp Visualizza i questionari di anamnesi compilati </a><span style="color:#3a3133c7;">
+                  </br></span>
+				</div>
+				<div class="h3 mt-4"><a href="Registrazione">&nbsp Calendario : fornisci disponibilità per le prenotazioni </a><span style="color:#3a3133c7;">
+                  </br></span>
+				</div>
+				</br></br><a href="Opuscolo"><b></b></a></br></br><!--
+				<button class="w3-button w3-section w3-teal w3-ripple opuscolo"> Leggi tutto </button>
+				</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>-->
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-8 order-xl-1">
+        <!--<div class="col-xl-4 order-xl-2">
           <div class="card bg-secondary shadow">
             <div class="card-header bg-white border-0">
-              <div class="row align-items-center">
+              <div class="rowModified align-items-center"><!--
                 <div class="col-8">
                   <h3 class="mb-0">My account</h3>
                 </div>
                 <div class="col-4 text-right">
                   <a href="#!" class="btn btn-sm btn-primary">Settings</a>
-                </div>
+                </div>-->
+				<!--<div class="text-center">
+					<h2 style="color:black;">NOTIZIE</h2>
+					<h3 style="color:black;">Aggiornamenti sulla situazione del Covid-19 in Italia</h3>
+				</div>
               </div>
             </div>
-            <div class="card-body">
+            <div class="card-body"><!--
               <form>
                 <h6 class="heading-small text-muted mb-4">User information</h6>
                 <div class="pl-lg-4">
@@ -181,8 +177,9 @@
                     </div>
                   </div>
                 </div>
-                <hr class="my-4">
-                <!-- Address -->
+                <hr class="my-4">-->
+				<!--<img src="img/ministero-della-salute-dati-popolazione-contagiata-in-italia.jpg" class="align-items-center covidImage">-->
+                <!-- Address --><!--
                 <h6 class="heading-small text-muted mb-4">Contact information</h6>
                 <div class="pl-lg-4">
                   <div class="row">
@@ -213,9 +210,9 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <hr class="my-4">
-                <!-- Description -->
+                </div>-->
+                <!--<hr class="my-4">-->
+                <!-- Description --><!--
                 <h6 class="heading-small text-muted mb-4">About me</h6>
                 <div class="pl-lg-4">
                   <div class="form-group focused">
@@ -223,19 +220,19 @@
                     <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
                   </div>
                 </div>
-              </form>
+              </form>-->
             </div>
           </div>
         </div>
-      </div>
+      <!--</div>
     </div>
-  </div>
+  </div>-->
   <footer class="footer">
     <div class="row align-items-center justify-content-xl-between">
       <div class="col-xl-6 m-auto text-center">
-        <div class="copyright">
+        <!--<div class="copyright">
           <p>Made with <a href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Argon Dashboard</a> by Creative Tim</p>
-        </div>
+        </div>-->
       </div>
     </div>
   </footer>

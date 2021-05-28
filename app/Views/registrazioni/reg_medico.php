@@ -14,8 +14,9 @@
 			  <div class="row">
 				<div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
 				  <div class="card card-profile shadow">
+					<div class="card-body pt-md-4">
 					  <center>						
-						<form method="post" action="/Registrazione/creaAccount/Cittadino">
+						<form method="post" action="/Registrazione/creaAccount/Medico">
 						
 							<p class="pt-md-4">
 								<input class="form-control" type="text" name="nome" placeholder="Nome" style="width:90%" required>
@@ -27,6 +28,28 @@
 							
 							<p class="pt-md-4">
 								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" style="width:90%" required>
+							</p>
+							
+							<p class="pt-md-4">
+								<input class="form-control" type="text" name="partitaIva" placeholder="Partita IVA" style="width:90%" required>
+							</p>
+							
+							<p class="pt-md-4">
+								<input class="form-control" type="text" name="codiceRegionale" placeholder="Codice Regionale" style="width:90%" required>
+							</p>
+							
+							<p class="pt-md-4" id="mySelect" style="width:90%">
+								<select name="AziendaSanitariaLocale" class="form-control" required>
+								  <option class="firstOption" disabled selected value="">Azienda Sanitaria Locale</option>
+								  <?php
+									$codiciASL = file(__DIR__ . "./asl_italiane.txt", 1);
+
+									foreach ($codiciASL as $codice)
+									{
+									   echo "<option class='otherOptions'>$codice</option>";
+									}
+								  ?>
+								</select>
 							</p>
 							
 							<p class="pt-md-4">

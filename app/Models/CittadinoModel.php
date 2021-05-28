@@ -5,24 +5,12 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 class CittadinoModel extends Model
-{/*
-    protected $table = 'news';.
-	
-	protected $allowedFields = ['title', 'slug', 'body'];
-	
-	public function getNews($slug = false)
-	{
-		if ($slug === false)
-		{
-			return $this->findAll();
-		}
-
-		return $this->asArray()
-					->where(['slug' => $slug])
-					->first();
-	}*/
+{
 	
 	protected $table = 'Cittadini';
+	
+	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'Email', 'Password'];
+	
 	
 	public function getUtente($email, $password) {
 		
@@ -41,5 +29,4 @@ class CittadinoModel extends Model
 		}
 		return 3;
 	}
-	
 }

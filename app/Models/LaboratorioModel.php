@@ -8,6 +8,8 @@ class LaboratorioModel extends Model
 {
 	
 	protected $table = 'LaboratoriAnalisi';
+	
+	protected $allowedFields=['NomeTitolare','CognomeTitolare','CodFisTitolare','Nome','PartitaIva','CodiceFisicale','Email','Password'];
 
 	
 	public function getUtente($email, $password) {

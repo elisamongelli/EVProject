@@ -9,6 +9,8 @@ class MedicoModel extends Model
 	
 	protected $table = 'Medici';
 
+	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'PartitaIva', 'CodiceRegionale', 'AziendaSanitariaLocale', 'Email', 'Password'];
+	
 	
 	public function getUtente($email, $password) {
 		

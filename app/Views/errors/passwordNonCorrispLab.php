@@ -1,11 +1,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="css/stle-custom.css" rel="stylesheet">
-<link rel="stylesheet" href="css/login.css">
+<link href="/css/stle-custom.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/login.css">
 
 <body>
 	<div class="main-content">
-		<?php include 'common/navbar_accesso.php';?><!--
+		<?php include __DIR__ . "/../common/navbar_accesso.php";?><!--
 
 		<div class="w3-container w3-half w3-margin-top">
 			<div class="w3-container w3-card-4">
@@ -25,8 +25,10 @@
 				
 			</div>
 		</div>-->
-
-		<h1 class="h1-ruoli" style='text-align:center ; color:white';><b></br></br>Accedi</b></h1>
+		
+		<div id="error2" class="errorDiv" >Password e Conferma Password non corrispondono</div>
+				
+		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Registrati</b></h1>
 		
 		<div class="header pb-8 pt-0 d-flex align-items-center" style="min-height: 83%; background-color:#1a174dc9">
 		
@@ -70,8 +72,32 @@
 						</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>--
 					  </div>-->
 					  <center>
-						<form method="post" action="Accesso/controllaCampi">
+						<form method="post" action="/Registrazione/creaAccount/Laboratorio">
 						
+							<p class="pt-md-4">
+								<input class="form-control" type="text" name="nometitolare" placeholder="Nome Titolare" style="width:90%" required>
+							</p>
+							
+							<p class="pt-md-4">
+								<input class="form-control" type="text" name="cognometitolare" placeholder="Cognome Titolare" style="width:90%" required>
+							</p>
+							
+							<p class="pt-md-4">
+								<input class="form-control" type="text" name="codfistitolare" placeholder="Codice Fiscale Titolare" style="width:90%" required>
+							</p>
+							
+							<p class="pt-md-4">
+								<input class="form-control" type="text" name="nome" placeholder="Nome Laboratorio" style="width:90%" required>
+							</p>
+							
+							<p class="pt-md-4">
+								<input class="form-control" type="text" name="cognome" placeholder="Partita Iva" style="width:90%" required>
+							</p>
+							
+							<p class="pt-md-4">
+								<input class="form-control" type="text" name="codicefiscale" placeholder="Codice Fiscale Laboratorio" style="width:90%" required>
+							</p>
+							
 							<p class="pt-md-4">
 								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
 							</p>
@@ -80,20 +106,12 @@
 								<input class="form-control" type="password" name="password" placeholder="Password" style="width:90%" required>
 							</p>
 							
-							<p class="pt-md-4" id="mySelect" style="width:90%">
-								<select name="ruolo" class="form-control" required>
-								  <option class="firstOption" disabled selected value="">Ruolo</option>
-								  <option class="otherOptions">Cittadino</option>
-								  <option class="otherOptions">Datore di Lavoro</option>
-								  <option class="otherOptions">Medico di Medicina Generale</option>
-								  <option class="otherOptions">Laboratorio di Analisi</option>
-								  <option class="otherOptions">Azienda Sanitaria</option>
-								</select>
+							<p class="pt-md-4">
+								<input class="form-control" type="password" name="confermaPassword" placeholder="Conferma Password" style="width:90%" required>
 							</p>
 							
-							<button class="w3-button w3-section w3-teal w3-ripple accesso"> Accedi </button>
+							<button class="w3-button w3-section w3-teal w3-ripple accesso"> Registrati </button>
 						</form>
-						<p style="color:black">Non sei ancora registrato?<a href="Registrazione">&nbsp Registrati</a></p>
 					  </center>
 					</div>
 				  </div>
@@ -103,5 +121,3 @@
 		</div>
 	</div>
 </body>
-
-

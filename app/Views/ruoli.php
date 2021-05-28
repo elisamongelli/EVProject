@@ -22,32 +22,7 @@
 			<div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
 			  <div class="card card-profile shadow">
 				<div class="card-body pt-md-4">
-				  <center><!--
-					<form method="post" action="login.php">
-					
-						<p class="pt-md-4">
-							<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
-						</p>
-						
-						<p class="pt-md-4">
-							<input class="form-control" type="password" name="password" placeholder="Password" style="width:90%" required>
-						</p>
-						
-						<p class="pt-md-4" id="mySelect">
-							<select class="form-control" required>
-							  <option class="firstOption" disabled selected>Ruolo</option>
-							  <option>Cittadino</option>
-							  <option>Datore di Lavoro</option>
-							  <option>Medico di Medicina Generale</option>
-							  <option>Laboratorio di Analisi</option>
-							  <option>Azienda Sanitaria</option>
-							</select>
-						</p>
-						
-						<button class="w3-button w3-section w3-teal w3-ripple accesso"> Accedi </button>
-					</form>
-					<p style="color:black">Non sei ancora registrato?<a href="#">&nbsp Registrati</a></p>-->
-					
+				  <center>					
 					<a href="Registrazione/visualizzaForm/Cittadino"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Cittadino </button></a></br></br></br>
 					<a href="Registrazione/visualizzaForm/Datore"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Datore di Lavoro </button></a></br></br></br>
 					<a href="Registrazione/visualizzaForm/Medico"><button class="w3-button w3-section w3-teal w3-ripple ruoli"> Medico di Medicina Generale </button></a></br></br></br>

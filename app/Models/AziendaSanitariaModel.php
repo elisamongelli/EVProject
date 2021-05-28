@@ -9,6 +9,8 @@ class AziendaSanitariaModel extends Model
 	
 	protected $table = 'AziendeSanitarie';
 	
+	protected $allowedFields=['Nome','PartitaIva','CodiceFiscale','Email','Password'];
+	
 	
 	public function getUtente($email, $password) {
 		

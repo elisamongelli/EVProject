@@ -6,7 +6,7 @@
 	<div class="container-fluid">
 	<!--<nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-default">-->
 	  <div class="media align-items-center-home">
-		<a href="/Home"><i class="fa fa-home" style="font-size:26px ; color:royalblue"></i></a>
+		<a href="/Home"><i class="fa fa-home" style="font-size:26px ; color:white"></i></a>
 	    <div class="media-body ml-2 d-none d-lg-block">
 			<span class="mb-0 text-sm font-weight-bold"></br></span>
         </div>

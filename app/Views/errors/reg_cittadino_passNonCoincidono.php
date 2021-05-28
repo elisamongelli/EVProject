@@ -6,6 +6,8 @@
 <body>
 	<div class="main-content">
 		<?php include __DIR__ . "/../common/navbar_accesso.php";?>
+		
+		<div id="error2" class="errorDiv" >I campi Password e Conferma Password devono coincidere</div>
 
 		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Registrati</b></h1>
 		
@@ -14,23 +16,25 @@
 			  <div class="row">
 				<div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
 				  <div class="card card-profile shadow">
-					  <center>						
+					<div class="card-body pt-md-4">
+					
+					  <center>
 						<form method="post" action="/Registrazione/creaAccount/Cittadino">
 						
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="nome" placeholder="Nome" style="width:90%" required>
+								<input class="form-control" type="text" name="nome" placeholder="Nome" value="<?= esc($Nome)?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="cognome" placeholder="Cognome" style="width:90%" required>
+								<input class="form-control" type="text" name="cognome" placeholder="Cognome" value="<?= esc($Cognome)?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" style="width:90%" required>
+								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" value="<?= esc($CodiceFiscale)?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
+								<input class="form-control" type="text" name="email" placeholder="Email" value="<?= esc($Email)?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">

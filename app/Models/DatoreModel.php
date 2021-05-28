@@ -8,7 +8,9 @@ class DatoreModel extends Model
 {
 	
 	protected $table = 'DatoriLavoro';
-
+	
+	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'NomeAzienda', 'PartitaIva', 'CodiceFiscaleAzienda', 'Email', 'Password'];
+	
 	
 	public function getUtente($email, $password) {
 		
