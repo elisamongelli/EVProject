@@ -9,7 +9,7 @@
 		<a href="/Home"><i class="fa fa-sign-out fa-flip-horizontal" style="font-size:26px ; color:white"></i></a>
 	  </div>
 	  <div class="media align-items-center">
-	    <a href="Accesso"><div class="media-body ml-2 d-none d-lg-block">
+	    <a href="/Account"><div class="media-body ml-2 d-none d-lg-block">
 			<span class="mb-0 text-sm font-weight-bold">Il Mio Account</span>
         </div></a>            
       </div>

@@ -8,24 +8,27 @@
 <body>
   <div class="main-content">
     <!-- Top navbar -->
-	<?php include __DIR__ . "/../common/navbar_account_home.php";?>
+	<?php
+		$ruolo = "Cittadino";
+		include __DIR__ . "/common/navbar_account_funzionalita.php";
+	?>
 	<!-- Top navbar -->
 
-    <!-- Header -->
+    <!-- Header --><!--
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: center;">
-      <!-- Mask -->
+      <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
-      <!-- Header container -->
+      <!-- Header container --
       <div class="container-fluid align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
             <h1 class="display-2 text-white">Covid-19</h1><!--
 			<h3 class="display-3 text-white">Prenota un Tampone</h3></br>
-            <p class="text-white mt--3 mb-8"><a href="Accesso" style='color:white';><u>Registrati o accedi</u><a> per usufruire dei nostri servizi online</p>-->
+            <p class="text-white mt--3 mb-8"><a href="Accesso" style='color:white';><u>Registrati o accedi</u><a> per usufruire dei nostri servizi online</p>--
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <!-- Page content -->
     <div class="container-fluid mt--7">
       <div class="row">

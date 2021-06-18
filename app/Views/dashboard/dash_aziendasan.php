@@ -7,7 +7,7 @@
 <body>
   <div class="main-content">
     <!-- Top navbar -->
-	<?php include __DIR__ . "/../common/navbar_account.php";?>
+	<?php include __DIR__ . "/../common/navbar_account_home.php";?>
 	<!-- Top navbar -->
 
 
