@@ -10,7 +10,7 @@
     <!-- Top navbar -->
 	<?php
 		$ruolo = "Cittadino";
-		include __DIR__ . "/common/navbar_account_funzionalita.php";
+		include __DIR__ . "/../common/navbar_account_funzionalita.php";
 	?>
 	<!-- Top navbar -->
 
