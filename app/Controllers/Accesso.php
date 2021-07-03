@@ -33,9 +33,11 @@ class Accesso extends Controller
 				break;
 			case "Datore di Lavoro":
 				$model = new DatoreModel();
+				$ruolo = "Datore";
 				break;
 			case "Medico di Medicina Generale":
 				$model = new MedicoModel();
+				$ruolo = "Medico";
 				break;
 			case "Laboratorio di Analisi":
 				$model = new LaboratorioModel();
@@ -55,6 +57,7 @@ class Accesso extends Controller
 			echo view('errors/passwordErrata');
 		}
 		else if ($userValido == 3) {
+			
 			switch ($ruolo) {
 				case "Cittadino":
 					//$user=$userValido[1];
@@ -65,10 +68,10 @@ class Accesso extends Controller
 					
 					return redirect()->to('/Dashboard/vdDashboard/Cittadino');
 					break;
-				case "Datore di Lavoro":
+				case "Datore":
 					return redirect()->to('/Dashboard/vdDashboard/Datore');
 					break;
-				case "Medico di Medicina Generale":
+				case "Medico":
 					return redirect()->to('/Dashboard/vdDashboard/Medico');
 					break;
 				case "Laboratorio di Analisi":

@@ -9,7 +9,13 @@ class LaboratorioModel extends Model
 	
 	protected $table = 'LaboratoriAnalisi';
 	
-	protected $allowedFields=['NomeTitolare','CognomeTitolare','CodFisTitolare','Nome','PartitaIva','CodiceFisicale','Email','Password'];
+	protected $allowedFields=['NomeTitolare','CognomeTitolare','CodFisTitolare','Nome','PartitaIva','CodiceFiscale','Email','Password'];
+	
+	
+	public function getAllLaboratori() {
+		
+		return $this->findAll();
+	}
 
 	
 	public function getUtente($email, $password) {
@@ -27,7 +33,21 @@ class LaboratorioModel extends Model
 		if ($laboratorio['Password'] != $password) {
 			return 2;
 		}
-		return 3;
+		else {
+			
+			$session = session();
+			
+			$_SESSION['ruolo'] = "Laboratorio";
+			$_SESSION['nome'] = $laboratorio['NomeTitolare'];
+			$_SESSION['cognome'] = $laboratorio['CognomeTitolare'];
+			$_SESSION['codicefiscale'] = $laboratorio['CodFisTitolare'];
+			$_SESSION['nomelab'] = $laboratorio['Nome'];
+			$_SESSION['partitaIVA'] = $laboratorio['PartitaIva'];
+			$_SESSION['cflab'] = $laboratorio['CodiceFiscale'];
+			$_SESSION['email'] = $laboratorio['Email'];
+			
+			return 3;
+		}
 	}
 	
 }

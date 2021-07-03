@@ -41,10 +41,17 @@
             <div class="card-body pt-0 pt-md-4">
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
+<<<<<<< Updated upstream
                 <div class="h3 mt-4"><a href="/CalendarioPrenot"></br>PRENOTA UN TAMPONE</span></a></div></br>
                 <div class="h3 mt-4"><a href="/CalendarioPaziente"></br>GESTISCI PRENOTAZIONI</span></a></div></br>
                 <div class="h3 mt-4"><a href="/VisuaReferti"></br>VISUALIZZA REFERTI</span></a></div></br>
                 <div class="h3 mt-4"><a href="#"></br>COMPILA QUESTIONARIO ANAMNESI</span></a></div></br>
+=======
+                <div class="h3 mt-4"><a href="/Prenotazione"></br>PRENOTA UN TAMPONE</span></a></div></br>
+                <div class="h3 mt-4"><a href="#"></br>GESTISCI PRENOTAZIONI</span></a></div></br>
+                <div class="h3 mt-4"><a href="/Referto/visualizzaRefertiCittadino"></br>VISUALIZZA REFERTI</span></a></div></br>
+                <div class="h3 mt-4"><a href="/Questionario"></br>COMPILA QUESTIONARIO ANAMNESI</span></a></div></br>
+>>>>>>> Stashed changes
 				</br></br><a href="/Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>
               </div>
             </div>

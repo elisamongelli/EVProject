@@ -27,7 +27,17 @@ class AziendaSanitariaModel extends Model
 		if ($aziende['Password'] != $password) {
 			return 2;
 		}
-		return 3;
+		else {
+			$session = session();
+			
+			$_SESSION['ruolo'] = "AziendaSanitaria";
+			$_SESSION['nome'] = $aziende['Nome'];
+			$_SESSION['partitaIVA'] = $aziende['PartitaIva'];
+			$_SESSION['codicefiscale'] = $aziende['CodiceFiscale'];
+			$_SESSION['email'] = $aziende['Email'];
+			
+			return 3;
+		}
 	}
 	
 }

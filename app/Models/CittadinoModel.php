@@ -9,7 +9,7 @@ class CittadinoModel extends Model
 	
 	protected $table = 'Cittadini';
 	
-	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'Email', 'Password'];
+	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'MedicoCurante', 'Email', 'Password'];
 	
 
 	
@@ -27,6 +27,17 @@ class CittadinoModel extends Model
 		if ($cittadino['Password'] != $password) {
 			return 2;
 		}
-		return 3;
+		else {
+			$session = session();
+			
+			$_SESSION['ruolo'] = "Cittadino";
+			$_SESSION['nome'] = $cittadino['Nome'];
+			$_SESSION['cognome'] = $cittadino['Cognome'];
+			$_SESSION['codicefiscale'] = $cittadino['CodiceFiscale'];
+			$_SESSION['medico'] = $cittadino['MedicoCurante'];
+			$_SESSION['email'] = $cittadino['Email'];
+			
+			return 3;
+		}
 	}
 }

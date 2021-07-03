@@ -12,6 +12,11 @@ class MedicoModel extends Model
 	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'PartitaIva', 'CodiceRegionale', 'AziendaSanitariaLocale', 'Email', 'Password'];
 	
 	
+	public function getAllMedici() {
+		
+		return $this->findAll();
+	}
+	
 	public function getUtente($email, $password) {
 		
 		
@@ -27,7 +32,20 @@ class MedicoModel extends Model
 		if ($medico['Password'] != $password) {
 			return 2;
 		}
-		return 3;
+		else {
+			$session = session();
+			
+			$_SESSION['ruolo'] = "Medico";
+			$_SESSION['nome'] = $medico['Nome'];
+			$_SESSION['cognome'] = $medico['Cognome'];
+			$_SESSION['codicefiscale'] = $medico['CodiceFiscale'];
+			$_SESSION['partitaIVA'] = $medico['PartitaIva'];
+			$_SESSION['codregionale'] = $medico['CodiceRegionale'];
+			$_SESSION['asl'] = $medico['AziendaSanitariaLocale'];
+			$_SESSION['email'] = $medico['Email'];
+			
+			return 3;
+		}
 	}
 	
 }

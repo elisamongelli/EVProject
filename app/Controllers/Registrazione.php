@@ -22,7 +22,12 @@ class Registrazione extends Controller
 		
 		switch ($ruolo) {
 			case "Cittadino":
-				echo view('registrazioni/reg_cittadino');
+				$model = new MedicoModel();
+				$data = [
+					'medici' => $model->getAllMedici(),
+				];
+				
+				echo view('registrazioni/reg_cittadino', $data);
 				break;
 			case "Datore":
 				echo view('registrazioni/reg_datore');
@@ -45,11 +50,14 @@ class Registrazione extends Controller
 		switch ($ruolo) {
 			
 			case "Cittadino":
-				$nome = $_POST['nome']; $cognome = $_POST['cognome']; $cf = $_POST['codiceFiscale']; $email = $_POST['email']; $password = $_POST['password']; $confermaPass = $_POST['confermaPassword'];
+				$nome = $_POST['nome']; $cognome = $_POST['cognome']; $cf = $_POST['codiceFiscale']; $medico = $_POST['medicoCurante'];
+				$email = $_POST['email']; $password = $_POST['password']; $confermaPass = $_POST['confermaPassword'];
 				$data = [
+					//'ruolo' => "Cittadino",
 					'Nome' => $nome,
 					'Cognome' => $cognome,
 					'CodiceFiscale' => $cf,
+					'MedicoCurante' => $medico,
 					'Email' => $email,
 					'Password' => $password,
 				];
@@ -63,7 +71,17 @@ class Registrazione extends Controller
 							if (strcmp($password, $confermaPass) == 0) {
 								
 								$model->save($data);
-								//echo view('dashboard/dashboard_cittadino');
+								
+								$session = session();
+								
+								$_SESSION['ruolo'] = "Cittadino";
+								$_SESSION['nome'] = $nome;
+								$_SESSION['cognome'] = $cognome;
+								$_SESSION['codicefiscale'] = $cf;
+								$_SESSION['medico'] = $medico;
+								$_SESSION['email'] = $email;
+								
+								
 								return redirect()->to('/Dashboard/vdDashboard/Cittadino');
 							}
 							else {
@@ -86,6 +104,7 @@ class Registrazione extends Controller
 				$email = $_POST['email']; $password = $_POST['password']; $confermaPass = $_POST['confermaPassword'];
 				
 				$data = [
+					//'ruolo' => "Datore",
 					'Nome' => $nome,
 					'Cognome' => $cognome,
 					'CodiceFiscale' => $cf,
@@ -105,6 +124,19 @@ class Registrazione extends Controller
 							if (strcmp($password, $confermaPass) == 0) {
 								
 								$model->save($data);
+								
+								$session = session();
+								
+								$_SESSION['ruolo'] = "Datore";
+								$_SESSION['nome'] = $nome;
+								$_SESSION['cognome'] = $cognome;
+								$_SESSION['codicefiscale'] = $cf;
+								$_SESSION['nomeazienda'] = $nomeAzienda;
+								$_SESSION['partitaIVA'] = $partitaIVA;
+								$_SESSION['cfAzienda'] = $cfAzienda;
+								$_SESSION['email'] = $email;
+								
+								
 								return redirect()->to('/Dashboard/vdDashboard/Datore');
 							}
 							else {
@@ -127,6 +159,7 @@ class Registrazione extends Controller
 				$email = $_POST['email']; $password = $_POST['password']; $confermaPass = $_POST['confermaPassword'];
 				
 				$data = [
+					//'ruolo' => "Medico",
 					'Nome' => $nome,
 					'Cognome' => $cognome,
 					'CodiceFiscale' => $cf,
@@ -146,6 +179,19 @@ class Registrazione extends Controller
 							if (strcmp($password, $confermaPass) == 0) {
 								
 								$model->save($data);
+								
+								$session = session();
+								
+								$_SESSION['ruolo'] = "Medico";
+								$_SESSION['nome'] = $nome;
+								$_SESSION['cognome'] = $cognome;
+								$_SESSION['codicefiscale'] = $cf;
+								$_SESSION['partitaIVA'] = $partitaIVA;
+								$_SESSION['codregionale'] = $codiceRegionale;
+								$_SESSION['asl'] = $asl;
+								$_SESSION['email'] = $email;
+								
+								
 								return redirect()->to('/Dashboard/vdDashboard/Medico');
 							}
 							else {
@@ -163,25 +209,19 @@ class Registrazione extends Controller
 				break;
 			
 			case "Laboratorio":
-				$nomet = $_POST['nometitolare'];
-				$cognomet = $_POST['cognometitolare'];
-				$codfist = $_POST['codfistitolare'];
-				$nome = $_POST['nome'];
-				$pi = $_POST['partitaIva'];
-				$codicefiscale = $_POST['codicefiscale'];
-				$email = $_POST['email'];
-				$password = $_POST['password'];
-				$cpassword = $_POST['confermaPassword'];
+				$nomet = $_POST['nometitolare']; $cognomet = $_POST['cognometitolare']; $cftitolare = $_POST['codfistitolare'];
+				$nome = $_POST['nome']; $pi = $_POST['partitaIva']; $codicefiscale = $_POST['codicefiscale'];
+				$email = $_POST['email']; $password = $_POST['password']; $cpassword = $_POST['confermaPassword'];
 				
 				$data=[
-				'NomeTitolare'=>$nomet,
-				'CognomeTitolare'=>$cognomet,
-				'CodFisTitolare'=>$codfist,
-				'Nome'=>$nome,
-				'PartitaIva'=>$pi,
-				'CodiceFiscale'=>$codicefiscale,
-				'Email'=>$email,
-				'Password'=>$password
+					'NomeTitolare'=>$nomet,
+					'CognomeTitolare'=>$cognomet,
+					'CodFisTitolare'=>$cftitolare,
+					'Nome'=>$nome,
+					'PartitaIva'=>$pi,
+					'CodiceFiscale'=>$codicefiscale,
+					'Email'=>$email,
+					'Password'=>$password
 				];
 				
 				$model = new LaboratorioModel();
@@ -195,9 +235,20 @@ class Registrazione extends Controller
 					
 					if(strcmp($password, $cpassword)==0){
 					  
-					  $model->save($data);
-					  //echo view('dashboard/dash_laboratorio');
-					  return redirect()->to('/Dashboard/vdDashboard/Laboratorio');
+						$model->save($data);
+						
+						$session = session();
+						
+						$_SESSION['ruolo'] = "Laboratorio";
+						$_SESSION['nome'] = $nomet;
+						$_SESSION['cognome'] = $cognomet;
+						$_SESSION['codicefiscale'] = $cftitolare;
+						$_SESSION['nomelab'] = $nome;
+						$_SESSION['partitaIVA'] = $pi;
+						$_SESSION['cflab'] = $codicefiscale;
+						$_SESSION['email'] = $email;
+						
+						return redirect()->to('/Dashboard/vdDashboard/Laboratorio');
 					}
 					else{
 					  echo view('errors/passwordNonCorrispLab', $data);
@@ -214,19 +265,15 @@ class Registrazione extends Controller
 				break;
 				
 			  case "AziendaSanitaria":
-				$nomea = $_POST['nomeazienda'];
-				$part = $_POST['partitaiva'];
-				$codfis = $_POST['codicefiscale'];
-				$email = $_POST['email'];
-				$password = $_POST['password'];
-				$cpassword = $_POST['confermaPassword'];
+				$nomea = $_POST['nomeazienda']; $partitaIVA = $_POST['partitaiva']; $codfis = $_POST['codicefiscale'];
+				$email = $_POST['email']; $password = $_POST['password']; $cpassword = $_POST['confermaPassword'];
 				
 				$data=[
-				'Nome'=>$nomea,
-				'PartitaIva'=>$part,
-				'CodiceFiscale'=>$codfis,
-				'Email'=>$email,
-				'Password'=>$password
+					'Nome'=>$nomea,
+					'PartitaIva'=>$partitaIVA,
+					'CodiceFiscale'=>$codfis,
+					'Email'=>$email,
+					'Password'=>$password
 				];
 				
 				$model = new AziendaSanitariaModel();
@@ -240,9 +287,17 @@ class Registrazione extends Controller
 					
 					if(strcmp($password, $cpassword)==0){
 					  
-					  $model->save($data);
-					  //echo view('dashboard/dash_aziendasan');
-					  return redirect()->to('/Dashboard/vdDashboard/AziendaSanitaria');
+						$model->save($data);
+						
+						$session = session();
+						
+						$_SESSION['ruolo'] = "AziendaSanitaria";
+						$_SESSION['nome'] = $nomea;
+						$_SESSION['partitaIVA'] = $partitaIVA;
+						$_SESSION['codicefiscale'] = $codfis;
+						$_SESSION['email'] = $email;
+						
+						return redirect()->to('/Dashboard/vdDashboard/AziendaSanitaria');
 					}
 					else{
 					  echo view('errors/passwordNonCorrispAz', $data);

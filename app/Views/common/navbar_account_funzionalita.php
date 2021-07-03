@@ -6,10 +6,10 @@
 	<div class="container-fluid">
 	<!--<nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-default">-->
 	  <div class="media align-items-center-home">
-		<a href="/Dashboard/vdDashboard/<?= esc($ruolo) ?>"><i class="fa fa-home" style="font-size:26px ; color:white"></i></a>
+		<a href="/Dashboard/vdDashboard/<?= esc(session()->get('ruolo')) ?>"><i class="fa fa-home" style="font-size:26px ; color:white"></i></a>
 	  </div>
 	  <div class="media align-items-center">
-	    <a href="Account/infoAccount/<?= esc($ruolo) ?>"><div class="media-body ml-2 d-none d-lg-block">
+	    <a href="/Account/infoAccount/<?= esc(session()->get('ruolo')) ?>"><div class="media-body ml-2 d-none d-lg-block">
 			<span class="mb-0 text-sm font-weight-bold">Il Mio Account</span>
         </div></a>            
       </div>

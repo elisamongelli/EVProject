@@ -7,6 +7,7 @@
 <body>
   <div class="main-content">
     <!-- Top navbar -->
+<<<<<<< Updated upstream
 	<?php
 	$ruolo = "Laboratorio";
 	include __DIR__ . "/../common/navbar_account_home.php";
@@ -71,6 +72,11 @@
           <!--</li>
         </ul>-->
     <!-- Header -->
+=======
+	<?php include __DIR__ . "/../common/navbar_account_home.php";?>
+	
+	
+>>>>>>> Stashed changes
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: center;">
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
@@ -109,12 +115,31 @@
             <div class="card-body pt-0 pt-md-4">
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
+<<<<<<< Updated upstream
 		        <div class="h3 mt-4"><a href="#"></br>GESTISCI LE PRENOTAZIONI</span></a></div></br>
                 <div class="h3 mt-4"><a href="#"></br>INVIA REFERTI</span></a></div></br>
                 <!--<div class="h3 mt-4"><a href="#"></br>VISUALIZZA REFERTI</span></a></div></br>-->
                 <div class="h3 mt-4"><a href="#"></br>VISUALIZZA I QUESTIONARI DI ANAMNESI COMPILATI</span></a></div></br>
 				<div class="h3 mt-4"><a href="/CalendarioLab"></br>CALENDARIO : FORNISCI DISPONIBILITÀ PER LE PRENOTAZIONI</span></a></div></br>
 				</br></br><a href="/Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br><!--
+=======
+				<div class="h3 mt-4"><a href="Registrazione">&nbsp Consulta l'opuscolo </a><span style="color:#3a3133c7;"></br>
+                  </span>
+				</div>
+                <div class="h3 mt-4"><a href="Registrazione">&nbsp Gestisci le prenotazioni </a><span style="color:#3a3133c7;"></br>
+                  </span>
+				</div>
+				<div class="h3 mt-4"><a href="Registrazione">&nbsp Invia Referti </a><span style="color:#3a3133c7;"></br>
+                  </span>
+				</div>
+				<div class="h3 mt-4"><a href="/Questionario/visualizzaQuestionari">&nbsp Visualizza i questionari di anamnesi compilati </a><span style="color:#3a3133c7;">
+                  </br></span>
+				</div>
+				<div class="h3 mt-4"><a href="Registrazione">&nbsp Calendario : fornisci disponibilità per le prenotazioni </a><span style="color:#3a3133c7;">
+                  </br></span>
+				</div>
+				</br></br><a href="Opuscolo"><b></b></a></br></br><!--
+>>>>>>> Stashed changes
 				<button class="w3-button w3-section w3-teal w3-ripple opuscolo"> Leggi tutto </button>
 				</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>-->
               </div>

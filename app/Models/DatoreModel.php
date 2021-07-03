@@ -27,7 +27,20 @@ class DatoreModel extends Model
 		if ($datore['Password'] != $password) {
 			return 2;
 		}
-		return 3;
+		else {
+			$session = session();
+			
+			$_SESSION['ruolo'] = "Datore";
+			$_SESSION['nome'] = $datore['Nome'];
+			$_SESSION['cognome'] = $datore['Cognome'];
+			$_SESSION['codicefiscale'] = $datore['CodiceFiscale'];
+			$_SESSION['nomeazienda'] = $datore['NomeAzienda'];
+			$_SESSION['partitaIVA'] = $datore['PartitaIva'];
+			$_SESSION['cfAzienda'] = $datore['CodiceFiscaleAzienda'];
+			$_SESSION['email'] = $datore['Email'];
+			
+			return 3;
+		}
 	}
 	
 }

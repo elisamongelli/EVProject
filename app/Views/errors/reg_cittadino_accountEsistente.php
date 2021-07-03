@@ -32,6 +32,21 @@
 							<p class="pt-md-4">
 								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" value="<?= esc($CodiceFiscale)?>" style="width:90%" required>
 							</p>
+						
+							<p class="pt-md-4" id="mySelect" style="width:90%">
+								<select name="medicoCurante" class="form-control" required>
+								  <option class="firstOption">Medico di Medicina Generale</option>
+								  <?php
+
+									foreach ($medici as $medico)
+									{
+										$med = $medico['Nome']." ".$medico['Cognome']." - ".$medico['AziendaSanitariaLocale'];
+										
+										echo "<option class='otherOptions'>$med</option>";
+									}
+								  ?>
+								</select>
+							</p>
 							
 							<p class="pt-md-4">
 								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>

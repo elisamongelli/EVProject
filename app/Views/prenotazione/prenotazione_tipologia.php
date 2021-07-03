@@ -1,15 +1,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="/css/stle-custom.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/login.css">
 
-<head><title>Covid-19 Prenota un Tampone</title></head>
+<head>
+	<title>Prenotazione Tamponi</title>
+</head>
 
 <body>
   <div class="main-content">
     <!-- Top navbar -->
 	<?php
-		$ruolo = "Cittadino";
 		include __DIR__ . "/../common/navbar_account_funzionalita.php";
 	?>
 	<!-- Top navbar -->
@@ -18,17 +21,9 @@
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: center;">
       <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
-      <!-- Header container --
-      <div class="container-fluid align-items-center">
-        <div class="row">
-          <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Covid-19</h1><!--
-			<h3 class="display-3 text-white">Prenota un Tampone</h3></br>
-            <p class="text-white mt--3 mb-8"><a href="Accesso" style='color:white';><u>Registrati o accedi</u><a> per usufruire dei nostri servizi online</p>--
-          </div>
-        </div>
-      </div>
-    </div>-->
+      <!-- Header container -->
+      <div class="container-fluid align-items-center" style="padding-top: 200px">
+    </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
       <div class="row">
@@ -41,12 +36,20 @@
             <div class="card-body pt-0 pt-md-4">
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
-                <div class="h3 mt-4"><a href="#"></br>PRENOTA UN TAMPONE</span></a></div></br>
-                <div class="h3 mt-4"><a href="#"></br>GESTISCI PRENOTAZIONI</span></a></div></br>
-                <div class="h3 mt-4"><a href="#"></br>VISUALIZZA REFERTI</span></a></div></br>
-                <div class="h3 mt-4"><a href="#"></br>COMPILA QUESTIONARIO ANAMNESI</span></a></div></br>
-				</br></br><a href="Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>
-              </div>
+				<center>
+					<form name="tipoTampone" method="post" action="/Prenotazione/cercaLaboratorio">
+						
+						<p class="pt-md-4">Tipologia del tampone :&ensp;
+							<input type="radio" name="tipologia">
+							<label> Tampone molecolare&ensp;</label>
+							<input type="radio" name="tipologia">
+							<label> Tampone antigenico rapido&ensp;</label></br>
+						</p>
+					  
+					  <button class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
+					</form>
+				</center>
+			  </div>
             </div>
           </div>
         </div>
