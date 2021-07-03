@@ -19,9 +19,7 @@
       <div class="container-fluid align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Covid-19</h1><!--
-			<h3 class="display-3 text-white">Prenota un Tampone</h3></br>
-            <p class="text-white mt--3 mb-8"><a href="Accesso" style='color:white';><u>Registrati o accedi</u><a> per usufruire dei nostri servizi online</p>-->
+            <h1 class="display-2 text-white">Covid-19</h1>
           </div>
         </div>
       </div>
@@ -38,11 +36,11 @@
             <div class="card-body pt-0 pt-md-4">
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
-                <div class="h3 mt-4"><a href="/Prenotazione"></br>PRENOTA UN TAMPONE</span></a></div></br>
-                <div class="h3 mt-4"><a href="#"></br>GESTISCI PRENOTAZIONI</span></a></div></br>
+                <div class="h3 mt-4"><a href="/Prenotazione"></br>PRENOTA TAMPONI</span></a></div></br>
+                <div class="h3 mt-4"><a href="/Calendario"></br>GESTISCI PRENOTAZIONI</span></a></div></br>
                 <div class="h3 mt-4"><a href="/Referto"></br>VISUALIZZA REFERTI</span></a></div></br>
-                <div class="h3 mt-4"><a href="#"></br>SEGNALA RISULTATI</span></a></div></br>
-				</br></br><a href="Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>
+                <div class="h3 mt-4"><a href="/SegnalaRisultati"></br>SEGNALA RISULTATI</span></a></div></br>
+				</br></br><a href="/Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>
               </div>
             </div>
           </div>

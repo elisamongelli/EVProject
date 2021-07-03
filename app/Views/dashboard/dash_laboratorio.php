@@ -32,28 +32,14 @@
         <div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
           <div class="card card-profile shadow">
             <div class="row justify-content-center">
-              <div class="col-lg-3 order-lg-2"><!--
-                <div class="card-profile-image">
-                  <a href="#">
-                    <img src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg" class="rounded-circle">
-                  </a>
-                </div>-->
+              <div class="col-lg-3 order-lg-2">
               </div>
-            </div><!--
-            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-              <div class="d-flex justify-content-between">
-                <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
-                <a href="#" class="btn btn-sm btn-default float-right">Message</a>
-              </div>
-            </div>-->
+            </div>
             <div class="card-body pt-0 pt-md-4">
               <div class="text-center">
-
-		        <div class="h3 mt-4"><a href="#"></br>GESTISCI LE PRENOTAZIONI</span></a></div></br>
                 <div class="h3 mt-4"><a href="#"></br>INVIA REFERTI</span></a></div></br>
-                <!--<div class="h3 mt-4"><a href="#"></br>VISUALIZZA REFERTI</span></a></div></br>-->
-                <div class="h3 mt-4"><a href="#"></br>VISUALIZZA I QUESTIONARI DI ANAMNESI COMPILATI</span></a></div></br>
-				<div class="h3 mt-4"><a href="/CalendarioLab"></br>CALENDARIO : FORNISCI DISPONIBILITÀ PER LE PRENOTAZIONI</span></a></div></br>
+                <div class="h3 mt-4"><a href="/Questionario/visualizzaQuestionari"></br>VISUALIZZA I QUESTIONARI DI ANAMNESI COMPILATI</span></a></div></br>
+				<div class="h3 mt-4"><a href="/CalendarioLab"></br>CALENDARIO : FORNISCI DISPONIBILITÀ E GESTISCI PRENOTAZIONI</span></a></div></br>
 				</br></br><a href="/Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>
             </div>
           </div>
