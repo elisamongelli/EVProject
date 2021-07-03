@@ -7,7 +7,10 @@
 <body>
   <div class="main-content">
     <!-- Top navbar -->
-	<?php include __DIR__ . "/../common/navbar_account_home.php";?>
+	<?php
+	$ruolo = "AziendaSanitaria";
+	include __DIR__ . "/../common/navbar_account_home.php";
+	?>
 	<!-- Top navbar -->
 
 
@@ -106,13 +109,8 @@
             <div class="card-body pt-0 pt-md-4">
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
-				<div class="h3 mt-4"><a href="Registrazione">&nbsp Consulta l'opuscolo </a><span style="color:#3a3133c7;"></br>
-                  </span>
-				</div>
-                <div class="h3 mt-4"><a href="Registrazione">&nbsp Visualizza i referti dei tamponi </a><span style="color:#3a3133c7;"></br>
-                  </span>
-				</div>
-				</br></br><a href="Opuscolo"><b></b></a></br></br><!--
+				<div class="h3 mt-4"><a href="#"></br>VISUALIZZA I REFERTI DEI TAMPONI</span></a></div></br>
+				</br></br><a href="/Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br><!--
 				<button class="w3-button w3-section w3-teal w3-ripple opuscolo"> Leggi tutto </button>
 				</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>-->
               </div>

@@ -8,7 +8,10 @@
 <body>
   <div class="main-content">
     <!-- Top navbar -->
-	<?php include __DIR__ . "/../common/navbar_account_home.php";?>
+	<?php
+	$ruolo = "Datore";
+	include __DIR__ . "/../common/navbar_account_home.php";
+	?>
 	<!-- Top navbar -->
 
     <!-- Header -->
@@ -39,9 +42,9 @@
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
                 <div class="h3 mt-4"><a href="#"></br>PRENOTA TAMPONI</span></a></div></br>
-                <div class="h3 mt-4"><a href="#"></br>GESTISCI PRENOTAZIONI</span></a></div></br>
-                <div class="h3 mt-4"><a href="#"></br>VISUALIZZA REFERTI</span></a></div></br>
-				</br></br><a href="Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>
+                <div class="h3 mt-4"><a href="/Calendario"></br>GESTISCI PRENOTAZIONI</span></a></div></br>
+                <div class="h3 mt-4"><a href="/VisuaReferti"></br>VISUALIZZA REFERTI</span></a></div></br>
+				</br></br><a href="/Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>
               </div>
             </div>
           </div>

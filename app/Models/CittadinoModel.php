@@ -11,6 +11,7 @@ class CittadinoModel extends Model
 	
 	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'Email', 'Password'];
 	
+
 	
 	public function getUtente($email, $password) {
 		
@@ -18,7 +19,6 @@ class CittadinoModel extends Model
 		$cittadino = $this->asArray()
 					->where(['Email' => $email])
 					->first();
-		
 		
 		if (empty($cittadino))
 		{

@@ -12,6 +12,8 @@ use CodeIgniter\Controller;
 
 class Accesso extends Controller
 {
+	public $userData;
+	
     public function index()
     {		
 		return view('accesso');
@@ -46,7 +48,6 @@ class Accesso extends Controller
 		
 		$userValido = $model->getUtente($email, $password);
 		
-		
 		if ($userValido == 1) {
 			echo view('errors/emailInesistente');
 		}
@@ -56,6 +57,12 @@ class Accesso extends Controller
 		else if ($userValido == 3) {
 			switch ($ruolo) {
 				case "Cittadino":
+					//$user=$userValido[1];
+
+					//echo 'userData: '.$user['Nome'].' '.$user['Cognome'].' '.$user['CodiceFiscale'].' '.$user['MedicoCurante'].' '.$user['Email'];
+					
+					 //$this->load->library( array('session', 'form_validation') );
+					
 					return redirect()->to('/Dashboard/vdDashboard/Cittadino');
 					break;
 				case "Datore di Lavoro":
