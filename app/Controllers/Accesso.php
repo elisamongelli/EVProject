@@ -59,13 +59,7 @@ class Accesso extends Controller
 		else if ($userValido == 3) {
 			
 			switch ($ruolo) {
-				case "Cittadino":
-					//$user=$userValido[1];
-
-					//echo 'userData: '.$user['Nome'].' '.$user['Cognome'].' '.$user['CodiceFiscale'].' '.$user['MedicoCurante'].' '.$user['Email'];
-					
-					 //$this->load->library( array('session', 'form_validation') );
-					
+				case "Cittadino":					
 					return redirect()->to('/Dashboard/vdDashboard/Cittadino');
 					break;
 				case "Datore":
