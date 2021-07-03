@@ -37,7 +37,6 @@
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
                 <div class="h3 mt-4"><a href="/Prenotazione"></br>PRENOTA TAMPONI</span></a></div></br>
-                <div class="h3 mt-4"><a href="/Calendario"></br>GESTISCI PRENOTAZIONI</span></a></div></br>
                 <div class="h3 mt-4"><a href="/Referto"></br>VISUALIZZA REFERTI</span></a></div></br>
                 <div class="h3 mt-4"><a href="/SegnalaRisultati"></br>SEGNALA RISULTATI</span></a></div></br>
 				</br></br><a href="/Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>
