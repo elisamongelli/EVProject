@@ -67,13 +67,7 @@ class Prenotazione extends Controller
 	
 	public function cercaLaboratorio()
     {
-		$tipologiaTampone = $_POST['tipologia'];
-		
-		$data = [
-			'tipologiaTampone' => $tipologiaTampone,
-		];
-		
-		return view('prenotazione/prenotazione_labVicini', $data);
+		return view('prenotazione/prenotazione_labVicini');
     }/*
 	
 	public function visualizzaQuestionari()

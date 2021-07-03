@@ -74,6 +74,11 @@
 					
 					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAGD-JlQ-N1_FSLdrJJu1g6i1oLpSQJNA&callback=initMap"></script>
 					
+					<form name="laboratorio" method="post" action="/CalendarioPrenot">
+						
+						<button class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
+					</form>
+					
 					<!--
 					<div id="map"></div>
 					

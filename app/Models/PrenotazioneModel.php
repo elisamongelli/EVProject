@@ -7,9 +7,9 @@ use CodeIgniter\Model;
 class PrenotazioneModel extends Model
 {
 	
-	protected $table = 'Prenotazioni';
+	protected $table = 'PrenotazioniDati';
 	
-	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'DataNascita', 'LuogoNascita', 'Citta', 'NumTelefono', 'Email', 'LaboratorioAnalisi', 'Data'];
+	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'DataNascita', 'LuogoNascita', 'Citta', 'NumTelefono', 'Email', 'LaboratorioAnalisi'];
 	
 	
 	public function getAllPrenotazioni() {

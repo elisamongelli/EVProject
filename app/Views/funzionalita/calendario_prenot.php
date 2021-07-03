@@ -45,7 +45,7 @@
         </div>
 		<div class="interaction">
 			<div class="add-event-day">
-				<input hidden type="text" class="add-event-day-field" placeholder="Create an Event" value=""> 
+				<input hidden type="text" class="add-event-day-field" placeholder="Create an Event" value="<?= esc(session()->get('codicefiscale')) ?>">
 				<span id="prenotazione-submit" class="cursor-pointer add-event-day-field-btn">Prenota</span>
 			</div>
 			<!--<div class="hour-start">
