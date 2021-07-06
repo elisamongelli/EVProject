@@ -23,15 +23,12 @@
 					  <center>
 
 
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/all2.css">
-</head>
-<body>
+
 
 <div class="calendar disable-selection" id="calendar">
     <div class="left-side">
@@ -74,8 +71,7 @@
 </div>
 
 <script async src="js/all2.js"></script>
-</body>
-</html>
+
 					  </center>
 					
 				  
