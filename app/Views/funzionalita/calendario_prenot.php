@@ -1,3 +1,15 @@
+<?PHP
+    $numeroPrenotazioni = session()->get('numeroPrenotazioni');
+    //$numeroPrenotazioni = count(session()->get('prenotazioni'));
+
+    if ($numeroPrenotazioni == 1) {
+        $path = '/Prenotazione/mostraResoconto';
+    }
+    else {
+        $path = '/CalendarioPrenot';
+    }
+?>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="css/stle-custom.css" rel="stylesheet">
@@ -31,7 +43,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/all.css">
 </head>
-<body>
+
 
 <div class="calendar disable-selection" id="calendar">
     <div class="left-side">
@@ -45,7 +57,7 @@
         </div>
 		<div class="interaction">
 			<div class="add-event-day">
-				<input hidden type="text" class="add-event-day-field" placeholder="Create an Event" value="<?= esc(session()->get('codicefiscale')) ?>">
+				<input type="text" class="add-event-day-field" placeholder="Create an Event" value="<?= esc(session()->get('codicefiscale')) ?>">
 				<span id="prenotazione-submit" class="cursor-pointer add-event-day-field-btn">Prenota</span>
 			</div>
 			<!--<div class="hour-start">
@@ -74,11 +86,26 @@
 </div>
 
 <script async src="js/all.js"></script>
-</body>
-</html>
+
+
 					  </center>
-					
-				  
+
+                        
+                        <div class="row justify-content-center">
+                            <div class="card-body pt-0 pt-md-4">
+                                <div class="text-center">
+                                    <center>
+                                        <form name="calendario" method="post" action="<?= esc($path) ?>">
+                                            
+                                            <h1><?= esc($numeroPrenotazioni) ?></h1>
+                                            <p><?php print_r(session()->get('prenotazioni')); ?></p>
+                                            
+                                            <button style="margin-left:30%" class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
+                                        </form>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
 				</div>
 			  </div>
 			</div>

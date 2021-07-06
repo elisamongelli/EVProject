@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use CodeIgniter\Database\Query;
 
 class PrenotazioneModel extends Model
 {
@@ -15,32 +16,12 @@ class PrenotazioneModel extends Model
 	public function getAllPrenotazioni() {
 		
 		return $this->findAll();
-	}/*
-	
-	public function getPrenotazioniLab() {
-		
-		$lab = session()->get('nomelab');
-		
-		$questionari = $this->asArray()
-					->where(['LaboratorioAnalisi' => $lab])
-					->findAll();
-		
-		return $questionari;
 	}
 	
-	public function getQuestionario($codice) {
+	public function getPrenotazioniNoLab() {
 		
-		
-		$questionario = $this->asArray()
-					->where(['Codice' => $codice])
-					->first();
-		
-		$lab = session()->get('nomelab');
-		
-		if (empty($questionario) or $questionario['LaboratorioAnalisi'] != $lab)
-		{
-			return 1;
-		}
-		return $questionario;
-	}*/
+		return $prenotazioni = $this->asArray()
+					->where(['LaboratorioAnalisi' => ""])
+					->findAll();
+	}
 }

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PrenotazioneModel;
+use App\Models\LaboratorioModel;
 
 use CodeIgniter\Controller;
 
@@ -23,6 +24,7 @@ class Prenotazione extends Controller
     public function inserisciDati()
     {
 		$numeroPrenotazioni = $_POST['numeroPrenotazioni'];
+		session()->set('numeroPrenotazioni', $numeroPrenotazioni);
 		
 		$data = [
 			'numeroPrenotazioni' => $numeroPrenotazioni,
@@ -34,6 +36,10 @@ class Prenotazione extends Controller
 	public function salvaDati()
     {
 		$numeroPrenotazioni = $_POST['numeroPrenotazioni'];
+
+		if(session()->get('ruolo') == 'Cittadino') {
+			session()->set('numeroPrenotazioni', 1);
+		}
 		
 		$nome = $_POST['nome']; $cognome = $_POST['cognome']; $cf = $_POST['codiceFiscale'];
 		$dataNascita = $_POST['dataNascita']; $luogoNascita = $_POST['luogoNascita']; $citta = $_POST['citta'];
@@ -67,42 +73,66 @@ class Prenotazione extends Controller
 	
 	public function cercaLaboratorio()
     {
-		return view('prenotazione/prenotazione_labVicini');
-    }/*
-	
-	public function visualizzaQuestionari()
-    {
-		$model = new QuestionarioModel();
+		$model = new LaboratorioModel();
 		
 		$data = [
-			'questionari' => $model->getAllQuestionari(),
+			'laboratori' => $model->getAllLaboratori(),
 		];
-		
-		//print_r($data);
-		
-		return view('elenco_questionari', $data);
+
+		return view('prenotazione/prenotazione_labVicini', $data);
     }
 	
-	public function cercaQuestionario()
+	public function salvaLab($laboratorio)
     {
-		$codice = $_POST['codice'];
-		
-		$model = new QuestionarioModel();
-		
-		$questionario = $model->getQuestionario($codice);
-		
-		
-		if ($questionario == 1) {
-			
+		$model = new PrenotazioneModel();
+
+		//session_start();
+
+		//echo(session()->get('numeroPrenotazioni'));
+
+		$prenotazioni = $model->getPrenotazioniNoLab();
+		//$_SESSION['prenotazioni'] = array();
+
+		for ($i = 0; $i < count($prenotazioni); $i++) {
 			$data = [
-				'questionari' => $model->getAllQuestionari(),
+				'Nome' => $prenotazioni[$i]['Nome'],
+				'Cognome' => $prenotazioni[$i]['Cognome'],
+				'CodiceFiscale' => $prenotazioni[$i]['CodiceFiscale'],
+				'DataNascita' => $prenotazioni[$i]['DataNascita'],
+				'LuogoNascita' => $prenotazioni[$i]['LuogoNascita'],
+				'Citta' => $prenotazioni[$i]['Citta'],
+				'NumTelefono' => $prenotazioni[$i]['NumTelefono'],
+				'Email' => $prenotazioni[$i]['Email'],
+				'LaboratorioAnalisi' => $laboratorio,
 			];
+
+			$prenotazioni[$i]['LaboratorioAnalisi'] = $laboratorio;
+
+			$model->replace($data);
+
+			$_SESSION['prenotazioni'][$i] = $prenotazioni[$i]['CodiceFiscale'];
 			
-			return view('errors/questionario_nonTrovato', $data);
+			//redirect()->to('/CalendarioPrenot');
+			//echo($_SESSION['prenotazione']);
+			//echo($i);
+			//echo view('funzionalita/calendario_prenot');
 		}
-		else {
-			
-			return view('questionario_trovato', $questionario);
-		}
-    }*/
+
+		session()->set('prenotazioni', $prenotazioni);
+
+		//print_r($_SESSION['prenotazioni']);
+		//print_r(session()->get('prenotazioni'));
+		//echo(count($_SESSION['prenotazioni']));
+
+		//$_SESSION['numeroPrenotazioni'] = count($prenotazioni);
+		//echo session()->get('numeroPrenotazioni');
+		//echo($_SESSION['numeroPrenotazioni']);
+
+		return redirect()->to('/CalendarioPrenot');
+    }
+
+	public function mostraResoconto() {
+
+		return view('prenotazione/prenotazione_resoconto');
+	}
 }

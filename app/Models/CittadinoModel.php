@@ -36,6 +36,8 @@ class CittadinoModel extends Model
 			$_SESSION['codicefiscale'] = $cittadino['CodiceFiscale'];
 			$_SESSION['medico'] = $cittadino['MedicoCurante'];
 			$_SESSION['email'] = $cittadino['Email'];
+			$_SESSION['numeroPrenotazioni'] = 0;
+			$_SESSION['prenotazioni'] = array();
 			
 			return 3;
 		}
