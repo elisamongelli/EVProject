@@ -62,8 +62,6 @@
 						$sql2 = "SELECT Esito FROM Referti WHERE CodiceFiscale='" . $_SESSION['codicefiscale'] . "'";
 						$result2 = $conn->query($sql2);
 						
-						$sql3 = "DELETE FROM Prenotazioni WHERE CodiceFiscale='" . $_SESSION['codicefiscale'] . "'";  
-						$result3 = $conn->query($sql3);
 
 						if ($result !== false && $result->num_rows > 0) {
 						  // output data of each row
@@ -75,16 +73,16 @@
 								while($row = $result2->fetch_assoc()) {
 								
 								if($row["Esito"]=="Positivo"){
-									echo "<br>" . "<div style='color:black;'>" . "Esito : " ."<div style='color:green;'>" . $row["Esito"]. "<br>" . "</div>";
+									echo "<br>" . "<div style='color:black;'>" . "Esito : " ."<div style='color:red;'>" . $row["Esito"]. "<br>" . "</div>";
 								}
 								else if($row["Esito"]=="Negativo"){
-									echo "<br>" . "<div style='color:black;'>" . "Esito : " . "</div>" .  "<div style='color:red;'>" . $row["Esito"]. "<br>" . "</div>";
+									echo "<br>" . "<div style='color:black;'>" . "Esito : " . "</div>" .  "<div style='color:green;'>" . $row["Esito"]. "<br>" . "</div>";
 								}
 							}
 							  }
 							else{
 								echo "<span class='deleteMember'>
-										<form action='' method='POST'>
+										<form action='/EliminaPrenotazione' method='POST'>
 										<button type='submit'>Elimina Prenotazione</button>
 									</form>
 									</span>";	       

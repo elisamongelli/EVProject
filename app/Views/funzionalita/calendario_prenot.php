@@ -15,19 +15,40 @@
 <link href="css/stle-custom.css" rel="stylesheet">
 <link rel="stylesheet" href="css/login.css">
 
-
 <body>
-	<div class="main-content" style='height: 100%; overflow: hidden'>
+	<div class="main-content">
 		<?php
 		$ruolo = "Cittadino";
 		include __DIR__ . "/../common/navbar_account_funzionalita.php";
-		?>
+		?><!--
 
-		<h1 class="h1-ruoli" style='text-align:center ; color:white; background-color:white'></br></br></h1>
+		<div class="w3-container w3-half w3-margin-top">
+			<div class="w3-container w3-card-4">
+				<form method="post" action="login.php">
+
+					<p>
+					<input class="w3-input" type="text" name="name" style="width:90%" required>
+					<label>Email</label></p>
+					<p>
+					<input class="w3-input" type="password" name="password" style="width:90%" required>
+					<label>Password</label></p>
+				
+					<button class="w3-button w3-section w3-teal w3-ripple"> Log In </button>
+				</form>
+
+				<a href="signin.html"><button class="w3-button w3-section w3-teal w3-ripple singin"> Sign Up </button>
+				
+			</div>
+		</div>-->
+
+		<h1 class="h1-ruoli" style='text-align:center ; color:white; background-color:white'><b></br></br></b></h1>
 		
 		<div class="header pb-8 pt-0 d-flex align-items-center" style="min-height: 83%; background-color:white">
 		
 		
+		<!--<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 94%; background-color:#1a174dc9">-->
+		<!-- Mask --
+		<span class="mask bg-gradient-default opacity-8"></span>-->
 			<div class="container-fluid pt-5">
 			  <div class="row">
 				<div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
@@ -35,83 +56,86 @@
 					  <center>
 
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/all.css">
-</head>
+						<html lang="en">
+						<head>
+							<meta charset="UTF-8">
+							
+							<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+							<link rel="stylesheet" href="css/font-awesome.min.css">
+							<link rel="stylesheet" href="css/all.css">
+						</head>
 
 
-<div class="calendar disable-selection" id="calendar">
-    <div class="left-side">
-        <div class="current-day text-center">
-            <h1 class="calendar-left-side-day"></h1>
-            <div class="calendar-left-side-day-of-week"></div>
-        </div>
-        <div class="current-day-events">
-            <div>Orari disponibili :</div>
-            <ul class="current-day-events-list"></ul>
-        </div>
-		<div class="interaction">
-			<div class="add-event-day">
-				<input type="text" class="add-event-day-field" placeholder="Create an Event" value="<?= esc(session()->get('codicefiscale')) ?>">
-				<span id="prenotazione-submit" class="cursor-pointer add-event-day-field-btn">Prenota</span>
-			</div>
-			<!--<div class="hour-start">
-			<input type="time" id="hour-start" class="hour-start-value" name="appt">
-			</div>-->
-		</div>
-    </div>
-    <div class="right-side">
-        <div class="text-right calendar-change-year">
-            <div class="calendar-change-year-slider">
-                <span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
-                <span class="calendar-current-year"></span>
-                <span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
-            </div>
-        </div>
-        <div class="calendar-month-list">
-            <ul class="calendar-month"></ul>
-        </div>
-        <div class="calendar-week-list">
-            <ul class="calendar-week"></ul>
-        </div>
-        <div class="calendar-day-list">
-            <ul class="calendar-days"></ul>
-        </div>
-    </div>
-</div>
+						<div class="calendar disable-selection" id="calendar">
+							<div class="left-side">
+								<div class="current-day text-center">
+									<h1 class="calendar-left-side-day"></h1>
+									<div class="calendar-left-side-day-of-week"></div>
+								</div>
+								<div class="current-day-events">
+									<div>Orari disponibili :</div>
+									<ul class="current-day-events-list"></ul>
+								</div>
+								<div class="interaction">
+									<div class="add-event-day">
+										<input type="text" class="add-event-day-field" placeholder="Create an Event" value="<?= esc(session()->get('codicefiscale')) ?>">
+										<span id="prenotazione-submit" class="cursor-pointer add-event-day-field-btn">Prenota</span>
+									</div>
+									<!--<div class="hour-start">
+									<input type="time" id="hour-start" class="hour-start-value" name="appt">
+									</div>-->
+								</div>
+							</div>
+							<div class="right-side">
+								<div class="text-right calendar-change-year">
+									<div class="calendar-change-year-slider">
+										<span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
+										<span class="calendar-current-year"></span>
+										<span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
+									</div>
+								</div>
+								<div class="calendar-month-list">
+									<ul class="calendar-month"></ul>
+								</div>
+								<div class="calendar-week-list">
+									<ul class="calendar-week"></ul>
+								</div>
+								<div class="calendar-day-list">
+									<ul class="calendar-days"></ul>
+								</div>
+							</div>
+						</div>
 
-<script async src="js/all.js"></script>
+						<script async src="js/all.js"></script>
 
 
-					  </center>
+											  </center>
 
-                        
-                        <div class="row justify-content-center">
-                            <div class="card-body pt-0 pt-md-4">
-                                <div class="text-center">
-                                    <center>
-                                        <form name="calendario" method="post" action="<?= esc($path) ?>">
-                                            
-                                            <h1><?= esc($numeroPrenotazioni) ?></h1>
-                                            <p><?php print_r(session()->get('prenotazioni')); ?></p>
-                                            
-                                            <button style="margin-left:30%" class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
-                                        </form>
-                                    </center>
-                                </div>
-                            </div>
-                        </div>
-				</div>
+												
+												<div class="row justify-content-center">
+													<div class="card-body pt-0 pt-md-4">
+														<div class="text-center">
+															<center>
+																<form name="calendario" method="post" action="<?= esc($path) ?>">
+																	
+																	<h1><?= esc($numeroPrenotazioni) ?></h1>
+																	<p><?php print_r(session()->get('prenotazioni')); ?></p>
+																	
+																	<button style="margin-left:30%" class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
+																</form>
+															</center>
+														</div>
+													</div>
+												</div>
+										</div>
 			  </div>
 			</div>
 		</div>
 	</div>
 </body>
+
+
+
 
 
 
