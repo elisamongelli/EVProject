@@ -3,6 +3,7 @@
 <link href="css/stle-custom.css" rel="stylesheet">
 <link rel="stylesheet" href="css/login.css">
 
+<!-- efettua pagamento -->
 
 <body style="color: black">
 	<div class="main-content">
@@ -23,7 +24,7 @@
 				<div class="row">
   <div class="col-75">
     <div class="container">
-      <form method="POST" action="/Pagamento/salvaDati">
+      <form method="POST" action="/Pagamento/salvaDati" id="formPagamento">
 
         <div class="row">
           <div class="col-50">
@@ -73,18 +74,18 @@
             <label for="cname">Nome sulla carta</label>
             <input type="text" id="nome" name="cardname">
             <label for="ccnum">Numero della carta</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <input type="text" id="ccnum" name="cardnumber">
             <label for="expmonth">Mese</label>
-            <input type="text" id="expmonth" name="expmonth">
+            <input type="text" id="month" name="expmonth">
 
             <div class="row">
               <div class="col-50">
                 <label for="expyear">Anno</label>
-                <input type="text" id="expyear" name="expyear">
+                <input type="text" id="year" name="expyear">
               </div>
               <div class="col-50">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv">
+                <input type="text" id="c" name="cvv">
               </div>
 			  <!--<div class="col-50">
 		      <br><b><label for="expmonth">Prezzo 25€</label></b></br>
@@ -98,7 +99,7 @@
           <!--<b>4</b>-->
         </span>
       </h4>
-      <p><span>€25</span></p></br>
+      <p><span>€<?= esc($prezzo) ?></span></p></br>
       <!--<p><a href="#">Product 2</a> <span class="price">$5</span></p>
       <p><a href="#">Product 3</a> <span class="price">$8</span></p>
       <p><a href="#">Product 4</a> <span class="price">$2</span></p>-->
@@ -111,7 +112,8 @@
         </div>
 
         <!--<input type="submit" value="Conferma Pagamento" class="btn">-->
-		<button class="w3-button w3-section w3-teal w3-ripple accesso"> Conferma Pagamento</button>
+		<div class="textError" id="errorString" style="display:none">Tutti i campi sono obbligatori</div>
+		<button type="button" onClick="submitForm();" class="w3-button w3-section w3-teal w3-ripple accesso"> Conferma Pagamento</button>
 		
       </form>
     </div>
@@ -125,6 +127,133 @@
 			</div>
 		</div>
 	</div>
+	
+
+<!-- script che controlla i campi prima di fare submit -->	
+<script text="text/javascript">
+
+window.scrollBy({ 
+  top: 100, // could be negative value
+  left: 0, 
+  behavior: 'smooth' 
+});
+
+	function submitForm(){
+		var form = document.getElementById('formPagamento');
+		
+		var error=false;
+
+		//controlla tutti i campi di form (es. form.card number, form.nome carta ecc...) se senza errori submit
+		
+		if(form.nome[0].value == ""){
+			form.nome[0].classList.add("errordiv");
+			error=true;
+		}else{
+			form.nome[0].classList.remove("errordiv");
+		}
+		
+		if(form.cognome.value == ""){
+			form.cognome.classList.add("errordiv");
+			error=true;
+		}else{
+			form.cognome.classList.remove("errordiv");
+		}
+		
+		if(form.codiceFiscale.value == ""){
+			form.codiceFiscale.classList.add("errordiv");
+			error=true;
+		}else{
+			form.codiceFiscale.classList.remove("errordiv");
+		}
+		
+		if(form.email.value == ""){
+			form.email.classList.add("errordiv");
+			error=true;
+		}else{
+			form.email.classList.remove("errordiv");
+		}
+		
+		if(form.citta.value == ""){
+			form.citta.classList.add("errordiv");
+			error=true;
+		}else{
+			form.citta.classList.remove("errordiv");
+		}
+		
+		if(form.indirizzo.value == ""){
+			form.indirizzo.classList.add("errordiv");
+			error=true;
+		}else{
+			form.indirizzo.classList.remove("errordiv");
+		}
+		
+		if(form.cap.value == "" || form.cap.value.length!=5){
+			form.cap.classList.add("errordiv");
+			error=true;
+		}else{
+			form.cap.classList.remove("errordiv");
+		}
+		
+		
+		if(form.cardname.value == ""){
+			form.cardname.classList.add("errordiv");
+			error=true;
+		}else{
+			form.cardname.classList.remove("errordiv");
+		}
+		
+	
+		var ccnum = form.cardnumber.value.replaceAll('-', '');
+		 
+		 
+		if(ccnum == "" || ccnum.length!= 16){
+			form.ccnum.classList.add("errordiv");
+			error=true;
+		}else{
+			form.ccnum.classList.remove("errordiv");
+		}
+		
+		
+		/*if(expmonth == "" || expmonth.length!= 2){
+			form.expmonth.classList.add("errordiv");
+			error=true;
+		}else{
+			form.expmonth.classList.remove("errordiv");
+		}
+				
+		if(cvv == "" || cvv.length!= 3){
+			form.cvv.classList.add("errordiv");
+			error=true;
+		}else{
+			form.cvv.classList.remove("errordiv");
+		}
+		
+		
+		if(expyear == "" || expyear.length!= 4){
+			form.expyear.classList.add("errordiv");
+			error=true;
+		}else{
+			form.expyear.classList.remove("errordiv");
+		}*/
+		
+
+		
+		if(!error){
+			document.getElementById("errorString").style.display = "none";
+			form.submit();
+			
+		}else{
+			document.getElementById('formPagamento').scrollIntoView();
+			document.getElementById("errorString").style.display = "block";
+		}
+			
+		
+			
+		};
+
+    
+</script>
+	
 </body>
 
 

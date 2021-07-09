@@ -12,4 +12,20 @@ class PagamentoModel extends Model
 	protected $allowedFields = ['CodiceFiscale', 'Citta', 'Indirizzo', 'CAP', 'NomeCarta', 'NumeroCarta', 'Mese', 'Anno', 'CVV'];
 	
 	
+		public function getUtente($numcarta) {
+		
+		
+		$pagamento = $this->asArray()
+					->where(['NumeroCarta' => $numcarta])
+					->first();
+		
+		if (empty($pagamento))
+		{
+			return 1;
+		}
+		else {
+			return 2;
+		}
+	}
+	
 }

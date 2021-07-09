@@ -84,3 +84,12 @@ span.price {
     margin-bottom: 20px;
   }
 }
+
+
+.errordiv {
+    border-color: red !important;
+}
+
+div#errorString {
+    color: red;
+}

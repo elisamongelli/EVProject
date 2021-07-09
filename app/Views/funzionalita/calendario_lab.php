@@ -40,7 +40,7 @@
 			<div class="container-fluid pt-5">
 			  <div class="row">
 				<div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
-				  <div class="card card-profile shadow"><!--
+				  <!--
 					<div class="row justify-content-center">
 					  <div class="col-lg-3 order-lg-2">
 						<div class="card-profile-image">
@@ -123,7 +123,7 @@
 						<script async src="js/all2.js"></script>
 					  </center>
 					</div>
-				  </div>
+				  
 				</div>
 			  </div>
 			</div>
