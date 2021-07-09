@@ -213,6 +213,10 @@ textarea {
   margin: 0;
 }
 
+input[type='file'] {
+  font-size:0!important;
+}
+
 button,
 input {
   overflow: visible;
@@ -298,6 +302,7 @@ progress {
 }
 
 ::-webkit-file-upload-button {
+  display:none!important;
   font: inherit;
   -webkit-appearance: button;
 }
@@ -1277,6 +1282,10 @@ button.bg-white:focus {
   margin-right: 1rem !important;
 }
 
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
 .mt-4,
 .my-4 {
   margin-top: 1.5rem !important;
@@ -1293,6 +1302,10 @@ button.bg-white:focus {
 
 .mb-5 {
   margin-bottom: 3rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
 }
 
 .mb-8 {

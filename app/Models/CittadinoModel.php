@@ -36,10 +36,25 @@ class CittadinoModel extends Model
 			$_SESSION['codicefiscale'] = $cittadino['CodiceFiscale'];
 			$_SESSION['medico'] = $cittadino['MedicoCurante'];
 			$_SESSION['email'] = $cittadino['Email'];
+			$_SESSION['tipologiaTampone'] = "";
 			$_SESSION['numeroPrenotazioni'] = 0;
 			$_SESSION['prenotazioni'] = array();
 			
 			return 3;
+		}
+	}
+
+	public function getMedico($codicefiscale) {
+
+		$cittadino = $this->asArray()
+					->where(['CodiceFiscale' => $codicefiscale])
+					->first();
+		
+		if (empty($cittadino)) {
+			return 1;
+		}
+		else {
+			return $cittadino['MedicoCurante'];
 		}
 	}
 }

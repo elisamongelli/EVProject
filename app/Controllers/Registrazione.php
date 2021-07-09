@@ -80,6 +80,9 @@ class Registrazione extends Controller
 								$_SESSION['codicefiscale'] = $cf;
 								$_SESSION['medico'] = $medico;
 								$_SESSION['email'] = $email;
+								$_SESSION['tipologiaTampone'] = "";
+								$_SESSION['numeroPrenotazioni'] = 0;
+								$_SESSION['prenotazioni'] = array();
 								
 								
 								return redirect()->to('/Dashboard/vdDashboard/Cittadino');
@@ -135,6 +138,9 @@ class Registrazione extends Controller
 								$_SESSION['partitaIVA'] = $partitaIVA;
 								$_SESSION['cfAzienda'] = $cfAzienda;
 								$_SESSION['email'] = $email;
+								$_SESSION['tipologiaTampone'] = "";
+								$_SESSION['numeroPrenotazioni'] = 0;
+								$_SESSION['prenotazioni'] = array();
 								
 								
 								return redirect()->to('/Dashboard/vdDashboard/Datore');
@@ -190,6 +196,9 @@ class Registrazione extends Controller
 								$_SESSION['codregionale'] = $codiceRegionale;
 								$_SESSION['asl'] = $asl;
 								$_SESSION['email'] = $email;
+								$_SESSION['tipologiaTampone'] = "";
+								$_SESSION['numeroPrenotazioni'] = 0;
+								$_SESSION['prenotazioni'] = array();
 								
 								
 								return redirect()->to('/Dashboard/vdDashboard/Medico');

@@ -55,7 +55,7 @@
 					<button class="w3-button w3-section w3-teal w3-ripple accesso"> Pagamento Online </button>
 					</form>
 					
-					<form method="post" action="/Opuscolo">
+					<form method="post" action="/Dashboard/vdDashboard/<?= esc(session()->get('ruolo')) ?>">
 					<button class="w3-button w3-section w3-teal w3-ripple accesso"> Pagamento Fisico </button>
 					</form>
 					

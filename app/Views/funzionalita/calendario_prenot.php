@@ -1,5 +1,6 @@
 <?PHP
     $numeroPrenotazioni = session()->get('numeroPrenotazioni');
+	session()->set('numeroPrenotazioni', $numeroPrenotazioni-1);
     //$numeroPrenotazioni = count(session()->get('prenotazioni'));
 
     if ($numeroPrenotazioni == 1) {
@@ -8,6 +9,9 @@
     else {
         $path = '/CalendarioPrenot';
     }
+
+	$prenotazioni = array_merge(session()->get('prenotazioni'));
+	$codiceFiscale = $prenotazioni[$numeroPrenotazioni-1]['CodiceFiscale'];
 ?>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -78,7 +82,7 @@
 								</div>
 								<div class="interaction">
 									<div class="add-event-day">
-										<input type="text" class="add-event-day-field" placeholder="Create an Event" value="<?= esc(session()->get('codicefiscale')) ?>">
+										<input type="text" class="add-event-day-field" placeholder="Create an Event" value="<?= $codiceFiscale ?>">
 										<span id="prenotazione-submit" class="cursor-pointer add-event-day-field-btn">Prenota</span>
 									</div>
 									<!--<div class="hour-start">
@@ -118,8 +122,7 @@
 															<center>
 																<form name="calendario" method="post" action="<?= esc($path) ?>">
 																	
-																	<h1><?= esc($numeroPrenotazioni) ?></h1>
-																	<p><?php print_r(session()->get('prenotazioni')); ?></p>
+																	<p style = "font-weight:bold"><br />Seleziona giorno e ora, poi premi "Avanti"<br /><i><?= esc($numeroPrenotazioni) ?> prenotazioni rimanenti</i></p>
 																	
 																	<button style="margin-left:30%" class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
 																</form>

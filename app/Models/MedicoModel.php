@@ -43,6 +43,9 @@ class MedicoModel extends Model
 			$_SESSION['codregionale'] = $medico['CodiceRegionale'];
 			$_SESSION['asl'] = $medico['AziendaSanitariaLocale'];
 			$_SESSION['email'] = $medico['Email'];
+			$_SESSION['tipologiaTampone'] = "";
+			$_SESSION['numeroPrenotazioni'] = 0;
+			$_SESSION['prenotazioni'] = array();
 			
 			return 3;
 		}

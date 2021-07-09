@@ -40,9 +40,9 @@
 					<form name="tipoTampone" method="post" action="/Prenotazione/cercaLaboratorio">
 						
 						<p class="pt-md-4">Tipologia del tampone :&ensp;</br></br>
-							<input type="radio" name="tipologia">
+							<input type="radio" value="Molecolare" name="tipologia">
 							<label> Tampone molecolare&ensp;</label></br>
-							<input type="radio" name="tipologia">
+							<input type="radio" value="Antigenico" name="tipologia">
 							<label> Tampone antigenico rapido&ensp;</label></br>
 						</p>
 					  

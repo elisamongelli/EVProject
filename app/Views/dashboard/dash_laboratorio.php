@@ -37,7 +37,7 @@
             </div>
             <div class="card-body pt-0 pt-md-4">
               <div class="text-center">
-                <div class="h3 mt-4"><a href="#"></br>INVIA REFERTI</span></a></div></br>
+                <div class="h3 mt-4"><a href="/Referto/inviaReferto"></br>INVIA REFERTI</span></a></div></br>
                 <div class="h3 mt-4"><a href="/Questionario/visualizzaQuestionari"></br>VISUALIZZA I QUESTIONARI DI ANAMNESI COMPILATI</span></a></div></br>
 				<div class="h3 mt-4"><a href="/CalendarioLab"></br>CALENDARIO : FORNISCI DISPONIBILITÀ E GESTISCI PRENOTAZIONI</span></a></div></br>
 				</br></br><a href="/Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>

@@ -9,7 +9,7 @@ class LaboratorioModel extends Model
 	
 	protected $table = 'LaboratoriAnalisi';
 	
-	protected $allowedFields=['NomeTitolare','CognomeTitolare','CodFisTitolare','Nome','PartitaIva','CodiceFiscale','Email','Password'];
+	protected $allowedFields=['NomeTitolare','CognomeTitolare','CodFisTitolare','Nome','PartitaIva','CodiceFiscale','PrezzoAntigenico','PrezzoMolecolare','Email','Password'];
 	
 	
 	public function getAllLaboratori() {
@@ -50,4 +50,18 @@ class LaboratorioModel extends Model
 		}
 	}
 	
+	
+	public function getPrezzoLab($laboratorio, $tipologia) {
+
+		$lab = $this->asArray()
+			->where(['Nome' => $laboratorio])
+			->first();
+		
+		if ($tipologia == 'Molecolare') {
+			return $lab['PrezzoMolecolare'];
+		}
+		else if ($tipologia == 'Antigenico') {
+			return $lab['PrezzoAntigenico'];
+		}
+	}
 }

@@ -38,9 +38,14 @@ class Pagamento extends Controller
 		$model = new PagamentoModel();	
 		
 		$model->save($datiPersonali);
-						
-		return redirect()->to('/Dashboard/vdDashboard/Cittadino');
 
+		$ruolo = session()->get('ruolo');
+
+		if ($ruolo == 'Cittadino') {
+			return redirect()->to('/Dashboard/vdDashboard/Cittadino');
+		}
+		else if ($ruolo == 'Datore') {
+			return redirect()->to('/Dashboard/vdDashboard/Datore');
+		}
     }
-	
 }

@@ -282,8 +282,6 @@
 
 					<p><br />Visualizza sulla mappa il nome, la distanza e il costo di ogni laboratorio<br />Scegli il laboratorio dall'elenco qui sotto</br></br></p>
 
-					<!--<form name="laboratorio" method="post">-->
-
 						<?PHP
 							foreach ($laboratori as $laboratorio) {
 								echo "
@@ -304,6 +302,7 @@
 							}
 						?>
 
+					<!--<form name="laboratorio" method="post">-->
 						<!--<button class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
 					</form>-->
 				</center>

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\RefertoModel;
+use App\Models\CittadinoModel;
 
 use CodeIgniter\Controller;
 
@@ -65,4 +66,73 @@ class Referto extends Controller
 			return view('referto_trovato', $referto);
 		}
     }
+
+	public function inviaReferto() {
+
+		return view('invia_referto');
+	}
+
+	public function salvaReferto() {
+
+		$file = $_FILES['referto']['name']; $codice = $_POST['codice'];
+		$nome = $_POST['nome']; $cognome = $_POST['cognome']; $codiceFiscale = $_POST['codiceFiscale'];
+		$esito = $_POST['esito']; $azienda = $_POST['azienda']; $email = $_POST['email'];
+
+		$data = [
+			'codice' => $codice,
+			'nome' => $nome,
+			'cognome' => $cognome,
+			'codicefiscale' => $codiceFiscale,
+			'esito' => $esito,
+			'azienda' => $azienda,
+			'email' => $email,
+		];
+
+		if (($file != "")){
+				$target_dir = "docs/referti/";
+				$path = pathinfo($file);
+				$filename = $path['filename'];
+
+				if($filename != $codice) {
+					return view('errors/referto_rinominare', $data);
+					//echo("<br />codice ".$codice." diverso dal nome del file ".$filename." con esito ".$esito);
+				}
+
+				$ext = $path['extension'];
+				$temp_name = $_FILES['referto']['tmp_name'];
+				$path_filename_ext = $target_dir.$filename.".".$ext;
+			
+			if (file_exists($path_filename_ext)) {
+				return view('errors/referto_esistente', $data);
+			 	//echo("<br />file ".$filename." esistente con il codice ".$codice." con esito ".$esito);
+			}else{
+				move_uploaded_file($temp_name,$path_filename_ext);
+
+				$model = new CittadinoModel();
+				$medico = $model->getMedico($codicefiscale);
+
+				if ($medico == 1) {
+					$medico = '-';
+				}
+
+				$data = NULL;
+				$data = [
+					'Codice' => $codice,
+					'Nome' => $nome,
+					'Cognome' => $cognome,
+					'CodiceFiscale' => $codicefiscale,
+					'Esito' => $esito,
+					'MedicoCurante' => $medico,
+					'Azienda' => $azienda,
+					'EmailLaboratorio' => $email,
+				];
+
+				$model = new RefertoModel();
+				$model->save($data);
+
+				return redirect()->to('/Dashboard/vdDashboard/Laboratorio');
+				//echo("<br />tutto ok per il file ".$filename." con il codice ".$codice." con esito ".$esito);
+			}
+		}
+	}
 }

@@ -4,7 +4,7 @@
 <link href="/css/stle-custom.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/login.css">
 
-<head><title>Il Mio Account</title></head>
+<head><title>Resoconto Prenotazione</title></head>
 
 <body>
   <div class="main-content">
@@ -31,25 +31,53 @@
               </div>
             </div>
             <div class="card-body pt-0 pt-md-4">
-	
-			  <div style="text-align:right"><a href="/Account/modificaInfo/<?= esc(session()->get('ruolo')) ?>"><i class="fas fa-pen-alt"></i>    Modifica</a></div>
+				<div class='text-center'>
+
+				<?PHP
+					$prenotazioni = array_merge(session()->get('prenotazioni'));
+
+					for($i = 0; $i < count($prenotazioniCorrenti); $i++) {
+
+						for($j = 0; $j < count($prenotazioni); $j++) {
+
+							if ($prenotazioniCorrenti[$i]['CodiceFiscale'] == $prenotazioni[$j]['CodiceFiscale']) {
+								echo "
+										<div class='h3 mt-4'></br>Nome</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['Nome']."</span></div></br>
+										<div class='h3 mt-4'></br>Cognome</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['Cognome']."</span></div></br>
+										<div class='h3 mt-4'></br>Codice Fiscale</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['CodiceFiscale']."</span></div></br>
+										<div class='h3 mt-4'></br>Data Nascita</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['DataNascita']."</span></div></br>
+										<div class='h3 mt-4'></br>Luogo Nascita</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['LuogoNascita']."</span></div></br>
+										<div class='h3 mt-4'></br>Città di Residenza</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['Citta']."</span></div></br>
+										<div class='h3 mt-4'></br>Tipologia Tampone</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['TipologiaTampone']."</span></div></br>
+										<div class='h3 mt-4'></br>Numero di Telefono</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['NumTelefono']."</span></div></br>
+										<div class='h3 mt-4'></br>Email</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['Email']."</span></div></br>
+										<div class='h3 mt-4'></br>Laboratorio di Analisi</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioni[$i]['LaboratorioAnalisi']."</span></div></br>
+										<div class='h3 mt-4'></br>Data della Prenotazione</span></div></br>
+										<div class='h2 mt-4'></br>".$prenotazioniCorrenti[$j]['Data']."</span></div></br>
+										
+										<hr width='70%' align='center' style='margin-left:15%;height:2px;background-color:black'>
+								";
+							}
+						}
+					}
+				?>
 				
-              <div class="text-center">
-                <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
-                <div class="h3 mt-4"></br>Nome</span></div></br>
-                <div class="h2 mt-0"></br><?= esc(session()->get('nome')) ?></span></div></br>
-                <div class="h3 mt-0"></br>Cognome</span></div></br>
-				<div class="h2 mt--3"></br><?= esc(session()->get('cognome')) ?></span></div></br>
-                <div class="h3 mt-4"></br>Codice Fiscale</span></div></br>
-				<div class="h2 mt--3"></br><?= esc(session()->get('codicefiscale')) ?></span></div></br>
-                <div class="h3 mt-4"></br>Medico di Medicina Generale</span></div></br>
-				<div class="h2 mt--3"></br><?= esc(session()->get('medico')) ?></span></div></br>
-				
-				<hr width="70%" align="center" style="margin-left:15%">
-				
-                <div class="h3 mt-4"></br>Email</span></div></br>
-				<div class="h2 mt--3"></br><?= esc(session()->get('email')) ?></span></div></br>
-              </div>
+				<form name="tipoTampone" method="post" action="/SceltaPagamento">
+					<button class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
+				</form>
+
+			</div>
+
             </div>
           </div>
         </div>

@@ -38,6 +38,9 @@ class DatoreModel extends Model
 			$_SESSION['partitaIVA'] = $datore['PartitaIva'];
 			$_SESSION['cfAzienda'] = $datore['CodiceFiscaleAzienda'];
 			$_SESSION['email'] = $datore['Email'];
+			$_SESSION['tipologiaTampone'] = "";
+			$_SESSION['numeroPrenotazioni'] = 0;
+			$_SESSION['prenotazioni'] = array();
 			
 			return 3;
 		}

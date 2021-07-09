@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\PrenotazioneModel;
 use App\Models\LaboratorioModel;
+use App\Models\PrenotazioneOrarioModel;
 
 use CodeIgniter\Controller;
 
@@ -73,6 +74,9 @@ class Prenotazione extends Controller
 	
 	public function cercaLaboratorio()
     {
+		$tipologia = $_POST['tipologia'];
+		session()->set('tipologiaTampone', $tipologia);
+		
 		$model = new LaboratorioModel();
 		
 		$data = [
@@ -84,6 +88,8 @@ class Prenotazione extends Controller
 	
 	public function salvaLab($laboratorio)
     {
+		$tipologia = session()->get('tipologiaTampone');
+		
 		$model = new PrenotazioneModel();
 
 		//session_start();
@@ -101,16 +107,18 @@ class Prenotazione extends Controller
 				'DataNascita' => $prenotazioni[$i]['DataNascita'],
 				'LuogoNascita' => $prenotazioni[$i]['LuogoNascita'],
 				'Citta' => $prenotazioni[$i]['Citta'],
+				'TipologiaTampone' => $tipologia,
 				'NumTelefono' => $prenotazioni[$i]['NumTelefono'],
 				'Email' => $prenotazioni[$i]['Email'],
 				'LaboratorioAnalisi' => $laboratorio,
 			];
 
 			$prenotazioni[$i]['LaboratorioAnalisi'] = $laboratorio;
+			$prenotazioni[$i]['TipologiaTampone'] = $tipologia;
 
 			$model->replace($data);
 
-			$_SESSION['prenotazioni'][$i] = $prenotazioni[$i]['CodiceFiscale'];
+			//$_SESSION['prenotazioni'][$i] = $prenotazioni[$i]['CodiceFiscale'];
 			
 			//redirect()->to('/CalendarioPrenot');
 			//echo($_SESSION['prenotazione']);
@@ -133,6 +141,18 @@ class Prenotazione extends Controller
 
 	public function mostraResoconto() {
 
-		return view('prenotazione/prenotazione_resoconto');
+		$prenotazioni = array_merge(session()->get('prenotazioni'));
+		
+		for($i = 0; $i < count($prenotazioni); $i++) {
+			$cf[$i] = $prenotazioni[$i]['CodiceFiscale'];
+		}
+		
+		$model = new PrenotazioneOrarioModel();
+		
+		$data = [
+			'prenotazioniCorrenti' => $model->getPrenotazioniCorrenti($cf),
+		];
+
+		return view('prenotazione/prenotazione_resoconto', $data);
 	}
 }

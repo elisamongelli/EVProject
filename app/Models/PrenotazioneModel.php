@@ -10,7 +10,7 @@ class PrenotazioneModel extends Model
 	
 	protected $table = 'PrenotazioniDati';
 	
-	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'DataNascita', 'LuogoNascita', 'Citta', 'NumTelefono', 'Email', 'LaboratorioAnalisi'];
+	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'DataNascita', 'LuogoNascita', 'Citta', 'TipologiaTampone', 'NumTelefono', 'Email', 'LaboratorioAnalisi'];
 	
 	
 	public function getAllPrenotazioni() {
