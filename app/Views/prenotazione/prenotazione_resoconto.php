@@ -64,10 +64,12 @@
 										<div class='h2 mt-4'></br>".$prenotazioni[$i]['LaboratorioAnalisi']."</span></div></br>
 										<div class='h3 mt-4'></br>Data della Prenotazione</span></div></br>
 										<div class='h2 mt-4'></br>".$prenotazioniCorrenti[$j]['Data']."</span></div></br>
-										
-										<hr width='70%' align='center' style='margin-left:15%;height:2px;background-color:black'>
 								";
 							}
+						}
+
+						if ($i < count($prenotazioniCorrenti) - 1) {
+							echo "<hr width='70%' align='center' style='margin-left:15%;height:2px;background-color:black'>";
 						}
 					}
 				?>

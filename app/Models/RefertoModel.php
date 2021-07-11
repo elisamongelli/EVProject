@@ -53,6 +53,13 @@ class RefertoModel extends Model
 		$referto = $this->asArray()
 					->where(['Codice' => $codice])
 					->first();
+
+
+		if (empty($referto))
+		{
+			return 1;
+		}
+
 		
 		if ($ruolo == 'Medico') {
 			$nomeMedico = session()->get('nome');
@@ -83,7 +90,7 @@ class RefertoModel extends Model
 		}
 		
 		
-		if (empty($referto) or !$trovato)
+		if ($trovato == 0)
 		{
 			return 1;
 		}

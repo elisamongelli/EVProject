@@ -54,7 +54,7 @@
 							<input class="form-control" type="text" name="codice" placeholder="Codice del Referto" style="width:70%" required>
 						</p>
 						
-						<button class="w3-button w3-section w3-teal w3-ripple accesso"> Cerca </button>
+						<button class="w3-button w3-section w3-teal w3-ripple accesso"> Cerca </button></br>
 					</form>
 					
 					<?php

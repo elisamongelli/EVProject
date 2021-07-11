@@ -69,7 +69,7 @@
 		include __DIR__ . "/../common/navbar_account_funzionalita.php";
 	?>
 
-    <div id="error2" class="errorDiv" >Il codice del referto e il nome del file devono coincidere<br />Rinominare il file e ricaricarlo</div>
+    <div id="error2" class="errorDiv" >Il codice del referto e il nome del file devono coincidere. Rinominare il file e ricaricarlo</div>
 	<!-- Top navbar -->
 
     <!-- Header --><!--
@@ -136,7 +136,7 @@
                         <p class="mt-0">
 							<label>Esito:</label>
 							<select id="esito" name="esito" style="width:70%" class="form-control" required>
-							  <option class="firstOption">value="<?= esc($esito) ?>" </option>
+							  <option class="firstOption"><?= esc($esito) ?></option>
 							  <?php
 								echo "<option class='otherOptions'>Positivo</option>";
 								echo "<option class='otherOptions'>Negativo</option>";

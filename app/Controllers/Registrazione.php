@@ -62,6 +62,19 @@ class Registrazione extends Controller
 					'Password' => $password,
 				];
 				
+				$model = new MedicoModel();
+				$dataErrors = [
+					'Nome' => $nome,
+					'Cognome' => $cognome,
+					'CodiceFiscale' => $cf,
+					'MedicoCurante' => $medico,
+					'Email' => $email,
+					'Password' => $password,
+					'medici' => $model->getAllMedici(),
+				];
+				
+				$model = NULL;
+				
 				$model = new CittadinoModel();
 				
 				if ($model->getUtente($email, $password) == 1) {
@@ -88,15 +101,15 @@ class Registrazione extends Controller
 								return redirect()->to('/Dashboard/vdDashboard/Cittadino');
 							}
 							else {
-								echo view('errors/reg_cittadino_passNonCoincidono', $data);
+								echo view('errors/reg_cittadino_passNonCoincidono', $dataErrors);
 							}
 					}
 					else {
-						echo view('errors/reg_cittadino_passNonValida', $data);
+						echo view('errors/reg_cittadino_passNonValida', $dataErrors);
 					}
 				}
 				else {
-					echo view('errors/reg_cittadino_accountEsistente', $data);
+					echo view('errors/reg_cittadino_accountEsistente', $dataErrors);
 				}
 				
 				break;

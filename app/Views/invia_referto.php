@@ -151,7 +151,7 @@
 
                         <p class="mt-0">
 							<label>Email del laboratorio:</label>
-							<input class="form-control" type="text" name="email" placeholder="Email" style="width:70%" required>
+							<input class="form-control" type="text" name="email" placeholder="Email" value="<?= esc(session()->get('email')) ?>" style="width:70%" required>
 						</p>
 					  
                         

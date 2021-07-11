@@ -5,7 +5,14 @@
 
 <body>
 	<div class="main-content">
-		<?php include 'common/navbar_accesso.php';?>
+		<?php 
+			if(session()->get('ruolo')) {
+				$accesso = 1;
+			}
+			else $accesso = 0;
+			
+			include 'common/navbar_opuscolo.php';
+		?>
 
 		
 <div class="header pb-8 pt-5 pt-lg-88 d-flex align-items-center" style="min-height: 100%; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: bottom; position: relative">

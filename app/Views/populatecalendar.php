@@ -1,8 +1,8 @@
 <?php
 
 	
-	$con = mysqli_connect('freedb.tech','freedbtech_prenotatamponi','tamponi');
-    $mysqli = mysqli_select_db($con, 'freedbtech_PrenotaTamponi');
+	$con = mysqli_connect('remotemysql.com','iESeA9LQ9x','TQ5cw89N0z');
+    $mysqli = mysqli_select_db($con, 'iESeA9LQ9x');
 	
 	$result = mysqli_query($con, "SELECT * FROM Prenotazioni");
 	

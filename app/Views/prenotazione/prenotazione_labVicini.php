@@ -119,13 +119,13 @@
 												'Costo tampone molecolare:&ensp;€62</div></div></div>'
 									});
 								addMarker({
-									coords:{lat:41.12176087305888, lng:16.876589455777964},
+									coords:{lat:40.52172179372786, lng:17.274482188837595},
 									content:'<div style = "display:table;height:40px;width:200px"><div style="display:table-cell;vertical-align:middle;color:black;font-size:20px">' +
 												'Analisi Cliniche Verdi<br /><br /><div style="color:grey;font-size:12px">Distanza:&ensp;2.1 km<br />Costo tampone antigenico:&ensp;€27<br />' + 
 												'Costo tampone molecolare:&ensp;€60</div></div></div>'
 									});
 								addMarker({
-									coords:{lat:41.11171925756446, lng:16.852382474872},
+									coords:{lat:40.52056164552312, lng:17.27359974204448},
 									content:'<div style = "display:table;height:40px;width:200px"><div style="display:table-cell;vertical-align:middle;color:black;font-size:20px">' +
 												'Analisi Cliniche Bianchi<br /><br /><div style="color:grey;font-size:12px">Distanza:&ensp;3.5 km<br />Costo tampone antigenico:&ensp;€25<br />' + 
 												'Costo tampone molecolare:&ensp;€60</div></div></div>'

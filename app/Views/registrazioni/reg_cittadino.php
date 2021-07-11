@@ -90,7 +90,7 @@
 						
 							<p class="pt-md-4" id="mySelect" style="width:90%">
 								<select name="medicoCurante" class="form-control" required>
-								  <option class="firstOption">Medico di Medicina Generale</option>
+								  <option class="firstOption" disabled selected value="">Medico di Medicina Generale</option>
 								  <?php
 
 									foreach ($medici as $medico)
@@ -99,6 +99,8 @@
 										
 										echo "<option class='otherOptions'>$med</option>";
 									}
+									
+									echo "<option class='otherOptions'>Altro Medico</option>";
 								  ?>
 								</select>
 							</p>

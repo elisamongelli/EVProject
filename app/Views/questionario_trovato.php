@@ -33,28 +33,28 @@
 				<center>
 					<form method="post" action="/Questionario/cercaQuestionario">
 					
-						<h5 style="font-size:17px;text-align:center">Inserisci il codice:</h5>
+						<h5 style="font-size:17px;text-align:center">Inserisci il codice:</h5></br>
 						
 						<p class="mt-0">
 							<input class="form-control" type="text" name="codice" placeholder="Codice del Questionario di Anamnesi" style="width:70%" required>
 						</p>
 						
-						<button class="w3-button w3-section w3-teal w3-ripple accesso"> Cerca </button>
+						<button class="w3-button w3-section w3-teal w3-ripple accesso"> Cerca </button></br>
 					</form>
-					
-					<div class='card card-profile shadow'>
-						<div class='row justify-content-center'>
-						  <div class='col-lg-3 order-lg-2'>
-						  </div>
-						</div>
-						<div class='card-body pt-0 pt-md-4'>
-						  <div class='text-center'>
-							<center>
-								<p><a href='/docs/questionari/<?= esc($Codice) ?>.pdf'><?= esc($Codice) ?>&emsp; - &emsp;<?= esc($Nome) ?>&ensp;<?= esc($Cognome) ?></a></p>
-							</center>
-						  </div>
-						</div>
-					</div></br>
+
+          <div class='card card-profile shadow'>
+            <div class='row justify-content-center'>
+              <div class='col-lg-3 order-lg-2'>
+              </div>
+            </div>
+            <div class='card-body pt-0 pt-md-4'>
+              <div class='text-center'>
+                <center>
+                  <p><a href='/docs/questionari/<?= esc($Codice) ?>.pdf'><?= esc($Codice) ?>&emsp; - &emsp;<?= esc($Nome) ?>&ensp;<?= esc($Cognome) ?></a></p>
+                </center>
+              </div>
+            </div>
+          </div></br>
 					
 					<p><a href='/Questionario/visualizzaQuestionari'>Visualizza tutti</a></p>
 					

@@ -109,7 +109,7 @@ class Referto extends Controller
 				move_uploaded_file($temp_name,$path_filename_ext);
 
 				$model = new CittadinoModel();
-				$medico = $model->getMedico($codicefiscale);
+				$medico = $model->getMedico($codiceFiscale);
 
 				if ($medico == 1) {
 					$medico = '-';
@@ -120,7 +120,7 @@ class Referto extends Controller
 					'Codice' => $codice,
 					'Nome' => $nome,
 					'Cognome' => $cognome,
-					'CodiceFiscale' => $codicefiscale,
+					'CodiceFiscale' => $codiceFiscale,
 					'Esito' => $esito,
 					'MedicoCurante' => $medico,
 					'Azienda' => $azienda,
@@ -129,10 +129,9 @@ class Referto extends Controller
 
 				$model = new RefertoModel();
 				$model->save($data);
-
-				return redirect()->to('/Dashboard/vdDashboard/Laboratorio');
-				//echo("<br />tutto ok per il file ".$filename." con il codice ".$codice." con esito ".$esito);
 			}
 		}
+
+		return redirect()->to('Dashboard/vdDashboard/Laboratorio');
 	}
 }
