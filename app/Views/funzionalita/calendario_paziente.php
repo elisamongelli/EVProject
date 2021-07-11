@@ -43,12 +43,13 @@
 						<input class="h2 mt--3" type="text" name="data" value="<?= esc(session()->get('data'))?>">
 						</p>
 				</form>-->
-				<div class="h3 mt-4" style="margin-top : -2.5rem !important"></br>Le Tue Prenotazioni</span></div></br>
+				<!--<div class="h3 mt-4" style="margin-top : -2.5rem !important"></br>Le Tue Prenotazioni</span></div></br>-->
+				<h1>Le tue Prenotazioni</h1></br>
 				<div class="h2 mt--3" style="margin-top :1rem !important"></br><?php
-						$servername = "freedb.tech";
-						$username = "freedbtech_prenotatamponi";
-						$password = "tamponi";
-						$dbname = "freedbtech_PrenotaTamponi";
+						$servername = "remotemysql.com";
+						$username = "iESeA9LQ9x";
+						$password = "TQ5cw89N0z";
+						$dbname = "iESeA9LQ9x";
 
 						// Create connection
 						$conn = new mysqli($servername, $username, $password, $dbname);
@@ -97,16 +98,16 @@
 								while($row = $result2->fetch_assoc()) {
 								
 								if($row["Esito"]=="Positivo"){
-									echo "<br>" . "<div style='color:black;'>" . "Esito : " ."<div style='color:red;'>" . $row["Esito"]. "<br>" . "</div>";
+									echo "<br>" . "<div style='color:black;'>" . "Esito : " ."<div style='color:red;'>" . $row["Esito"]. "<br>" . "<br>" . "</div>";
 								}
 								else if($row["Esito"]=="Negativo"){
-									echo "<br>" . "<div style='color:black;'>" . "Esito : " . "</div>" .  "<div style='color:green;'>" . $row["Esito"]. "<br>" . "</div>";
+									echo "<br>" . "<div style='color:black;'>" . "Esito : " . "</div>" .  "<div style='color:green;'>" . $row["Esito"]. "<br>" . "<br>" . "</div>";
 								}
 							}
 							  }
 							else{
 								echo "<br>" . "<span class='deleteMember'>
-										<form action='EliminaPrenotazione' method='POST'>
+										<form action='EliminaTuttaPrenotazione' method='POST'>
 										<button type='submit'>Elimina Prenotazione</button>
 									</form>
 									</span>";	       
@@ -117,7 +118,7 @@
 						} else {
 						  echo "Non hai prenotazioni";
 							echo "<br>" . "<div class='text-center'>" . 
-							"<br>"."<br>"."<p style='color:black'>". "Vuoi scegliere una data?" . "<a href='CalendarioPrenot'>&nbsp Prenotati</a>" . "</p>". "</br>". "</br>"."
+							"<br>"."<br>"."<p style='color:black'>". "Vuoi effettuare una prenotazione?" . "<a href='Prenotazione'>&nbsp Prenotati</a>". "</p>". "</br>". "</br>"."
 							</div>";
 						}
 						}

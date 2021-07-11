@@ -19,13 +19,13 @@ class PagamentoModel extends Model
 					->where(['NumeroCarta' => $numcarta])
 					->first();
 		
-		if (empty($pagamento))
+		/*if (empty($pagamento))
 		{
 			return 1;
 		}
 		else {
 			return 2;
-		}
+		}*/
 	}
 	
 }

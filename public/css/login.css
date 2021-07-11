@@ -75,3 +75,8 @@ button.w3-button.w3-section.w3-teal.w3-ripple.signin {
 .gender input[type="radio"] {
     margin: 2%;
 }
+
+
+@-ms-viewport{
+  width: device-width;
+}

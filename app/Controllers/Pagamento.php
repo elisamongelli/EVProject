@@ -19,7 +19,7 @@ class Pagamento extends Controller
 		
 		$nome = $_POST['nome']; $cognome = $_POST['cognome']; $cf = $_POST['codiceFiscale']; $email = $_POST['email'];
 		$citta = $_POST['citta']; $indirizzo = $_POST['indirizzo'];  $cap = $_POST['cap']; $nomecarta = $_POST['cardname'];
-		$numcarta = $_POST['cardnumber']; $mese = $_POST['expmonth'];  $anno = $_POST['expyear'];  $cvv = $_POST['cvv'];
+		$numcarta = $_POST['cardnumber']; $mese = $_POST['mese'];  $anno = $_POST['anno'];  $cvv = $_POST['cvv'];
 		
 		
 

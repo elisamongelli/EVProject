@@ -44,11 +44,11 @@
               </div>
             </div>
             <div class="card-body pt-0 pt-md-4">
-              <div class="text-center">
+              <div class="text-center"></br>
 				<center>
 					<form method="post" action="/Referto/cercaReferto/<?= esc(session()->get('ruolo')) ?>">
 					
-						<h5 style="font-size:17px;text-align:center">Inserisci il codice:</h5>
+						<h5 style="font-size:17px;text-align:center">Inserisci il codice:</h5></br>
 						
 						<p class="mt-0">
 							<input class="form-control" type="text" name="codice" placeholder="Codice del Referto" style="width:70%" required>

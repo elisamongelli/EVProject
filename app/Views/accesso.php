@@ -26,9 +26,11 @@
 			</div>
 		</div>-->
 
-		<h1 class="h1-ruoli" style='text-align:center ; color:white';><b></br></br>Accedi</b></h1>
 		
-		<div class="header pb-8 pt-0 d-flex align-items-center" style="min-height: 83%; background-color:#1a174dc9">
+<div class="header pb-8 pt-5 pt-lg-88 d-flex align-items-center" style="min-height: 100%; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: bottom; position: relative">
+      <!-- Mask -->
+	  
+      <span class="mask bg-gradient-default opacity-8"></span>
 		
 		
 		<!--<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 94%; background-color:#1a174dc9">-->
@@ -53,6 +55,7 @@
 						<a href="#" class="btn btn-sm btn-default float-right">Message</a>
 					  </div>
 					</div>-->
+					
 					<div class="card-body pt-md-4"><!--
 					  <div class="text-center">
 						<h2 style="color:black;">OPUSCOLO INFORMATIVO</h2></br>
@@ -70,6 +73,9 @@
 						</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>--
 					  </div>-->
 					  <center>
+
+						<h1>Accedi</h1></br>
+						
 						<form method="post" action="Accesso/controllaCampi">
 						
 							<p class="pt-md-4">

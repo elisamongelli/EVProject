@@ -12,23 +12,25 @@
 	<!-- Top navbar -->
 
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: center;">
+    <div class="header pb-8 pt-5 pt-lg-88 d-flex align-items-center" style="min-height: 100%; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: bottom; position: relative">
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid align-items-center">
+      <!--<div class="container-fluid align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Covid-19</h1>
-          </div>
+            <h1 class="display-2 text-white">Covid-19</h1><!--
+			<h3 class="display-3 text-white">Prenota un Tampone</h3></br>
+            <p class="text-white mt--3 mb-8"><a href="Accesso" style='color:white';><u>Registrati o accedi</u><a> per usufruire dei nostri servizi online</p>-->
+          <!--</div>
         </div>
-      </div>
-    </div>
+      </div>-->
+    
     <!-- Page content -->
     <div class="container-fluid mt--7">
       <div class="row">
         <div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
-          <div class="card card-profile shadow">
+          <div class="card card-profile shadow" style="border-radius: -0.625rem; background-color: white; margin-bottom: -90px">
             <div class="row justify-content-center">
               <div class="col-lg-3 order-lg-2">
               </div>
@@ -37,9 +39,9 @@
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
                 <div class="h3 mt-4"><a href="/Prenotazione"></br>PRENOTA TAMPONI</span></a></div></br>
-                <div class="h3 mt-4"><a href="/Referto"></br>VISUALIZZA REFERTI</span></a></div></br>
-                <div class="h3 mt-4"><a href="/SegnalaRisultati"></br>SEGNALA RISULTATI</span></a></div></br>
-				</br></br><a href="/Opuscolo"><b>Consulta Opuscolo Informativo sui Tamponi</b></a></br></br>
+                <div class="h3 mt-4"><a href="/Referto"></br>VISUALIZZA I REFERTI DEI TAMPONI</span></a></div></br>
+                <div class="h3 mt-4"><a href="/SegnalaRisultati"></br>SEGNALA I PAZIENTI POSITIVI</span></a></div></br>
+				</br></br><a href="/Opuscolo"><b>Consulta l'opuscolo informativo</b></a></br></br>
               </div>
             </div>
           </div>
@@ -47,17 +49,18 @@
             </div>
           </div>
         </div>
+		</div>
       <!--</div>
     </div>
   </div>-->
-  <footer class="footer">
+  <!--<footer class="footer">
     <div class="row align-items-center justify-content-xl-between">
       <div class="col-xl-6 m-auto text-center">
         <!--<div class="copyright">
           <p>Made with <a href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Argon Dashboard</a> by Creative Tim</p>
         </div>-->
-      </div>
+      <!--</div>
     </div>
-  </footer>
+  </footer>-->
 </body>
 

@@ -1,20 +1,26 @@
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-<link href="css/stle-custom.css" rel="stylesheet">
-<link href="css/login.css" rel="stylesheet">
-
-<head>
-	<title>Opuscolo Informativo</title>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="/css/stle-custom.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/login.css">
 
 <body>
-	
 	<div class="main-content">
 		<?php include 'common/navbar_accesso.php';?>
-	</div>
-	
-	<h1 class="h1-opuscolo" style='text-align:center';><b>Opuscolo Informativo</br></h1></br>
 
-	<div class="div-opuscolo" style='width: 1000px; margin-left: 270px; background-color: #5e72e424'>
+		
+<div class="header pb-8 pt-5 pt-lg-88 d-flex align-items-center" style="min-height: 100%; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: bottom; position: relative">
+      <!-- Mask -->
+	  
+      <span class="mask bg-gradient-default opacity-8"></span>
+		
+
+			<div class="container-fluid pt-5">
+			  <div class="row">
+				
+				
+		<div class="card card-profile shadow" style="background-color:#ffffffd6">	
+		<div class="card-body pt-md-4">
+		<center>
 		<h1 class="h1-opuscolo"><i>Quante e quali sono le tipologie di tampone?</i></h1>
 		<p  class="p-opuscolo" style="margin-left: 1%; margin-top: 2%; font-size: 18px">Le tipologie di tampone sono due:</br></p>
 		<ul><li><p  class="p-opuscolo" style="margin-left: 1% ; margin-top: 2%; font-size: 18px">
@@ -26,18 +32,28 @@
 		tutto analoghe a quelle dei test molecolari (tampone naso-faringeo), i tempi di risposta sono molto brevi (circa 15 minuti), ma la sensibilità e specificità di questo test sembrano 
 		essere inferiori a quelle del test molecolare. Ciò comporta la possibilità di risultati falso-negativi in presenza di bassa carica virale (tC>25), oltre alla necessità di confermare i 
 		risultati positivi mediante un tampone molecolare.</p></li></ul>
-	</div>
+		</center>
+		</div>
+		</div>
+		</br>
 	
-	<div class="div-opuscolo" style='width: 1000px; margin-left: 270px; background-color: #5e72e424'>
+		<div class="card card-profile shadow" style="background-color:#ffffffd6">
+		<div class="card-body pt-md-4">
+		<center>
 		<h1 class="h1-opuscolo"><i>Cosa devo fare prima di effettuare il tampone?</i></h1>
 		<p  class="p-opuscolo" style="margin-top: 2%; font-size: 18px">Prima di effettuare il tampone è necessario compilare il consenso informato e il questionario di anamnesi.  Per ragioni di validità la compilazione deve 
 		avvenire al momento dell'esame diagnostico, pertanto all'utente registrato al sistema verrà fornito, dal laboratorio, un codice di accesso alla sezione del questionario, per poterlo 
 		compilare online. </br></br>E' possibile visualizzare un prototipo dei documenti qui di seguito:</br></br>
 		<a href="docs/Consenso test antigenico compilabile.pdf" download>Consenso Informato</a></br>
 		<a href="docs/Questionario valutazione del rischio da contagio COVID-19 270121_compilabile.pdf" download>Questionario di Anamnesi</a></p>
-	</div>
+		</center>
+		</div>
+		</div></br>
 	
-	<div class="div-opuscolo" style='width: 1000px; margin-left: 270px; background-color: #5e72e424'>
+		
+		<div class="card card-profile shadow" style="background-color:#ffffffd6">
+		<div class="card-body pt-md-4">
+		<center>
 		<h1 class="h1-opuscolo"><i>Come devo comportarmi se il risultato del mio test è negativo?</i></h1>
 		<p  class="p-opuscolo" style="margin-top: 2%; font-size: 18px">Esiste la possibilità che, nonostante la negatività del test, sia stata comunque contratta l'infezione da SARS-CoV-2 e che si manifestino sintomi nei giorni seguenti. 
 		Il periodo più lungo di incubazione, della malattia da COVID-19, descritto è di 21 giorni. Si deve pertanto monitorare l'eventuale insorgenza di sintomi e applicare le misure
@@ -53,5 +69,16 @@
 		l’inizio dei sintomi (o la data di effettuazione del tampone se non si hanno sintomi), poichè sarà utile al Dipartimento di Prevenzione. Pertanto, previa informativa al proprio medico di medicina 
 		generale, si dovrà rimanere in quarantena obbligatoria, nel rispetto degli adempimenti previsti dalle normative vigenti.<br>
 		N.B. Gli individui risultati positivi potranno uscire dalla quarantena solo dopo essere stati sottoposti all’esecuzione di un tampone che sia risultato negativo (guarigione clinica e virologica).</br></p>
+		</center>
+		</div>
+		</div>
+		</br>
+					  
+				
+			  </div>
+			</div>
+		</div>
 	</div>
 </body>
+
+

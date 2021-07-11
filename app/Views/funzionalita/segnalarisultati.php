@@ -10,14 +10,15 @@
 		include __DIR__ . "/../common/navbar_account_funzionalita.php";
 		?>
 
-		<h1 class="h1-ruoli" style='text-align:center ; color: #9f9ee5; background-color:white'></br></br>Inserisci i dati dei pazienti risultati positivi : </b></h1>
+		<!--<h1 class="h1-ruoli" style='text-align:center ; color: #9f9ee5; background-color:white'></br></br>Inserisci i dati dei pazienti risultati positivi : </b></h1>-->
 		
 		<div class="header pb-8 pt-0 d-flex align-items-center" style="min-height: 83%; background-color: white">
-			<div class="container-fluid pt-5">
-			  <div class="row">
+			</br></br><div class="container-fluid pt-5">
+			  </br><div class="row">
 				<div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
 				  <div class="card card-profile shadow">
-					  <center>						
+					  <center>		
+						</br></br><h1>Inserisci i dati dei pazienti risultati positivi </h1></br></br>
 						<form method="post" action="/PositiviDb/cittadiniPositivi">
 						
 							<p class="pt-md-4">

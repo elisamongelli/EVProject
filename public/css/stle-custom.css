@@ -110,8 +110,8 @@ p {
 }
 
 .div-opuscolo {
-  background-color: #5e72e44f;
-  border-radius: 20px;
+  background-color: white;
+  border-radius: 14px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -324,7 +324,7 @@ h6,
   font-family: inherit;
   font-weight: 600;
   line-height: 1.5;
-  margin-bottom: .5rem;
+  margin-bottom: -0.5rem;
   color: #32325d;
 }
 
@@ -1089,7 +1089,7 @@ textarea.form-control {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  min-width: 430;
   word-wrap: break-word;
   border: 1px solid rgba(0, 0, 0, .05);
   border-radius: .375rem;
@@ -1104,6 +1104,11 @@ textarea.form-control {
 
 .card-body {
   padding: 1.5rem;
+  flex: 1 1 auto;
+}
+
+.card-body-2 {
+  padding: -2.5rem;
   flex: 1 1 auto;
 }
 
@@ -1316,8 +1321,9 @@ button.bg-white:focus {
   margin-top: -1rem !important;
 }
 
-.mt--7 {
-  margin-top: -6rem !important;
+
+.mt--22 {
+  margin-top: -4rem !important;
 }
 
 .pt-0 {
@@ -1357,6 +1363,10 @@ button.bg-white:focus {
   .pt-md-4 {
     padding-top: 1.5rem !important;
   }
+  
+    .pt-md-22 {
+    padding-top: -10.5rem !important;
+  }
 
   .pb-md-4 {
     padding-bottom: 1.5rem !important;
@@ -1371,6 +1381,9 @@ button.bg-white:focus {
 
   .pt-lg-8 {
     padding-top: 8rem !important;
+  }
+    .pt-lg-88{
+    padding-top: 4rem !important;
   }
 
   .ml-lg-auto {
@@ -2185,4 +2198,19 @@ p {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
+}
+
+#box-esterno {
+width: 400px;
+height: 200px;
+}
+#box-interno{
+padding: 20px;
+border: 5px solid;
+margin: 20px;
+}
+
+
+@-ms-viewport{
+  width: device-width;
 }
