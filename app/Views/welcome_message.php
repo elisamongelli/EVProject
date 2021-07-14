@@ -1,7 +1,7 @@
 <div class="topnav">
   <a class="active" href="/Home">Home</a>
   <a href="/Opuscolo">Opuscolo</a>
-  <a href="/Accesso">Accedi / Registrati</a>
+  <a href="/Accesso" style="float: right">Accedi / Registrati</a>
   <!--<a href="#about">About</a>-->
 </div>
 <link href="css/stle-custom.css" rel="stylesheet">

@@ -3,7 +3,7 @@
 <div class="topnav">
   <a href="/Home">Home</a>
   <a href="/Opuscolo">Opuscolo</a>
-  <a class="active" href="/Accesso">Accedi / Registrati</a>
+  <a class="active" style="float: right" href="/Accesso">Accedi / Registrati</a>
   <!--<a href="#about">About</a>-->
 </div>
 
