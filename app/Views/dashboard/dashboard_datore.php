@@ -39,8 +39,8 @@
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
                 <div class="h3 mt-4"><a href="/Prenotazione"></br>PRENOTA TAMPONI</span></a></div></br>
-                <div class="h3 mt-4"><a href="/Referto/visualizzaRefertiDatore"></br>VISUALIZZA I REFERTI DEI TAMPONI</span></a></div></br>
-				</br></br><a href="/Opuscolo"><b>Consulta l'opuscolo informativo</b></a></br></br>
+                <div class="h3 mt-4"><a href="/Referto/visualizzaRefertiDatore"></br>VISUALIZZA I REFERTI DEI TAMPONI</span></a></div></br></br>
+				<!--</br></br><a href="/Opuscolo"><b>Consulta l'opuscolo informativo</b></a></br></br>-->
               </div>
             </div>
           </div>

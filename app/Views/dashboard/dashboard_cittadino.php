@@ -41,8 +41,8 @@
                 <div class="h3 mt-4"><a href="/Prenotazione"></br>PRENOTA UN TAMPONE</span></a></div></br>
                 <div class="h3 mt-4"><a href="/CalendarioPaziente"></br>GESTISCI LE TUE PRENOTAZIONI</span></a></div></br>
                 <div class="h3 mt-4"><a href="/Referto/visualizzaRefertiCittadino"></br>VISUALIZZA I TUOI REFERTI</span></a></div></br>
-                <div class="h3 mt-4"><a href="/Questionario"></br>COMPILA IL QUESTIONARIO DI ANAMNESI</span></a></div></br>
-				</br></br><a href="/Opuscolo"><b>Consulta l'opuscolo informativo</b></a></br></br>
+                <div class="h3 mt-4"><a href="/Questionario"></br>COMPILA IL QUESTIONARIO DI ANAMNESI</span></a></div></br></br>
+				<!--</br></br><a href="/Opuscolo"><b>Consulta l'opuscolo informativo</b></a></br></br>-->
               </div>
             </div>
           </div>

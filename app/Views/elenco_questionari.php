@@ -32,7 +32,7 @@
     <!-- Header --><!--
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: center;">
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 150px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
@@ -48,7 +48,8 @@
 				<center>
 					<form method="post" action="/Questionario/cercaQuestionario">
 					
-						<h5 style="font-size:17px;text-align:center">Inserisci il codice:</h5></br>
+						<!--<h5 style="font-size:17px;text-align:center">Inserisci il codice:</h5></br>-->
+						</br><h1>Inserisci il codice del questionario :</h1></br></br>
 						
 						<p class="mt-0">
 							<input class="form-control" type="text" name="codice" placeholder="Codice del Questionario di Anamnesi" style="width:70%" required>

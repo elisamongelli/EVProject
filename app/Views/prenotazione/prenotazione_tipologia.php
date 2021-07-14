@@ -22,7 +22,7 @@
       <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 150px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
@@ -38,8 +38,7 @@
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
 				<center>
 					<form name="tipoTampone" method="post" action="/Prenotazione/cercaLaboratorio">
-						
-						<p class="pt-md-4">Tipologia del tampone :&ensp;</br></br>
+						</br><p class="pt-md-4">SCEGLI UNA TIPOLOGIA DI TAMPONE : </br></br>
 							<input type="radio" value="Molecolare" name="tipologia">
 							<label> Tampone molecolare&ensp;</label></br>
 							<input type="radio" value="Antigenico" name="tipologia">

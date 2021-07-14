@@ -19,7 +19,7 @@
       <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 70px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
@@ -32,7 +32,7 @@
             </div>
             <div class="card-body pt-0 pt-md-4">
 				<div class='text-center'>
-
+				<h1>Resoconto della Prenotazione</h1></br>
 				<?PHP
 					$prenotazioni = array_merge(session()->get('prenotazioni'));
 

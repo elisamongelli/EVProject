@@ -1,4 +1,9 @@
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<div class="topnav">
+  <a class="active" href="/Home">Home</a>
+  <a href="/Opuscolo">Opuscolo</a>
+  <a href="/Accesso">Accedi / Registrati</a>
+  <!--<a href="#about">About</a>-->
+</div>
 <link href="css/stle-custom.css" rel="stylesheet">
 <link href="css/login.css" rel="stylesheet">
 
@@ -7,7 +12,7 @@
 <body>
   <div class="main-content">
     <!-- Top navbar -->
-	<?php include 'common/navbar.php';?>
+	
 	<!-- Top navbar -->
 
     <!-- Header -->

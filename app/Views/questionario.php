@@ -22,7 +22,7 @@
       <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 70px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
@@ -39,7 +39,9 @@
 				<center>
 					<form name="questionario" method="post" action="/Questionario/salvaDati">
 					  <div id="print-content">
-						<h2 style="text-align:center"><b>QUESTIONARIO DI ANAMNESI</b></h2>
+					  
+						</br><h1>Questionario di anamnesi</h1></br></br>
+						<!--<h2 style="text-align:center"><b>QUESTIONARIO DI ANAMNESI</b></h2>-->
 						
 						<p class="mt-0">
 							<label>Codice (NB: codice fornito dal laboratorio)</label>

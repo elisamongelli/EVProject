@@ -39,8 +39,8 @@
              <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
 				<div class="h3 mt-4"><a href="#"></br>VISUALIZZA I REFERTI DEI TAMPONI</span></a></div></br>
-				<div class="h3 mt-4"><a href="/Resoconto"></br>VISUALIZZA IL RESOCONTO</span></a></div></br>
-				</br></br><a href="/Opuscolo"><b>Consulta l'opuscolo informativo</b></a></br></br><!--
+				<div class="h3 mt-4"><a href="/Resoconto"></br>VISUALIZZA IL RESOCONTO</span></a></div></br></br>
+				<!--</br></br><a href="/Opuscolo"><b>Consulta l'opuscolo informativo</b></a></br></br>--><!--
 				<button class="w3-button w3-section w3-teal w3-ripple opuscolo"> Leggi tutto </button>
 				</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>-->
               </div>

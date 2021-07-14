@@ -19,7 +19,7 @@
       <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 150px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
@@ -38,8 +38,6 @@
 				<!--<div class="h3 mt-4" style="margin-top : -2.5rem !important"></br>Resoconto</span></div>-->
 				<h1>Resoconto</h1></br></br>
 				<div class="h2 mt--3" style="margin-top :1rem !important"><?php
-				
-						$na = esc(session()->get('nomeazienda'));
 						
 						$servername = "remotemysql.com";
 						$username = "iESeA9LQ9x";
@@ -53,13 +51,13 @@
 						  die("Connection failed: " . $conn->connect_error);
 						}
 							
-						$sql = "SELECT COUNT(CodiceFiscale) AS NumeroTamponi FROM Referti WHERE MedicoCurante='Giulio Valente - ASL TA'";
+						$sql = "SELECT COUNT(CodiceFiscale) AS NumeroTamponi FROM Referti WHERE MedicoCurante=''";
 						$result = $conn->query($sql);
 						
-						$sql2 = "SELECT COUNT(Esito) AS EsitoPositivo FROM Referti WHERE Esito='Positivo' AND MedicoCurante='Giulio Valente - ASL TA'";
+						$sql2 = "SELECT COUNT(Esito) AS EsitoPositivo FROM Referti WHERE Esito='Positivo' AND MedicoCurante=''";
 						$result2 = $conn->query($sql2);
 						
-						$sql3 = "SELECT COUNT(Esito) AS EsitoNegativo FROM Referti WHERE Esito='Negativo' AND MedicoCurante='Giulio Valente - ASL TA'";
+						$sql3 = "SELECT COUNT(Esito) AS EsitoNegativo FROM Referti WHERE Esito='Negativo' AND MedicoCurante=''";
 						$result3 = $conn->query($sql3);
 						
 

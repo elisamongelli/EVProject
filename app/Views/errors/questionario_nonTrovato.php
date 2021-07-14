@@ -37,7 +37,7 @@
     <!-- Header --><!--
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: center;">
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 150px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">

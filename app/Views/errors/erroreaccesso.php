@@ -5,32 +5,14 @@
 
 <body>
 	<div class="main-content">
-		<?php include __DIR__ . "/../common/navbar_accesso.php";?><!--
-
-		<div class="w3-container w3-half w3-margin-top">
-			<div class="w3-container w3-card-4">
-				<form method="post" action="login.php">
-
-					<p>
-					<input class="w3-input" type="text" name="name" style="width:90%" required>
-					<label>Email</label></p>
-					<p>
-					<input class="w3-input" type="password" name="password" style="width:90%" required>
-					<label>Password</label></p>
-				
-					<button class="w3-button w3-section w3-teal w3-ripple"> Log In </button>
-				</form>
-
-				<a href="signin.html"><button class="w3-button w3-section w3-teal w3-ripple singin"> Sign Up </button>
-				
-			</div>
-		</div>-->
+		<?php include __DIR__ . "/../common/navbar_accesso.php";?>
 		
-		<div id="error2" class="errorDiv" >Account non esistente, <a href="/Registrazione" style="color:#525f7f"><u>registrati</u></a></div>
+		<div id="error2" class="errorDiv" >Credenziali errate, <a href="/Registrazione" style="color:#525f7f"><u>registrati</u></a></div>
 
-		<h1 class="h1-ruoli" style='text-align:center';><b></br></br>Accedi</b></h1>
-		
-		<div class="header pb-8 pt-0 d-flex align-items-center" style="min-height: 83%; background-color:#1a174dc9">
+<div class="header pb-8 pt-5 pt-lg-88 d-flex align-items-center" style="min-height: 100%; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: bottom; position: relative">
+      <!-- Mask -->
+	  
+      <span class="mask bg-gradient-default opacity-8"></span>
 		
 		
 		<!--<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 94%; background-color:#1a174dc9">-->
@@ -55,6 +37,7 @@
 						<a href="#" class="btn btn-sm btn-default float-right">Message</a>
 					  </div>
 					</div>-->
+					
 					<div class="card-body pt-md-4"><!--
 					  <div class="text-center">
 						<h2 style="color:black;">OPUSCOLO INFORMATIVO</h2></br>
@@ -72,7 +55,10 @@
 						</br></br><a href="docs/Consenso test antigenico compilabile.pdf" download>CONSENSO AL TEST</a></br></br>--
 					  </div>-->
 					  <center>
-						<form method="post" action="controllaCampi">
+
+						<h1>Accedi</h1></br>
+						
+						<form method="post" action="Accesso/controllaCampi">
 						
 							<p class="pt-md-4">
 								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
@@ -95,7 +81,7 @@
 							
 							<button class="w3-button w3-section w3-teal w3-ripple accesso"> Accedi </button>
 						</form>
-						<p style="color:black">Non sei ancora registrato?<a href="/Registrazione">&nbsp Registrati</a></p>
+						<p style="color:black">Non sei ancora registrato?<a href="Registrazione">&nbsp Registrati</a></p>
 					  </center>
 					</div>
 				  </div>
@@ -105,5 +91,3 @@
 		</div>
 	</div>
 </body>
-
-

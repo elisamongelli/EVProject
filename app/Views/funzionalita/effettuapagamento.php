@@ -338,14 +338,14 @@ window.scrollBy({
 			error=true;
 		}else{
 			form.expyear.classList.remove("errordiv");
-		}
+		}*/
 		
-		if(cvv == "" || cvv.length!= 3){
+		if(form.cvv.value == "" || form.cvv.value.length!= 3){
 			form.cvv.classList.add("errordiv");
 			error=true;
 		}else{
 			form.cvv.classList.remove("errordiv");
-		}*/
+		}
 
 
 		

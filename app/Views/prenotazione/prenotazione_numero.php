@@ -22,7 +22,7 @@
       <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 150px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
@@ -40,7 +40,7 @@
 					<form name="numPrenotazioni" method="post" action="/Prenotazione/inserisciDati">
 						
 						<p class="mt-0">
-							<label>Numero di prenotazioni:</label>
+							</br><h1>Seleziona il numero di prenotazioni </h1></br></br>
 							<select id="numero" name="numeroPrenotazioni" style="width:70%" class="form-control" required>
 							  <option class="firstOption">1</option>
 							  <?php

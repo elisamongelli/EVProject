@@ -75,7 +75,7 @@
       <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 70px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
@@ -94,7 +94,7 @@
 					<form name="invioReferto" method="post" action="/Referto/salvaReferto" enctype="multipart/form-data">
 
                         <div>
-                            <label style="font-size:18px">Referto da inviare:</label>
+                            <label style="font-size:18px"><h1></br>Referto da inviare :</h1></br></label>
                             <input type="file" name="referto" id="file" class="file"></input>
                             <p class="mt-3" style="color:#605ed4;font-size:15px">(NB: il nome del file deve corrispondere al codice ID del referto)</p>
                             <span id="value" style="color:green"></span>

@@ -22,7 +22,7 @@
       <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 150px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
@@ -49,7 +49,8 @@
 					  <button class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
 					</form>-->
 					
-					<p class="pt-md-4" style="color: black">SCEGLI UNA MODALITÀ DI PAGAMENTO :</br></br></p>
+					</br><h1>Scegli una modalità di pagamento</h1></br></br>
+					<!--<p class="pt-md-4" style="color: black">SCEGLI UNA MODALITÀ DI PAGAMENTO :</br></br></p>-->
 					
 					<form  method="post" action="/EffettuaPagamento">
 					<button class="w3-button w3-section w3-teal w3-ripple accesso"> Pagamento Online </button>

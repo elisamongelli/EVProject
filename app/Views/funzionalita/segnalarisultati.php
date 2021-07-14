@@ -14,11 +14,11 @@
 		
 		<div class="header pb-8 pt-0 d-flex align-items-center" style="min-height: 83%; background-color: white">
 			</br></br><div class="container-fluid pt-5">
-			  </br><div class="row">
+			  </br></br><div class="row">
 				<div class="col-xl-8 order-xl-1 mb-5 mb-xl-0">
 				  <div class="card card-profile shadow">
 					  <center>		
-						</br></br><h1>Inserisci i dati dei pazienti risultati positivi </h1></br></br>
+						</br></br><h1>Inserisci i dati dei pazienti risultati positivi</h1></br></br>
 						<form method="post" action="/PositiviDb/cittadiniPositivi">
 						
 							<p class="pt-md-4">

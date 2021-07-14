@@ -51,10 +51,10 @@ class Accesso extends Controller
 		$userValido = $model->getUtente($email, $password);
 		
 		if ($userValido == 1) {
-			echo view('errors/emailInesistente');
+			echo view('errors/erroreaccesso');
 		}
 		else if ($userValido == 2) {
-			echo view('errors/passwordErrata');
+			echo view('errors/erroreaccesso');
 		}
 		else if ($userValido == 3) {
 			

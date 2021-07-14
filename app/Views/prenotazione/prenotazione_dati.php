@@ -28,7 +28,7 @@
       <!-- Mask --
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
-      <div class="container-fluid align-items-center" style="padding-top: 200px">
+      <div class="container-fluid align-items-center" style="padding-top: 70px">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
@@ -43,6 +43,7 @@
               <div class="text-center">
                 <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
 				<center>
+				</br><h1>Prenota un tampone</h1></br></br>
 					<form name="datiPrenotazione" method="post" action="/Prenotazione/salvaDati">
 						
 						<input type="hidden" name="numeroPrenotazioni" value="<?= esc($numero) ?>"/>
