@@ -132,6 +132,6 @@ class Referto extends Controller
 			}
 		}
 
-		return redirect()->to('Dashboard/vdDashboard/Laboratorio');
+		return redirect()->to('/Dashboard/vdDashboard/Laboratorio');
 	}
 }

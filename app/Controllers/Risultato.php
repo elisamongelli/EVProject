@@ -2,8 +2,10 @@
 
 namespace App\Controllers;
 
-use App\Models\AziendaSanitariaModel;
 use App\Models\RefertoModel;
+use App\Models\PrenotazioneModel;
+use App\Models\PrenotazioneOrarioModel;
+use App\Models\RisultatoModel;
 
 use CodeIgniter\Controller;
 
@@ -12,39 +14,109 @@ class Risultato extends Controller
     public function index()
     {
 		$model = new RefertoModel();
-        $referti = $model->getAllReferti();
+        $allReferti = $model->getAllReferti();
+
+        $model = new PrenotazioneModel();
+        $allPrenotazioni = $model->getAllPrenotazioni();
+
+        $model = new PrenotazioneOrarioModel();
+        $allDate = $model->getAllPrenotazioni();
+
+        $model = new RisultatoModel();
+        $risultati = $model->getAllRisultati();
 
         $i = 0;
-        foreach($referti as $referto) {
-            $medico = explode(" ", $referto['MedicoCurante'], 4);
-            if (count($medico) > 2) {
-                $asl[$i] = $medico[3];
-                echo ($i.") MEDICO CORRENTE : ");
-                print_r($medico);
-                echo ("<br />ASL [".$asl[$i]."]<br /><br />");
-                $i++;
-            }
-            else {
-                echo ("MEDICO NON DISPONIBILE");
-                //print_r($medico);
-                echo ("<br /><br />");
-            }
-        }
+        foreach($allReferti as $referto) {
 
-        echo ("<br /><br /><br />* ARRAY PRECEDENTI CON TABELLA DELLE AZIENDE SANITARIE: <br /><br />");
-        
-        $model = new AziendaSanitariaModel();
-        $aziendeSanitarie = $model->getAllAziendeSanitarie();
+            $codiceFiscale = $referto['CodiceFiscale'];
 
-        foreach($aziendeSanitarie as $aziendaSanitaria) {
+            $flag = 0;
+            foreach($risultati as $risultato) {
 
-            for ($i = 0; $i < count($asl); $i++) {
-                if ($asl[$i] == $aziendaSanitaria['Nome']) {
-                    echo($asl[$i]." uguale a<br /><br />");
-                    print_r($aziendaSanitaria);
-                    echo "<br /><br /><br /><br />";
+                if ($risultato['CodiceFiscale'] == $codiceFiscale) {
+                    $flag = 1;
+                    break;
                 }
             }
+
+            if ($flag == 1) {
+                continue;
+            }
+
+
+            foreach($allPrenotazioni as $prenotazione) {
+
+                if ($prenotazione['CodiceFiscale'] == $codiceFiscale) {
+
+                    foreach($allDate as $dataPrenotazione) {
+
+                        if ($dataPrenotazione['CodiceFiscale'] == $codiceFiscale) {
+
+                            $dataPrenotazione['Data'] = explode(" ", $dataPrenotazione['Data']);
+                            $newData = array_reverse(explode("-", $dataPrenotazione['Data'][0]));
+                            $finalData = $newData[0]."/".$newData[1]."/".$newData[2];
+
+                            $aziendaSanitaria = new RefertoModel();
+                            $asl = $aziendaSanitaria->getAsl($codiceFiscale);
+
+                            if ($referto['Esito'] == "Positivo") {
+                                
+                                $data[$i] = [
+                                    'Esito' => $referto['Esito'],
+                                    'TipologiaTampone' => $prenotazione['TipologiaTampone'],
+                                    'Data' => $finalData,
+                                    'NomeLaboratorio' => $prenotazione['LaboratorioAnalisi'],
+                                    'EmailLaboratorio' => $referto['EmailLaboratorio'],
+                                    'CittaResidenza' => $prenotazione['Citta'],
+                                    'AziendaSanitaria' => $asl,
+                                    'Nome' => $referto['Nome'],
+                                    'Cognome' => $referto['Cognome'],
+                                    'CodiceFiscale' => $referto['CodiceFiscale'],
+                                    'Email' => $prenotazione['Email'],
+                                ];
+
+                                $i++;
+                                break;
+                            }
+                            else {                                
+                                $data[$i] = [
+                                    'Esito' => $referto['Esito'],
+                                    'TipologiaTampone' => $prenotazione['TipologiaTampone'],
+                                    'Data' => $finalData,
+                                    'NomeLaboratorio' => $prenotazione['LaboratorioAnalisi'],
+                                    'EmailLaboratorio' => $referto['EmailLaboratorio'],
+                                    'CittaResidenza' => $prenotazione['Citta'],
+                                    'AziendaSanitaria' => $asl,
+                                    'Nome' => '-',
+                                    'Cognome' => '-',
+                                    'CodiceFiscale' => '-',
+                                    'Email' => '-',
+                                ];
+
+                                $i++;
+                                break;
+                            }
+                        }
+                    }
+
+                    break;
+                }
+            }
+        }
+        
+        for($j = 0; $j < $i; $j++) {
+            $model->save($data[$j]);
+        }
+        
+        $risultati = $model->getRisultatiASL();
+        
+        if ($risultati == 0) {
+            echo "NESSUN RISULTATO DISPONIBILE";
+            //return view('elenco_risultati');
+        }
+        else {
+            //print_r($risultati);
+            return view('elenco_risultati');
         }
     }
 }

@@ -96,4 +96,21 @@ class RefertoModel extends Model
 		}
 		return $referto;
 	}
+
+
+	public function getAsl($cf) {
+
+		$referto = $this->asArray()
+					->where(['CodiceFiscale' => $cf])
+					->first();
+		
+		$medico = explode(" ", $referto['MedicoCurante'], 4);
+		
+		if (count($medico) > 2) {
+			$asl = $medico[3];
+		}
+		else $asl = "-";
+
+		return $asl;
+	}
 }

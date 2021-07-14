@@ -1,8 +1,8 @@
 <?php
 
 	
-	$con = mysqli_connect('remotemysql.com','iESeA9LQ9x','TQ5cw89N0z');
-    $mysqli = mysqli_select_db($con, 'iESeA9LQ9x');
+	$con = mysqli_connect('localhost','root','');
+    $mysqli = mysqli_select_db($con, 'prenotatamponi');
 	
 	$result = mysqli_query($con, "SELECT * FROM Prenotazioni");
 	

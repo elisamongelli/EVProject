@@ -27,8 +27,8 @@
 	
 	$mysqldate = date( 'Y-m-d H:i:s', strtotime($date[2].'-'.$date[1].'-'.$date[0].' '.$dateHour[0].':'.$dateHour[1].':00') );
 	
-	$con = mysqli_connect('remotemysql.com','iESeA9LQ9x','TQ5cw89N0z');
-    $mysqli = mysqli_select_db($con, 'iESeA9LQ9x');
+	$con = mysqli_connect('localhost','root','');
+    $mysqli = mysqli_select_db($con, 'prenotatamponi');
 	
 	$query = mysqli_query($con, "INSERT INTO Prenotazioni (CodiceFiscale,Data) VALUES ('$codFIs','$mysqldate')");
 

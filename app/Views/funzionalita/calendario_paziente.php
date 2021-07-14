@@ -46,10 +46,10 @@
 				<!--<div class="h3 mt-4" style="margin-top : -2.5rem !important"></br>Le Tue Prenotazioni</span></div></br>-->
 				<h1>Le tue Prenotazioni</h1></br>
 				<div class="h2 mt--3" style="margin-top :1rem !important"></br><?php
-						$servername = "remotemysql.com";
-						$username = "iESeA9LQ9x";
-						$password = "TQ5cw89N0z";
-						$dbname = "iESeA9LQ9x";
+						$servername = "localhost";
+						$username = "root";
+						$password = "";
+						$dbname = "prenotatamponi";
 
 						// Create connection
 						$conn = new mysqli($servername, $username, $password, $dbname);
