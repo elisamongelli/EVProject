@@ -34,7 +34,7 @@
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
+								<input class="form-control" type="text" name="cittaResidenza" placeholder="Citta di Residenza" style="width:90%" required>
 							</p>
 							
 							<button class="w3-button w3-section w3-teal w3-ripple accesso"> Invia </button>

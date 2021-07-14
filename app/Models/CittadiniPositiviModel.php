@@ -9,7 +9,13 @@ class CittadiniPositiviModel extends Model
 	
 	protected $table = 'CittadiniPositivi';
 	
-	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'Email'];
+	protected $allowedFields = ['Nome', 'Cognome', 'CodiceFiscale', 'CittaResidenza', 'AziendaSanitaria', 'Data'];
+
+
+	public function getAllPositivi() {
+
+		return $this->findAll();
+	}
 	
 	
 	public function getUtente($cf) {

@@ -6,6 +6,12 @@ class Resoconto extends BaseController
 {
 	public function index()
 	{
-		return view('funzionalita/visualizzaresoconto');
+		$asl = session()->get('nome');
+
+		$data = [
+			'asl' => $asl,
+		];
+
+		return view('funzionalita/visualizzaresoconto', $data);
 	}
 }

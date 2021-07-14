@@ -9,7 +9,7 @@ class RisultatoModel extends Model
 	
 	protected $table = 'Risultati';
 	
-	protected $allowedFields = ['Indice', 'Esito', 'TipologiaTampone', 'Data', 'NomeLaboratorio', 'EmailLaboratorio', 'CittaResidenza', 'AziendaSanitaria', 'Nome', 'Cognome', 'CodiceFiscale', 'Email'];
+	protected $allowedFields = ['ID', 'Esito', 'TipologiaTampone', 'Data', 'NomeLaboratorio', 'EmailLaboratorio', 'CittaResidenza', 'AziendaSanitaria', 'Nome', 'Cognome', 'CodiceFiscale', 'Email'];
 	
 	
 	public function getAllRisultati() {

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\RefertoModel;
 use App\Models\PrenotazioneModel;
 use App\Models\PrenotazioneOrarioModel;
+use App\Models\CittadiniPositiviModel;
 use App\Models\RisultatoModel;
 
 use CodeIgniter\Controller;
@@ -22,6 +23,9 @@ class Risultato extends Controller
         $model = new PrenotazioneOrarioModel();
         $allDate = $model->getAllPrenotazioni();
 
+        $model = new CittadiniPositiviModel();
+        $allPositivi = $model->getAllPositivi();
+
         $model = new RisultatoModel();
         $risultati = $model->getAllRisultati();
 
@@ -34,6 +38,22 @@ class Risultato extends Controller
             foreach($risultati as $risultato) {
 
                 if ($risultato['CodiceFiscale'] == $codiceFiscale) {
+                    $flag = 1;
+                    break;
+                }
+            }
+
+            if ($flag == 1) {
+                continue;
+            }
+
+
+            $ID = $referto['Codice'];
+
+            $flag = 0;
+            foreach($risultati as $risultato) {
+
+                if ($risultato['ID'] == $ID) {
                     $flag = 1;
                     break;
                 }
@@ -62,6 +82,7 @@ class Risultato extends Controller
                             if ($referto['Esito'] == "Positivo") {
                                 
                                 $data[$i] = [
+                                    'ID' => $referto['Codice'],
                                     'Esito' => $referto['Esito'],
                                     'TipologiaTampone' => $prenotazione['TipologiaTampone'],
                                     'Data' => $finalData,
@@ -80,6 +101,7 @@ class Risultato extends Controller
                             }
                             else {                                
                                 $data[$i] = [
+                                    'ID' => $referto['Codice'],
                                     'Esito' => $referto['Esito'],
                                     'TipologiaTampone' => $prenotazione['TipologiaTampone'],
                                     'Data' => $finalData,
@@ -102,6 +124,43 @@ class Risultato extends Controller
                     break;
                 }
             }
+        }
+
+        
+        foreach($allPositivi as $positivo) {
+            
+            $codiceFiscale = $positivo['CodiceFiscale'];
+
+            $flag = 0;
+            foreach($risultati as $risultato) {
+
+                if ($risultato['CodiceFiscale'] == $codiceFiscale) {
+                    $flag = 1;
+                    break;
+                }
+            }
+
+            if ($flag == 1) {
+                continue;
+            }
+
+            $data[$i] = [
+                'ID' => $positivo['CodiceFiscale'],
+                'Esito' => "Positivo",
+                'TipologiaTampone' => "ND",
+                'Data' => $positivo['Data'],
+                'NomeLaboratorio' => "ND",
+                'EmailLaboratorio' => "ND",
+                'CittaResidenza' => $positivo['CittaResidenza'],
+                'AziendaSanitaria' => $positivo['AziendaSanitaria'],
+                'Nome' => $positivo['Nome'],
+                'Cognome' => $positivo['Cognome'],
+                'CodiceFiscale' => $positivo['CodiceFiscale'],
+                'Email' => "ND",
+            ];
+
+            $i++;
+            break;
         }
         
         for($j = 0; $j < $i; $j++) {

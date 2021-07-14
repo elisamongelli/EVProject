@@ -23,14 +23,16 @@ class PositiviDb extends Controller
 				$nome = $_POST['nome']; 
 				$cognome = $_POST['cognome']; 
 				$cf = $_POST['codiceFiscale']; 
-				$email = $_POST['email']; 
+				$citta = $_POST['cittaResidenza']; 
 				
 				
 				$data = [
 					'Nome' => $nome,
 					'Cognome' => $cognome,
 					'CodiceFiscale' => $cf,
-					'Email' => $email,
+					'CittaResidenza' => $citta,
+					'AziendaSanitaria' => session()->get('asl'),
+					'Data' => date("d/m/Y"),
 				];
 				
 				$model = new CittadiniPositiviModel();

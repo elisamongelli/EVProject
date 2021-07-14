@@ -39,10 +39,10 @@
 				<h1>Resoconto</h1></br></br>
 				<div class="h2 mt--3" style="margin-top :1rem !important"><?php
 						
-						$servername = "remotemysql.com";
-						$username = "iESeA9LQ9x";
-						$password = "TQ5cw89N0z";
-						$dbname = "iESeA9LQ9x";
+						$servername = "localhost";
+						$username = "root";
+						$password = "";
+						$dbname = "prenotatamponi";
 
 						// Create connection
 						$conn = new mysqli($servername, $username, $password, $dbname);
@@ -51,13 +51,13 @@
 						  die("Connection failed: " . $conn->connect_error);
 						}
 							
-						$sql = "SELECT COUNT(CodiceFiscale) AS NumeroTamponi FROM Referti WHERE MedicoCurante=''";
+						$sql = "SELECT COUNT(CodiceFiscale) AS NumeroTamponi FROM Risultati WHERE AziendaSanitaria='$asl'";
 						$result = $conn->query($sql);
 						
-						$sql2 = "SELECT COUNT(Esito) AS EsitoPositivo FROM Referti WHERE Esito='Positivo' AND MedicoCurante=''";
+						$sql2 = "SELECT COUNT(Esito) AS EsitoPositivo FROM Risultati WHERE Esito='Positivo' AND AziendaSanitaria='$asl'";
 						$result2 = $conn->query($sql2);
 						
-						$sql3 = "SELECT COUNT(Esito) AS EsitoNegativo FROM Referti WHERE Esito='Negativo' AND MedicoCurante=''";
+						$sql3 = "SELECT COUNT(Esito) AS EsitoNegativo FROM Risultati WHERE Esito='Negativo' AND AziendaSanitaria='$asl'";
 						$result3 = $conn->query($sql3);
 						
 
