@@ -9,11 +9,11 @@
 	  <div class="media align-items-center-home">
         <?php
             if (!$accesso) {
-                echo "<a href='/Home'><i class='fa fa-angle-left' aria-hidden='true' style='font-size:35px ; font-weight:600 ; color:white'></i></a>";
+                echo "<a href='/Home'><i class='fa fa-angle-left' aria-hidden='true' style='font-size:35px ; color:white'></i></a>";
             }
             else {
                 $ruolo = session()->get('ruolo');
-                echo "<a href='/Dashboard/vdDashboard/".$ruolo."'><i class='fa fa-home' style='font-size:26px ; color:white'></i></a>";
+                echo "<a href='/Dashboard/vdDashboard/".$ruolo."'><i class='fa fa-angle-left' style='font-size:35px ; color:white'></i></a>";
             }
         ?>
 	      <div class="media-body ml-2 d-none d-lg-block">
