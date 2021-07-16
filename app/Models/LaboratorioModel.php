@@ -64,4 +64,10 @@ class LaboratorioModel extends Model
 			return $lab['PrezzoAntigenico'];
 		}
 	}
+
+	public function eliminaLaboratorio($email) {
+
+		$this->where('Email', $email);
+		return $this->delete();
+	}
 }

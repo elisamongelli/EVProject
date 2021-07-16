@@ -45,5 +45,10 @@ class AziendaSanitariaModel extends Model
 			return 3;
 		}
 	}
-	
+
+	public function eliminaAziendaSanitaria($email) {
+
+		$this->where('Email', $email);
+		return $this->delete();
+	}
 }

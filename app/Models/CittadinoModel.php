@@ -57,4 +57,10 @@ class CittadinoModel extends Model
 			return $cittadino['MedicoCurante'];
 		}
 	}
+
+	public function eliminaCittadino($email) {
+
+		$this->where('Email', $email);
+		return $this->delete();
+	}
 }

@@ -58,10 +58,10 @@
 
 						<h1>Accedi</h1></br>
 						
-						<form method="post" action="Accesso/controllaCampi">
+						<form method="post" action="/Accesso/controllaCampi">
 						
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
+								<input class="form-control" type="text" name="email" placeholder="Email" value="<?= esc($email) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
@@ -81,7 +81,7 @@
 							
 							<button class="w3-button w3-section w3-teal w3-ripple accesso"> Accedi </button>
 						</form>
-						<p style="color:black">Non sei ancora registrato?<a href="Registrazione">&nbsp Registrati</a></p>
+						<p style="color:black">Non sei ancora registrato?<a href="/Registrazione">&nbsp Registrati</a></p>
 					  </center>
 					</div>
 				  </div>

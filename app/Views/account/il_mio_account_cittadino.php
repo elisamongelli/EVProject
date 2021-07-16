@@ -3,8 +3,19 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="/css/stle-custom.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/login.css">
+<link href="/css/modal.css" rel="stylesheet">
 
-<head><title>Il Mio Account</title></head>
+<head>
+	<title>Il Mio Account</title>
+	<style>
+		a.elimina {
+			color:red;
+		}
+		a.elimina:hover {
+			color: #a90808;
+		}
+	</style>
+</head>
 
 <body>
   <div class="main-content">
@@ -32,30 +43,88 @@
             </div>
             <div class="card-body pt-0 pt-md-4">
 	
-			  <div style="text-align:right"><a href="/Account/modificaInfo/<?= esc(session()->get('ruolo')) ?>"><i class="fas fa-pen-alt"></i>    Modifica</a></div>
+				<div style="text-align:right"><a href="/Account/modificaInfo/Cittadino"><i class="fas fa-pen-alt"></i>    <u>Modifica</u></a></div></br>
 				
-              <div class="text-center">
-                <!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
-                <div class="h3 mt-4"></br>Nome</span></div></br>
-                <div class="h2 mt--3"></br><?= esc(session()->get('nome')) ?></span></div></br>
-                <div class="h3 mt-4"></br>Cognome</span></div></br>
-				<div class="h2 mt--3"></br><?= esc(session()->get('cognome')) ?></span></div></br>
-                <div class="h3 mt-4"></br>Codice Fiscale</span></div></br>
-				<div class="h2 mt--3"></br><?= esc(session()->get('codicefiscale')) ?></span></div></br>
-                <div class="h3 mt-4"></br>Medico di Medicina Generale</span></div></br>
-				<div class="h2 mt--3"></br><?= esc(session()->get('medico')) ?></span></div></br>
+				<div style="text-align:right"><a class="a elimina" href="#" id="elimina"><i class="fas fa-trash"></i>    <u>Elimina</u></a></div>
 				
-				<hr width="70%" align="center" style="margin-left:15%">
-				
-                <div class="h3 mt-4"></br>Email</span></div></br>
-				<div class="h2 mt--3"></br><?= esc(session()->get('email')) ?></span></div></br>
-              </div>
+					
+				<div class="text-center">
+					<!--<h2 style="color:black;">Informazioni e FAQ</h2></br>-->
+					<div class="h3 mt-0"></br>Nome</span></div></br>
+					<div class="h2 mt--3"></br><?= esc(session()->get('nome')) ?></span></div></br>
+					<div class="h3 mt-4"></br>Cognome</span></div></br>
+					<div class="h2 mt--3"></br><?= esc(session()->get('cognome')) ?></span></div></br>
+					<div class="h3 mt-4"></br>Codice Fiscale</span></div></br>
+					<div class="h2 mt--3"></br><?= esc(session()->get('codicefiscale')) ?></span></div></br>
+					<div class="h3 mt-4"></br>Medico di Medicina Generale</span></div></br>
+					<div class="h2 mt--3"></br><?= esc(session()->get('medico')) ?></span></div></br>
+					
+					<hr width="70%" align="center" style="margin-left:15%">
+					
+					<div class="h3 mt-4"></br>Email</span></div></br>
+					<div class="h2 mt--3"></br><?= esc(session()->get('email')) ?></span></div></br>
+				</div>
+
+
+				<div id="myModal" class="modal">
+				<div class="modal-content">
+					<form action="/Account/eliminaAccount/Cittadino">
+						<span class="close">&times;</span>
+						<div class="text-center">
+							<p>Stai per eliminare il tuo profilo.<br />L'azione è IRREVERSIBILE</p>
+							<p>Sei sicuro?</p>
+							<div>
+								<span style="color:#5e72e4" class="close annulla"><u>Annulla</u>&emsp;&ensp;</span>
+								<button class="w3-button w3-section w3-teal w3-ripple elimina"> Elimina </button>
+							</div>
+						</div>
+					</form>
+				</div>
+
             </div>
           </div>
         </div>
             </div>
           </div>
         </div>
+
+	
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("elimina");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// Get the <span> element that closes the modal
+			var spanAnnulla = document.getElementsByClassName("close annulla")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+				modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			spanAnnulla.onclick = function() {
+				modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
       <!--</div>
     </div>
   </div>-->

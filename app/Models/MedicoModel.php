@@ -50,5 +50,10 @@ class MedicoModel extends Model
 			return 3;
 		}
 	}
-	
+
+	public function eliminaMedico($email) {
+
+		$this->where('Email', $email);
+		return $this->delete();
+	}
 }

@@ -351,4 +351,51 @@ class Account extends BaseController
 				break;
 		}
 	}
+
+
+
+	public function eliminaAccount($ruolo) {
+
+		$email = session()->get('email');
+
+		switch($ruolo) {
+
+			case "Cittadino":
+				
+				$model = new CittadinoModel();
+				$model->eliminaCittadino($email);
+
+				break;
+
+			case "Datore":
+				
+				$model = new DatoreModel();
+				$model->eliminaDatore($email);
+
+				break;
+
+			case "Medico":
+				
+				$model = new MedicoModel();
+				$model->eliminaMedico($email);
+
+				break;
+
+			case "Laboratorio":
+				
+				$model = new LaboratorioModel();
+				$model->eliminaLaboratorio($email);
+
+				break;
+
+			case "AziendaSanitaria":
+				
+				$model = new AziendaSanitariaModel();
+				$model->eliminaAziendaSanitaria($email);
+
+				break;
+		}
+
+		return redirect()->to('/Home/logout');
+	}
 }

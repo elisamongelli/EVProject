@@ -45,5 +45,10 @@ class DatoreModel extends Model
 			return 3;
 		}
 	}
-	
+
+	public function eliminaDatore($email) {
+
+		$this->where('Email', $email);
+		return $this->delete();
+	}
 }

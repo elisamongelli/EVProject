@@ -49,12 +49,16 @@ class Accesso extends Controller
 		
 		
 		$userValido = $model->getUtente($email, $password);
+
+		$data = [
+			'email' => $email,
+		];
 		
 		if ($userValido == 1) {
-			echo view('errors/erroreaccesso');
+			echo view('errors/erroreaccesso', $data);
 		}
 		else if ($userValido == 2) {
-			echo view('errors/erroreaccesso');
+			echo view('errors/erroreaccesso', $data);
 		}
 		else if ($userValido == 3) {
 			

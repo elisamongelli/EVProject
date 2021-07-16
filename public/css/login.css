@@ -27,6 +27,10 @@ button.w3-button.w3-section.w3-teal.w3-ripple {
     background-color: #9f9ee5!important;
 }
 
+.w3-button.w3-section.w3-teal.w3-ripple.elimina {
+    background-color: red!important;
+}
+
 .w3-button.w3-section.w3-teal.w3-ripple.ruoli {
     background-color: #9f9ee5!important;
 }
