@@ -59,31 +59,31 @@
 						<form method="post" action="/Registrazione/creaAccount/Datore">
 						
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="nome" placeholder="Nome" style="width:90%" required>
+								<input class="form-control" type="text" name="nome" placeholder="Nome" value="<?= esc($Nome) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="cognome" placeholder="Cognome" style="width:90%" required>
+								<input class="form-control" type="text" name="cognome" placeholder="Cognome" value="<?= esc($Cognome) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" style="width:90%" required>
+								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" value="<?= esc($CodiceFiscale) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="nomeAzienda" placeholder="Nome Azienda" style="width:90%" required>
+								<input class="form-control" type="text" name="nomeAzienda" placeholder="Nome Azienda" value="<?= esc($NomeAzienda) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="partitaIVA" placeholder="Partita IVA" style="width:90%" required>
+								<input class="form-control" type="text" name="partitaIVA" placeholder="Partita IVA" value="<?= esc($PartitaIva) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="codiceFiscaleAzienda" placeholder="Codice Fiscale Azienda" style="width:90%" required>
+								<input class="form-control" type="text" name="codiceFiscaleAzienda" placeholder="Codice Fiscale Azienda" value="<?= esc($CodiceFiscaleAzienda) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
+								<input class="form-control" type="text" name="email" placeholder="Email" value="<?= esc($Email) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">

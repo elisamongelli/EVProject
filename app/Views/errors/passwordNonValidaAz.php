@@ -26,7 +26,7 @@
 			</div>
 		</div>-->
 		
-		<div id="error2" class="errorDiv" >Password non valida</div>
+		<div id="error2" class="errorDiv" >La password deve contenere da 8 a 15 caratteri e almeno un numero</div>
 		
 <div class="header pb-8 pt-5 pt-lg-88 d-flex align-items-center" style="min-height: 100%; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: bottom; position: relative">
       <!-- Mask -->
@@ -78,19 +78,19 @@
 						<form method="post" action="/Registrazione/creaAccount/AziendaSanitaria">
 						
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="nomeazienda" placeholder="Nome Azienda Sanitaria" style="width:90%" required>
+								<input class="form-control" type="text" name="nomeazienda" placeholder="Nome Azienda Sanitaria" value="<?= esc($Nome) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="partitaiva" placeholder="Partita Iva" style="width:90%" required>
+								<input class="form-control" type="text" name="partitaiva" placeholder="Partita Iva" value="<?= esc($PartitaIva) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="codicefiscale" placeholder="Codice Fiscale" style="width:90%" required>
+								<input class="form-control" type="text" name="codicefiscale" placeholder="Codice Fiscale" value="<?= esc($CodiceFiscale) ?>" style="width:90%" required>
 							</p>
 
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
+								<input class="form-control" type="text" name="email" placeholder="Email" value="<?= esc($Email) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">

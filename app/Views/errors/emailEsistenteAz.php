@@ -28,7 +28,7 @@
 			</div>
 		</div>-->
 		
-		<div id="error2" class="errorDiv" >Account già esistente, <a href="/Accesso" style="color:#525f7f"><u>accedi</u></a></div>
+		<div id="error2" class="errorDiv" >L'email è già in uso. <a href="/Accesso" style="color:#525f7f"><u>Effettua l'accesso</u></a> oppure inserisci un'altra email</div>
 
 <div class="header pb-8 pt-5 pt-lg-88 d-flex align-items-center" style="min-height: 100%; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: bottom; position: relative">
       <!-- Mask -->
@@ -80,15 +80,15 @@
 						<form method="post" action="/Registrazione/creaAccount/AziendaSanitaria">
 						
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="nomeazienda" placeholder="Nome Azienda Sanitaria" style="width:90%" required>
+								<input class="form-control" type="text" name="nomeazienda" placeholder="Nome Azienda Sanitaria" value="<?= esc($Nome) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="partitaiva" placeholder="Partita Iva" style="width:90%" required>
+								<input class="form-control" type="text" name="partitaiva" placeholder="Partita Iva" value="<?= esc($PartitaIva) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="codicefiscale" placeholder="Codice Fiscale" style="width:90%" required>
+								<input class="form-control" type="text" name="codicefiscale" placeholder="Codice Fiscale" value="<?= esc($CodiceFiscale) ?>" style="width:90%" required>
 							</p>
 
 							<p class="pt-md-4">

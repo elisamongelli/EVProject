@@ -7,7 +7,7 @@
 	<div class="main-content">
 		<?php include __DIR__ . "/../common/navbar_accesso.php";?>
 		
-		<div id="error2" class="errorDiv" >L'email è già in uso. Inserisci un'altra email oppure <a href="/Accesso" style="color:#525f7f"><u>effettua l'accesso</u></a></div>
+		<div id="error2" class="errorDiv" >L'email è già in uso. <a href="/Accesso" style="color:#525f7f"><u>Effettua l'accesso</u></a> oppure inserisci un'altra email</div>
 
 <div class="header pb-8 pt-5 pt-lg-88 d-flex align-items-center" style="min-height: 100%; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: bottom; position: relative">
       <!-- Mask -->
@@ -59,27 +59,27 @@
 						<form method="post" action="/Registrazione/creaAccount/Datore">
 						
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="nome" placeholder="Nome" style="width:90%" required>
+								<input class="form-control" type="text" name="nome" placeholder="Nome" value="<?= esc($Nome) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="cognome" placeholder="Cognome" style="width:90%" required>
+								<input class="form-control" type="text" name="cognome" placeholder="Cognome" value="<?= esc($Cognome) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" style="width:90%" required>
+								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" value="<?= esc($CodiceFiscale) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="nomeAzienda" placeholder="Nome Azienda" style="width:90%" required>
+								<input class="form-control" type="text" name="nomeAzienda" placeholder="Nome Azienda" value="<?= esc($NomeAzienda) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="partitaIVA" placeholder="Partita IVA" style="width:90%" required>
+								<input class="form-control" type="text" name="partitaIVA" placeholder="Partita IVA" value="<?= esc($PartitaIva) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="codiceFiscaleAzienda" placeholder="Codice Fiscale Azienda" style="width:90%" required>
+								<input class="form-control" type="text" name="codiceFiscaleAzienda" placeholder="Codice Fiscale Azienda" value="<?= esc($CodiceFiscaleAzienda) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">

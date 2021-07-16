@@ -7,7 +7,7 @@
 	<div class="main-content">
 		<?php include __DIR__ . "/../common/navbar_accesso.php";?>
 		
-		<div id="error2" class="errorDiv" >I campi Password e Conferma Password devono coincidere</div>
+		<div id="error2" class="errorDiv" >Password e Conferma Password non coincidono</div>
 
 <div class="header pb-8 pt-5 pt-lg-88 d-flex align-items-center" style="min-height: 100%; background-image: url(/img/photo_2021-05-19_18-17-14.jpg); background-position: bottom; position: relative">
       <!-- Mask -->
@@ -59,28 +59,28 @@
 						<form method="post" action="/Registrazione/creaAccount/Medico">
 						
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="nome" placeholder="Nome" style="width:90%" required>
+								<input class="form-control" type="text" name="nome" placeholder="Nome" value="<?= esc($Nome) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="cognome" placeholder="Cognome" style="width:90%" required>
+								<input class="form-control" type="text" name="cognome" placeholder="Cognome" value="<?= esc($Cognome) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" style="width:90%" required>
+								<input class="form-control" type="text" name="codiceFiscale" placeholder="Codice Fiscale" value="<?= esc($CodiceFiscale) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="partitaIva" placeholder="Partita IVA" style="width:90%" required>
+								<input class="form-control" type="text" name="partitaIva" placeholder="Partita IVA" value="<?= esc($PartitaIva) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="codiceRegionale" placeholder="Codice Regionale" style="width:90%" required>
+								<input class="form-control" type="text" name="codiceRegionale" placeholder="Codice Regionale" value="<?= esc($CodiceRegionale) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4" id="mySelect" style="width:90%">
 								<select name="AziendaSanitariaLocale" class="form-control" required>
-								  <option class="firstOption" disabled selected value="">Azienda Sanitaria Locale</option>
+								  <option class="firstOption"><?= esc($AziendaSanitariaLocale) ?></option>
 								  <?php
 									$codiciASL = file(__DIR__ . "/../registrazioni/asl_italiane.txt", 1);
 
@@ -93,7 +93,7 @@
 							</p>
 							
 							<p class="pt-md-4">
-								<input class="form-control" type="text" name="email" placeholder="Email" style="width:90%" required>
+								<input class="form-control" type="text" name="email" placeholder="Email" value="<?= esc($Email) ?>" style="width:90%" required>
 							</p>
 							
 							<p class="pt-md-4">
