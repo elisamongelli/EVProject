@@ -4,6 +4,8 @@
 <link href="/css/stle-custom.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/login.css">
 
+<head><title>Gestisci Prenotazioni</title></head>
+
 
 <body>
   <div class="main-content">

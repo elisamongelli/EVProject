@@ -39,7 +39,7 @@
               <div class="text-center">
                 <div class="h3 mt-4"><a href="/Referto/inviaReferto"></br>INVIA I REFERTI DEI TAMPONI</span></a></div></br>
                 <div class="h3 mt-4"><a href="/Questionario/visualizzaQuestionari"></br>VISUALIZZA I QUESTIONARI DI ANAMNESI COMPILATI</span></a></div></br>
-				<div class="h3 mt-4"><a href="/CalendarioLab"></br>CALENDARIO: GESTISCI LE PRENOTAZIONI, FORNISCI LE DISPONIBILITA'</span></a></div></br></br>
+				<div class="h3 mt-4"><a href="/CalendarioLab"></br>CALENDARIO: GESTISCI PRENOTAZIONI E DISPONIBILITA'</span></a></div></br></br>
 				<!--</br></br><a href="/Opuscolo"><b>Consulta l'opuscolo informativo</b></a></br></br>-->
             </div>
             </div>

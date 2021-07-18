@@ -3,6 +3,8 @@
 <link href="/css/stle-custom.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/login.css">
 
+<head><title>Scegli un ruolo</title></head>
+
 <body>
 	<div class="main-content">
 		<?php include 'common/navbar_accesso.php';?><!--

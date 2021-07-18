@@ -3,6 +3,8 @@
 <link href="/css/stle-custom.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/login.css">
 
+<head><title>Opuscolo Informativo</title></head>
+
 <body>
 	<div class="main-content">
 		<?php 

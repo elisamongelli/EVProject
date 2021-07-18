@@ -3,6 +3,8 @@
 <link href="css/stle-custom.css" rel="stylesheet">
 <link rel="stylesheet" href="css/login.css">
 
+<head><title>Pagamento</title></head>
+
 <!-- efettua pagamento -->
 
 <body style="color: black">
