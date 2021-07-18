@@ -96,7 +96,7 @@ class Prenotazione extends Controller
 
 		//echo(session()->get('numeroPrenotazioni'));
 
-		$prenotazioni = $model->getPrenotazioniNoLab();
+		$prenotazioni = $model->getPrenotazioniCorrenti();
 		//$_SESSION['prenotazioni'] = array();
 
 		for ($i = 0; $i < count($prenotazioni); $i++) {

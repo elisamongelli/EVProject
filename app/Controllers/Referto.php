@@ -11,13 +11,7 @@ class Referto extends Controller
 {
     public function index()
     {
-		$model = new RefertoModel();
-		
-		$data = [
-			'referti' => $model->getReferti('Medico'),
-		];
-		
-		return view('elenco_referti', $data);
+		return view('#');
     }
 	
 	
@@ -39,6 +33,18 @@ class Referto extends Controller
 		
 		$data = [
 			'referti' => $model->getReferti('Datore'),
+		];
+		
+		return view('elenco_referti', $data);
+    }
+	
+	
+	public function visualizzaRefertiMedico()
+    {
+		$model = new RefertoModel();
+		
+		$data = [
+			'referti' => $model->getReferti('Medico'),
 		];
 		
 		return view('elenco_referti', $data);

@@ -1,3 +1,13 @@
+<?php
+	$ruolo = session()->get('ruolo');
+
+	if ($ruolo == 'Cittadino' or $ruolo == 'Datore') {
+		$link = "/SceltaPagamento";
+	}
+	else $link = "/Dashboard/vdDashboard/Medico";
+?>
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -74,7 +84,7 @@
 					}
 				?>
 				
-				<form name="tipoTampone" method="post" action="/SceltaPagamento">
+				<form name="tipoTampone" method="post" action="<?= esc($link) ?>">
 					<button class="w3-button w3-section w3-teal w3-ripple accesso"> Avanti  &rarr; </button>
 				</form>
 

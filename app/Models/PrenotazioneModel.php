@@ -18,7 +18,7 @@ class PrenotazioneModel extends Model
 		return $this->findAll();
 	}
 	
-	public function getPrenotazioniNoLab() {
+	public function getPrenotazioniCorrenti() {
 		
 		return $prenotazioni = $this->asArray()
 					->where(['LaboratorioAnalisi' => ""])
